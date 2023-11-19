@@ -1,0 +1,55 @@
+@import "variables";
+
+.header {
+  position: sticky;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 3;
+  font-family: var(--font-cormorant);
+  font-weight: bolder;
+  display: flex;
+  justify-content: space-between;
+  background-color: $primaryColor;
+  color: $whiteColor;
+  padding: 0 30px;
+  height: 90px;
+  background: radial-gradient(circle, #62829a, #34373f);
+  .logo {
+    h2 {
+      font-family: var(--font-caveat);
+      font-size: 40px;
+      small {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .navigation {
+    display: flex;
+    justify-content: flex-end;
+    flex: 0.5;
+    gap: 20px;
+
+    nav {
+      ul {
+        display: flex;
+        gap: 30px;
+        margin-right: 20px;
+        .icon {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+
+  // bloc icon
+  > div {
+    display: flex;
+    align-items: center;
+  }
+
+  .iconUser {
+    margin-left: 20px;
+  }
+}
