@@ -1,4 +1,5 @@
 @import "variables";
+@import "mixins_media_queries";
 
 .header {
   position: sticky;
@@ -9,12 +10,16 @@
   font-family: var(--font-cormorant);
   font-weight: bolder;
   display: flex;
+  align-items: center;
   justify-content: space-between;
   color: $whiteColor;
   padding: 0 30px;
   height: 90px;
   // background: radial-gradient(circle, #62829a, #34373f);
   background: transparent;
+  @include sm-lt {
+    padding: 0 20px;
+  }
   .logo {
     h2 {
       font-family: var(--font-caveat);
@@ -24,32 +29,49 @@
       }
     }
   }
-
   .navigation {
     display: flex;
     justify-content: flex-end;
     flex: 0.5;
-    gap: 20px;
-
     nav {
       ul {
         display: flex;
         gap: 30px;
+        @include sm-lt {
+          gap: 30px;
+        }
         li {
+          display: flex;
+          flex-direction: row;
+
+          position: relative;
           .icon {
             margin-left: 10px;
           }
+          a[data-tooltip] {
+            text-decoration: none;
+            position: relative;
+            &:hover {
+              color: $goldColor;
+              &::before {
+                content: attr(data-tooltip);
+                position: absolute;
+                background: transparent;
+                color: #fff;
+                top: 100%;
+                left: 65%;
+                transform: translateX(-50%);
+                white-space: nowrap;
+              }
+            }
+          }
+          @include sm-lt {
+            .icon {
+              margin: 0;
+            }
+          }
         }
       }
-    }
-  }
-
-  // bloc icon
-  > div {
-    display: flex;
-    align-items: center;
-    p {
-      margin-right: 20px;
     }
   }
 }

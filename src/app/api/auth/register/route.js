@@ -16,6 +16,7 @@ export async function POST(request) {
       email,
     },
   });
+
   if (userExist) {
     throw new Error("Email already exists");
   }

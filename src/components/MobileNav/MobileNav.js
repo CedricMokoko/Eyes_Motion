@@ -1,6 +1,6 @@
 "use client";
 import { useSession } from "next-auth/react";
-import styles from "./Header.module.scss";
+import styles from "./MobileNav.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faUser,
@@ -12,18 +12,11 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 
-const Header = () => {
+const MobileNav = () => {
   const { data: session, status } = useSession();
   if (status === "authenticated") {
     return (
-      <header className={`${styles.header}`}>
-        <div className={`${styles.logo}`}>
-          <h2>
-            <Link href={`/api/homepage`}>
-              Eyes<small>_Motion</small>
-            </Link>
-          </h2>
-        </div>
+      <footer className={`${styles.container}`}>
         <div className={`${styles.navigation}`}>
           <nav>
             <ul>
@@ -33,7 +26,6 @@ const Header = () => {
                     icon={faHouse}
                     className={`${styles.icon}`}
                   />
-                  HOME
                 </Link>
               </li>
               <li>
@@ -42,41 +34,22 @@ const Header = () => {
                     icon={faMagnifyingGlass}
                     className={`${styles.icon}`}
                   />
-                  CERCA
                 </Link>
               </li>
               <li>
                 <Link href={`/user/profile`}>
-                  <FontAwesomeIcon icon={faPlus} className={`${styles.icon}`} />
-                  LA TUA LISTA
-                </Link>
-              </li>
-              <li>
-                <Link href={`/serie`}>
-                  <FontAwesomeIcon icon={faTv} className={`${styles.icon}`} />
-                  SERIE{" "}
-                </Link>
-              </li>
-              <li>
-                <Link href={`/movies`}>
                   <FontAwesomeIcon
-                    icon={faVideo}
-                    className={`${styles.icon}`}
+                    icon={faUser}
+                    className={`${styles.iconUser}`}
                   />
-                  FILM
+                  | {session.user.name}
                 </Link>
               </li>
             </ul>
           </nav>
         </div>
-        <div className={`${styles.user}`}>
-          <Link href={`/user/profile`}>
-            {session.user.name}
-            <FontAwesomeIcon icon={faUser} className={`${styles.iconUser}`} />
-          </Link>
-        </div>
-      </header>
+      </footer>
     );
   }
 };
-export default Header;
+export default MobileNav;

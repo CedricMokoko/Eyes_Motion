@@ -1,4 +1,5 @@
 @import "variables";
+@import "mixins_media_queries";
 
 .header {
   position: sticky;
@@ -10,11 +11,14 @@
   font-weight: bolder;
   display: flex;
   justify-content: space-between;
-  background-color: $primaryColor;
   color: $whiteColor;
   padding: 0 30px;
   height: 90px;
   background: radial-gradient(circle, #62829a, #34373f);
+  @include sm-lt {
+    position: static;
+    justify-content: center;
+  }
   .logo {
     h2 {
       font-family: var(--font-caveat);
@@ -27,17 +31,25 @@
 
   .navigation {
     display: flex;
-    justify-content: flex-end;
-    flex: 0.5;
     gap: 20px;
+    @include sm-lt {
+      display: none;
+    }
 
     nav {
       ul {
         display: flex;
         gap: 30px;
         margin-right: 20px;
-        .icon {
-          margin-right: 10px;
+        li {
+          .icon {
+            margin-right: 10px;
+          }
+          &:nth-child(3) {
+            @include lg-lt {
+              display: none;
+            }
+          }
         }
       }
     }
@@ -49,7 +61,12 @@
     align-items: center;
   }
 
-  .iconUser {
-    margin-left: 20px;
+  .user {
+    @include sm-lt {
+      display: none;
+    }
+    .iconUser {
+      margin-left: 20px;
+    }
   }
 }

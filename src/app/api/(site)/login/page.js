@@ -4,5 +4,4 @@ import React from "react";
 const LoginFormPage = () => {
   return <LoginForm />;
 };
-
 export default LoginFormPage;

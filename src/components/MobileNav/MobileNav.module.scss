@@ -1,0 +1,45 @@
+@import "variables";
+@import "mixins_media_queries";
+
+.container {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 3;
+  font-family: var(--font-cormorant);
+  font-weight: bolder;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $whiteColor;
+  height: 90px;
+  // background: radial-gradient(circle, #62829a, #34373f);
+  background: radial-gradient(circle, #62829a, #34373f);
+  @include xl {
+    display: none;
+  }
+  @include lg-lt {
+    display: none;
+  }
+  @include sm-lt {
+    display: flex;
+  }
+  .navigation {
+    nav {
+      margin: 0;
+
+      ul {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        gap: 40px;
+        li {
+          .iconUser {
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
+}

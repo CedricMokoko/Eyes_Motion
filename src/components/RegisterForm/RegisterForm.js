@@ -1,6 +1,8 @@
 "use client";
 import styles from "./RegisterForm.module.scss";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
+
 import HeaderHomePage from "../HomePage/HeaderHomePage/HeaderHomePage";
 import { toast } from "react-hot-toast";
 
@@ -13,7 +15,7 @@ const RegisterForm = () => {
     confirmPassword: "",
   });
 
-  const [registrationSuccess, setRegistrationSuccess] = useState(false);
+  const router = useRouter();
 
   const handleSigninFormSubmit = async (e) => {
     e.preventDefault();
@@ -39,8 +41,9 @@ const RegisterForm = () => {
       });
 
       if (response.ok) {
-        setRegistrationSuccess(true);
         toast.success("Registrazione andata a buon fine!");
+        router.push("/api/login");
+        router.refresh();
       } else {
         // Gérer les cas d'erreur si nécessaire
         console.error("Échec de l'inscription");
@@ -51,18 +54,6 @@ const RegisterForm = () => {
       toast.error("Erreur lors de l'inscription");
     }
   };
-
-  // Se la registrazione ha avuto successo, mostra un messaggio di successo
-  if (registrationSuccess) {
-    return (
-      <>
-        <HeaderHomePage />
-        <div className={styles.signupForm}>
-          <p>Registrazione andata a buon fine!</p>
-        </div>
-      </>
-    );
-  }
 
   return (
     <>

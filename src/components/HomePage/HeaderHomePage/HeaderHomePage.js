@@ -22,8 +22,7 @@ const HeaderHomePage = () => {
         <nav>
           <ul>
             <li>
-              <Link href={`/api/register`}>
-                Register{" "}
+              <Link href={`/api/register`} data-tooltip="Register">
                 <FontAwesomeIcon
                   icon={faUserPlus}
                   className={`${styles.icon}`}
@@ -32,8 +31,7 @@ const HeaderHomePage = () => {
             </li>
             <li>
               {/* <Link href={`/api/auth/signin`}> */}
-              <Link href={`/api/login`}>
-                Login{" "}
+              <Link href={`/api/login`} data-tooltip="Login">
                 <FontAwesomeIcon
                   icon={faRightToBracket}
                   className={`${styles.icon}`}
