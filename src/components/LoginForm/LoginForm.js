@@ -21,11 +21,17 @@ const LoginForm = () => {
       redirect: false, //Per non andare sulla pagina di Login fatta di Next
     }).then((callback) => {
       if (callback?.error) {
-        toast.error(callback.error);
+        toast.error(callback.error, {
+          id: "Messages",
+          style: { marginTop: "90px" },
+        });
       }
 
       if (callback?.ok && !callback?.error) {
-        toast.success("Login andato a buon fine!");
+        toast.success("Login andato a buon fine!", {
+          id: "Messages",
+          style: { marginTop: "90px" },
+        });
         // Redirection vers la page d'accueil après une connexion réussie
         router.push("/api/homepage");
         router.refresh();

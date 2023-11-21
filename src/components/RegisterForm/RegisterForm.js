@@ -20,12 +20,6 @@ const RegisterForm = () => {
   const handleSigninFormSubmit = async (e) => {
     e.preventDefault();
 
-    if (data.password !== data.confirmPassword) {
-      console.error("Les mots de passe ne correspondent pas.");
-      toast.error("Les mots de passe ne correspondent pas.");
-      return;
-    }
-
     try {
       const response = await fetch("/api/auth/register", {
         method: "POST",
@@ -33,25 +27,33 @@ const RegisterForm = () => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          name: data.nome,
-          surname: data.cognome,
+          name: data.name,
+          surname: data.surname,
           email: data.email,
           password: data.password,
+          confirmPassword: data.confirmPassword,
         }),
       });
 
+      //Per avere accesso ai messaggi di NextResponse lato server
+      const responseBody = await response.text();
+
       if (response.ok) {
-        toast.success("Registrazione andata a buon fine!");
+        toast.success(responseBody, {
+          id: "Messages",
+          style: { marginTop: "60px" },
+        });
         router.push("/api/login");
         router.refresh();
       } else {
-        // Gérer les cas d'erreur si nécessaire
-        console.error("Échec de l'inscription");
-        toast.error("Échec de l'inscription");
+        toast.error(responseBody, {
+          id: "Messages",
+          duration: 7000,
+          style: { marginTop: "60px" },
+        });
       }
-    } catch (erreur) {
-      console.error("Erreur lors de l'inscription :", erreur);
-      toast.error("Erreur lors de l'inscription");
+    } catch (err0r) {
+      toast.error(responseBody, { id: "ErrorGlobal" });
     }
   };
 
@@ -65,8 +67,8 @@ const RegisterForm = () => {
             type="text"
             name="name"
             placeholder="Name"
-            value={data.nome}
-            onChange={(e) => setData({ ...data, nome: e.target.value })}
+            value={data.name}
+            onChange={(e) => setData({ ...data, name: e.target.value })}
             autoFocus
             required
           />
@@ -74,8 +76,8 @@ const RegisterForm = () => {
             type="text"
             name="surname"
             placeholder="Surname"
-            value={data.cognome}
-            onChange={(e) => setData({ ...data, cognome: e.target.value })}
+            value={data.surname}
+            onChange={(e) => setData({ ...data, surname: e.target.value })}
             required
           />
           <input

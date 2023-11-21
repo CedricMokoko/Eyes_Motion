@@ -1,14 +1,19 @@
 import NextAuth from "next-auth/next";
 import prisma from "@/utils/prisma";
 import CredentialsProvider from "next-auth/providers/credentials";
+import GoogleProvider from "next-auth/providers/google";
 import * as bcrypt from "bcrypt";
 
 export const authOptions = {
   providers: [
+    GoogleProvider({
+      clientId: process.env.GOOGLE_ID,
+      clientSecret: process.env.GOOGLE_SECRET,
+    }),
+
     CredentialsProvider({
       name: "Eyes Motion",
       credentials: {
-        name: { label: "Name", type: "text", placeholder: "sed" },
         email: { label: "Email", type: "text", placeholder: "sed@gmail.com" },
         password: {
           label: "Password",
@@ -32,7 +37,7 @@ export const authOptions = {
         /* user?.hashedPassword serve in caso di login con Google o GitHub in cui
         la user?.hashedPassword non è indispensabile*/
         if (!user || !user?.password) {
-          throw new Error("No user found");
+          throw new Error("Incorrect email and/or password");
         }
         // Ora controllo se la password coincide con l'email
         const passwordMatch = await bcrypt.compare(
