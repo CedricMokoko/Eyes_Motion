@@ -4,9 +4,6 @@ import styles from "./MobileNav.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faUser,
-  faVideo,
-  faTv,
-  faPlus,
   faMagnifyingGlass,
   faHouse,
 } from "@fortawesome/free-solid-svg-icons";
@@ -42,7 +39,7 @@ const MobileNav = () => {
                     icon={faUser}
                     className={`${styles.iconUser}`}
                   />
-                  | {session.user.name}
+                  {/* | {session.user.name} */}
                 </Link>
               </li>
             </ul>

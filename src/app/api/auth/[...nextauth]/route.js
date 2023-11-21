@@ -2,10 +2,15 @@ import NextAuth from "next-auth/next";
 import prisma from "@/utils/prisma";
 import CredentialsProvider from "next-auth/providers/credentials";
 import GoogleProvider from "next-auth/providers/google";
+import GithubProvider from "next-auth/providers/github";
 import * as bcrypt from "bcrypt";
 
 export const authOptions = {
   providers: [
+    GithubProvider({
+      clientId: process.env.GITHUB_ID,
+      clientSecret: process.env.GITHUB_SECRET,
+    }),
     GoogleProvider({
       clientId: process.env.GOOGLE_ID,
       clientSecret: process.env.GOOGLE_SECRET,
@@ -21,8 +26,7 @@ export const authOptions = {
           placeholder: "********",
         },
       },
-      /* E' qui dentro a questa function che si gestisce il form di login cioè
-       controlliamo se l'email e la password son bien present dans notre DB*/
+      /*In questa funzione vado a validare ho meno i formulario di login*/
       async authorize(credentials) {
         //Controllo che i campi non siano vuoti
         if (!credentials.email || !credentials.password) {
@@ -34,8 +38,7 @@ export const authOptions = {
             email: credentials.email,
           },
         });
-        /* user?.hashedPassword serve in caso di login con Google o GitHub in cui
-        la user?.hashedPassword non è indispensabile*/
+
         if (!user || !user?.password) {
           throw new Error("Incorrect email and/or password");
         }

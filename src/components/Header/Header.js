@@ -11,72 +11,82 @@ import {
   faHouse,
 } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
+import { toast } from "react-hot-toast";
+import { useEffect, useState } from "react";
 
 const Header = () => {
   const { data: session, status } = useSession();
-  if (status === "authenticated") {
-    return (
-      <header className={`${styles.header}`}>
-        <div className={`${styles.logo}`}>
-          <h2>
-            <Link href={`/api/homepage`}>
-              Eyes<small>_Motion</small>
-            </Link>
-          </h2>
-        </div>
-        <div className={`${styles.navigation}`}>
-          <nav>
-            <ul>
-              <li>
-                <Link href={`/api/homepage`}>
-                  <FontAwesomeIcon
-                    icon={faHouse}
-                    className={`${styles.icon}`}
-                  />
-                  HOME
-                </Link>
-              </li>
-              <li>
-                <Link href={`/allmovies`}>
-                  <FontAwesomeIcon
-                    icon={faMagnifyingGlass}
-                    className={`${styles.icon}`}
-                  />
-                  CERCA
-                </Link>
-              </li>
-              <li>
-                <Link href={`/user/profile`}>
-                  <FontAwesomeIcon icon={faPlus} className={`${styles.icon}`} />
-                  LA TUA LISTA
-                </Link>
-              </li>
-              <li>
-                <Link href={`/serie`}>
-                  <FontAwesomeIcon icon={faTv} className={`${styles.icon}`} />
-                  SERIE{" "}
-                </Link>
-              </li>
-              <li>
-                <Link href={`/movies`}>
-                  <FontAwesomeIcon
-                    icon={faVideo}
-                    className={`${styles.icon}`}
-                  />
-                  FILM
-                </Link>
-              </li>
-            </ul>
-          </nav>
-        </div>
-        <div className={`${styles.user}`}>
-          <Link href={`/user/profile`}>
-            {session.user.name}
-            <FontAwesomeIcon icon={faUser} className={`${styles.iconUser}`} />
+
+  const [hasShownWelcomeToast, setHasShownWelcomeToast] = useState(false);
+
+  useEffect(() => {
+    if (status === "authenticated" && !hasShownWelcomeToast) {
+      // Mostra un toast solo se l'utente è autenticato e il toast non è stato ancora mostrato
+      toast.success(`Hi, ${session.user.name}!`, {
+        id: "Messages",
+        style: { marginTop: "90px" },
+      });
+
+      // Imposta la variabile di stato per indicare che il toast è stato mostrato
+      setHasShownWelcomeToast(true);
+    }
+  }, [status, session, hasShownWelcomeToast]);
+
+  return (
+    <header className={`${styles.header}`}>
+      <div className={`${styles.logo}`}>
+        <h2>
+          <Link href={`/api/homepage`}>
+            Eyes<small>_Motion</small>
           </Link>
-        </div>
-      </header>
-    );
-  }
+        </h2>
+      </div>
+      <div className={`${styles.navigation}`}>
+        <nav>
+          <ul>
+            <li>
+              <Link href={`/api/homepage`}>
+                <FontAwesomeIcon icon={faHouse} className={`${styles.icon}`} />
+                HOME
+              </Link>
+            </li>
+            <li>
+              <Link href={`/allmovies`}>
+                <FontAwesomeIcon
+                  icon={faMagnifyingGlass}
+                  className={`${styles.icon}`}
+                />
+                CERCA
+              </Link>
+            </li>
+            <li>
+              <Link href={`/user/profile`}>
+                <FontAwesomeIcon icon={faPlus} className={`${styles.icon}`} />
+                LA TUA LISTA
+              </Link>
+            </li>
+            <li>
+              <Link href={`/serie`}>
+                <FontAwesomeIcon icon={faTv} className={`${styles.icon}`} />
+                SERIE{" "}
+              </Link>
+            </li>
+            <li>
+              <Link href={`/movies`}>
+                <FontAwesomeIcon icon={faVideo} className={`${styles.icon}`} />
+                FILM
+              </Link>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div className={`${styles.user}`}>
+        <Link href={`/user/profile`}>
+          {session?.user?.name}
+          <FontAwesomeIcon icon={faUser} className={`${styles.iconUser}`} />
+        </Link>
+      </div>
+    </header>
+  );
 };
 export default Header;

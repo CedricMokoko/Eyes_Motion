@@ -16,12 +16,32 @@ model User{
   name String ? 
   surname String?
   password String
-  movieLikes MovieLike[]
+  accounts Account[] //Relazione one-to-many con Account
+  movieLikes MovieLike[] //Relazione one-to-many con MovieLike
+}
+
+model Account {
+  id        Int       @id @default(autoincrement())
+  provider  String    // Provider di autenticazione (es. google, github, credentials)
+  providerAccountId String   // ID univoco fornito dal provider
+  userId    Int       // Chiave esterna per collegare l'account a un utente
+  createdAt DateTime  @default(now())
+  refresh_token String?
+  access_token  String?
+  expires_at    DateTime?
+  token_type    String?
+  scope         String?
+  id_token      String?
+  session_state String?
+
+  user User @relation(fields: [userId], references: [id])
+   
 }
 
 model MovieLike{
   id Int @id @default(autoincrement())
-  movieId String 
-  user User @relation(fields: [userId], references: [id])
   userId Int
+  movieId String 
+
+  user User @relation(fields: [userId], references: [id])
 }

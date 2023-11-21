@@ -16,11 +16,11 @@
     background: transparent;
     border-radius: 6px;
     padding: 20px;
-    @include xs {
-      width: 75vw;
-    }
     @include sm {
-      width: 40vw;
+      width: 230px;
+    }
+    @include xs {
+      width: 210px;
     }
     h2 {
       text-align: center;

@@ -30,7 +30,6 @@ const HeaderHomePage = () => {
               </Link>
             </li>
             <li>
-              {/* <Link href={`/api/auth/signin`}> */}
               <Link href={`/api/login`} data-tooltip="Login">
                 <FontAwesomeIcon
                   icon={faRightToBracket}
