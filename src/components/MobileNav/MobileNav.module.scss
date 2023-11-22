@@ -23,6 +23,7 @@
   }
   @include sm-lt {
     display: flex;
+    height: 60px;
   }
   .navigation {
     nav {

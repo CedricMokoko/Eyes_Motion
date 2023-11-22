@@ -26,7 +26,7 @@ const Header = () => {
       // Mostra un toast solo se l'utente è autenticato e il toast non è stato ancora mostrato
       toast.success(`Hi, ${session.user.name}!`, {
         id: "Messages",
-        style: { marginTop: "90px" },
+        style: { marginTop: "80px" },
       });
       // Imposta la variabile di stato per indicare che il toast è stato mostrato
       setHasShownWelcomeToast(true);
@@ -35,7 +35,7 @@ const Header = () => {
 
   return (
     <>
-      {status === "authenticated" ? (
+      {session ? (
         <header className={`${styles.header}`}>
           <div className={`${styles.logo}`}>
             <h2>
@@ -58,7 +58,7 @@ const Header = () => {
                   </Link>
                 </li>
                 <li className={`${styles.word}`}>
-                  <Link href={`/allmovies`}>
+                  <Link href={`/search`}>
                     <FontAwesomeIcon
                       icon={faMagnifyingGlass}
                       className={`${styles.icon}`}
@@ -67,7 +67,7 @@ const Header = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link href={`/user/profile`}>
+                  <Link href={`/`}>
                     <FontAwesomeIcon
                       icon={faPlus}
                       className={`${styles.icon}`}
@@ -76,7 +76,7 @@ const Header = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link href={`/serie`}>
+                  <Link href={`/series`}>
                     <FontAwesomeIcon icon={faTv} className={`${styles.icon}`} />
                     SERIE{" "}
                   </Link>
@@ -94,7 +94,7 @@ const Header = () => {
             </nav>
           </div>
           <div className={`${styles.user}`}>
-            <Link href={`/user/profile`}>
+            <Link href={`/`}>
               {session?.user?.name}
               <FontAwesomeIcon icon={faUser} className={`${styles.iconUser}`} />
             </Link>

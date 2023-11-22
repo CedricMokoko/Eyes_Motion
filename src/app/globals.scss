@@ -1,15 +1,17 @@
 @import "variables";
-
-/*@use "./mixins_media_queries" as mixin;
+@import "mixins_media_queries";
 
 html {
-  @include mixin.lg-lt {
+  @include lg-lt {
     font-size: 87.5%;
   }
-  @include mixin.md-lt {
+  @include md-lt {
     font-size: 81.25%;
   }
-}*/
+  @include sm-lt {
+    font-size: 65%;
+  }
+}
 
 body {
   margin: 0;

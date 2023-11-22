@@ -2,12 +2,10 @@
 import { toast } from "react-hot-toast";
 import styles from "./LoginForm.module.scss";
 import { useRouter } from "next/navigation";
-// import HeaderHomePage from "../Header/HeaderHomePage/HeaderHomePage";
 import { signIn, useSession } from "next-auth/react";
 import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGoogle, faGithub } from "@fortawesome/free-brands-svg-icons";
-import Header from "../../Header/Header";
 
 const LoginForm = () => {
   const { data: session, status } = useSession();
@@ -81,14 +79,12 @@ const LoginForm = () => {
               required
             />
             <input type="submit" value="Sign in" />
-
             <p>Or</p>
             <div className={`${styles.containerBtnLogin}`}>
               <button onClick={handleGithubLogin}>
                 <FontAwesomeIcon icon={faGithub} className={`${styles.icon}`} />
                 <h4>Sign in with Github</h4>
               </button>
-
               <button onClick={handleGoogleLogin}>
                 <FontAwesomeIcon icon={faGoogle} className={`${styles.icon}`} />
                 <h4>Sign in with Google</h4>
