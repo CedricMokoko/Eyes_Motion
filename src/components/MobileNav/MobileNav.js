@@ -18,7 +18,7 @@ const MobileNav = () => {
           <nav>
             <ul>
               <li>
-                <Link href={`/api/homepage`}>
+                <Link href={`/`}>
                   <FontAwesomeIcon
                     icon={faHouse}
                     className={`${styles.icon}`}

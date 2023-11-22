@@ -6,7 +6,7 @@ const SignOutButton = () => {
     <div>
       <button
         style={{ cursor: "pointer" }}
-        onClick={() => signOut({ callbackUrl: "/api/login" })}
+        onClick={() => signOut({ callbackUrl: "/login" })}
       >
         Log out
       </button>

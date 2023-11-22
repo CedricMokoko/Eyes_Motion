@@ -1,8 +1,10 @@
 import "./globals.scss";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { cormorant_Garamond, caveat } from "@/fonts";
-import AuthProvider from "../context/AuthProvider";
-import ToasterContext from "../context/ToasterContext";
+import AuthProvider from "@/context/AuthProvider";
+import ToasterContext from "@/context/ToasterContext";
+import Header from "@/components/Header/Header";
+import MobileNav from "@/components/MobileNav/MobileNav";
 
 export const metadata = {
   title: "Create Next App",
@@ -15,7 +17,10 @@ export default function RootLayout({ children }) {
       <body className={`${cormorant_Garamond.variable} ${caveat.variable}`}>
         <AuthProvider>
           <ToasterContext />
-          {children}
+          <Header />
+          {/* QUI SI INSERISCONO LE MIE PAGE */}
+          <main>{children}</main>
+          <MobileNav />
         </AuthProvider>
       </body>
     </html>

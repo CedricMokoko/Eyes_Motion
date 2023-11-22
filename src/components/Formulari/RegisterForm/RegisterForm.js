@@ -3,7 +3,7 @@ import styles from "./RegisterForm.module.scss";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
-import HeaderHomePage from "../HomePage/HeaderHomePage/HeaderHomePage";
+// import HeaderHomePage from "../Header/HeaderHomePage/HeaderHomePage";
 import { toast } from "react-hot-toast";
 
 const RegisterForm = () => {
@@ -43,7 +43,7 @@ const RegisterForm = () => {
           id: "Messages",
           style: { marginTop: "60px" },
         });
-        router.push("/api/login");
+        router.push("/login");
         router.refresh();
       } else {
         toast.error(responseBody, {
@@ -59,7 +59,7 @@ const RegisterForm = () => {
 
   return (
     <>
-      <HeaderHomePage />
+      {/* <HeaderHomePage /> */}
       <div className={styles.signupForm}>
         <form onSubmit={handleSigninFormSubmit}>
           <h2>INSCRIPTION</h2>
