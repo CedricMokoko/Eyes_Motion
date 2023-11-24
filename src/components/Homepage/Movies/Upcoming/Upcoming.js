@@ -23,12 +23,6 @@ const Upcoming = async () => {
                     alt={movie.title}
                     fill
                   />
-                  <div className={`${styles.content}`}>
-                    <p className={styles.vote}>
-                      {" "}
-                      {movie.vote_average.toFixed(1)}
-                    </p>
-                  </div>
                 </div>
               </Link>
             </div>

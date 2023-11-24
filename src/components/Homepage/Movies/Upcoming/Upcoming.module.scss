@@ -82,25 +82,6 @@
               box-shadow: none;
             }
           }
-          .content {
-            .vote {
-              padding: 5px 10px;
-              position: absolute;
-              top: 6px;
-              right: 6px;
-              color: $whiteColor;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              border-radius: 50%;
-              background-color: $whiteColor;
-              color: black;
-              padding: 4px;
-              margin: 0;
-              font-weight: bolder;
-              font-size: 12px;
-            }
-          }
         }
       }
     }

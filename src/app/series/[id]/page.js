@@ -2,8 +2,8 @@ import React from "react";
 
 const SeriesIdPage = ({ params }) => {
   return (
-    <div>
-      <h1>Serie with Id: {params}</h1>
+    <div className="page">
+      <h1>Serie with Id: {params.id} </h1>
     </div>
   );
 };

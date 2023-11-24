@@ -26,7 +26,7 @@ const Header = () => {
       // Mostra un toast solo se l'utente è autenticato e il toast non è stato ancora mostrato
       toast.success(`Hi, ${session.user.name}!`, {
         id: "Messages",
-        style: { marginTop: "80px" },
+        style: { marginTop: "5px", marginRight: "900px" },
       });
       // Imposta la variabile di stato per indicare che il toast è stato mostrato
       setHasShownWelcomeToast(true);
@@ -67,7 +67,7 @@ const Header = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link href={`/`}>
+                  <Link href={`/user`}>
                     <FontAwesomeIcon
                       icon={faPlus}
                       className={`${styles.icon}`}
@@ -94,7 +94,7 @@ const Header = () => {
             </nav>
           </div>
           <div className={`${styles.user}`}>
-            <Link href={`/`}>
+            <Link href={`/user`}>
               {session?.user?.name}
               <FontAwesomeIcon icon={faUser} className={`${styles.iconUser}`} />
             </Link>

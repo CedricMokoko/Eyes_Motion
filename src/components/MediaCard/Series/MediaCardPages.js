@@ -1,11 +1,9 @@
 import React from "react";
 import Image from "next/image";
-import styles from "./MediaCard.module.scss";
+import styles from "./MediaCardPages.module.scss";
 import Link from "next/link";
 
-const MediaCard = ({ media }) => {
-  const formattedVoteAverage = media.vote_average.toFixed(1);
-
+const MediaCardPages = ({ media }) => {
   return (
     <div className={`${styles.card}`}>
       <Link href={`/contents/${media.id}`}>
@@ -20,4 +18,4 @@ const MediaCard = ({ media }) => {
     </div>
   );
 };
-export default MediaCard;
+export default MediaCardPages;

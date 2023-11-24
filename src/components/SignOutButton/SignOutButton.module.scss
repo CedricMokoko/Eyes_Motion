@@ -1,0 +1,54 @@
+@import "variables";
+@import "mixins_media_queries";
+
+.container {
+  position: fixed;
+  right: 0;
+  bottom: 10px;
+}
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 30px;
+  font-family: var(--font-cormorant);
+  border-radius: 5px;
+  font-weight: bolder;
+  border: none;
+  background-color: $whiteColor;
+  color: $goldColor;
+  font-size: 12px;
+  padding: 10px;
+  cursor: pointer;
+  transition: opacity 0.2s, color 0.2s;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  &:hover {
+    opacity: 0.7;
+    padding: 10px;
+    background-color: $goldColor;
+    color: $whiteColor;
+  }
+
+  .icon {
+    transform: rotate(180deg);
+    margin-left: 13px;
+  }
+}
+.button[data-tooltip] {
+  text-decoration: none;
+  position: relative;
+  &:hover {
+    &::before {
+      content: attr(data-tooltip);
+      position: absolute;
+      background: transparent;
+      color: white;
+      font-size: 18px;
+      top: -100%;
+      left: -70%;
+      transform: translateX(-50%);
+      white-space: nowrap;
+    }
+  }
+}

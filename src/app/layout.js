@@ -18,7 +18,6 @@ export default function RootLayout({ children }) {
         <AuthProvider>
           <ToasterContext />
           <Header />
-          {/* QUI SI INSERISCONO LE MIE PAGE */}
           <main>{children}</main>
           <MobileNav />
         </AuthProvider>
