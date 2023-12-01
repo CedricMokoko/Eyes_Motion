@@ -9,10 +9,9 @@ const MovieSearch = () => {
   const [movieResults, setMovieResults] = useState([]);
 
   const updateMovieSearch = async (query) => {
-    const response = await fetch(`/api/allmovies/search?query=${query}`);
+    const response = await fetch(`/api/auth/contents/search?query=${query}`);
     const { results } = await response.json();
     setMovieResults(results.filter((movie) => movie.poster_path));
-    //console.log(results);
   };
 
   return (
@@ -26,14 +25,14 @@ const MovieSearch = () => {
           placeholder="Cerca..."
           autoFocus
         />
+        {movieResults.length > 0 ? (
+          <MovieSearchResults movieResults={movieResults} />
+        ) : (
+          <p className={`${styles.info}`}>
+            Digitare il nome del film o della serie che stai cercando.
+          </p>
+        )}
       </div>
-      {movieResults.length > 0 ? (
-        <MovieSearchResults movieResults={movieResults} />
-      ) : (
-        <p className={`${styles.info}`}>
-          Digitare il nome del film o della serie che stai cercando.
-        </p>
-      )}
     </>
   );
 };

@@ -5,6 +5,7 @@ import AuthProvider from "@/context/AuthProvider";
 import ToasterContext from "@/context/ToasterContext";
 import Header from "@/components/Header/Header";
 import MobileNav from "@/components/MobileNav/MobileNav";
+import { Suspense } from "react";
 
 export const metadata = {
   title: "Create Next App",

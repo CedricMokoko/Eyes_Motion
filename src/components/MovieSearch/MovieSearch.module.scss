@@ -1,16 +1,19 @@
 @import "variables";
 
-.searchBar {
-  position: sticky;
-  top: 120px;
-  z-index: 2;
+.searchContainer {
   display: flex;
-  align-items: flex-start;
-  flex-direction: row;
+  position: relative;
+  flex-direction: column;
+}
+.searchBar {
+  position: fixed;
+  top: 90px;
+  left: 0;
+  right: 0;
+  z-index: 2;
   background: linear-gradient(to right, #262424, #3b3838);
   padding: 0 30px;
   height: 60px;
-  width: 100%;
   min-width: 260px;
   color: $whiteColor;
   font-family: var(--font-cormorant);
@@ -26,9 +29,12 @@
 }
 
 .info {
-  color: $goldColor;
+  position: fixed;
+  top: 50%;
+  left: 0;
+  right: 0;
   text-align: center;
-  margin-top: 250px;
+  color: $goldColor;
   font-weight: 700;
   font-size: 20px;
 }

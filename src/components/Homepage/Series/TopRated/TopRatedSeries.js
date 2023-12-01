@@ -16,7 +16,7 @@ const TopRatedSeries = async () => {
         {topRatedSeries.map((movie) => (
           <div key={movie.id} className={`${styles.cardContainer}`}>
             <div className={`${styles.card}`}>
-              <Link href={`/movies/${movie.id}`}>
+              <Link href={`/contents/${movie.id}`}>
                 <div className={`${styles.image}`}>
                   <Image
                     src={`${process.env.NEXT_PUBLIC_TMDB_IMAGE_BASE_PATH}/w500${movie.poster_path}`}

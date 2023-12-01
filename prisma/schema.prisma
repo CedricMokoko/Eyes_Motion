@@ -35,9 +35,14 @@ model Account {
   session_state String?
 
   user User @relation(fields: [userId], references: [id])
-   
-}
 
+  @@index([userId], name: "idx_userId")
+  @@map("accounts") // Optional: Specify a custom name for the database table
+  @@unique([provider, providerAccountId], name: "idx_provider_providerAccountId")
+  @@unique([userId, provider], name: "idx_userId_provider")
+  @@unique([userId, providerAccountId], name: "idx_userId_providerAccountId")
+  @@unique([providerAccountId], name: "idx_providerAccountId")
+}
 model MovieLike{
   id Int @id @default(autoincrement())
   userId Int

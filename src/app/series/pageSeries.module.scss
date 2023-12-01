@@ -9,7 +9,7 @@
   align-items: center;
   h2 {
     position: fixed;
-    top: 20%;
+    top: 120px;
     left: 30px;
     color: $goldColor;
     @include sm-lt {
@@ -21,9 +21,9 @@
     flex-direction: row;
     flex-wrap: wrap;
     align-self: center;
-    gap: 15px;
-    width: 80%;
-    margin: 107px 200px 100px 200px;
+    gap: 14px;
+    width: 65%;
+    margin: 120px auto 18px;
     @include sm-lt {
       gap: 7.5px;
     }

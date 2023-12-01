@@ -10,16 +10,13 @@ const MovieSearchResults = ({ movieResults }) => {
       <div className={`${styles.searchResults}`}>
         {movieResults.map((movie) => (
           <div key={movie.id} className={`${styles.card}`}>
-            <Link href={`/allmovies/${movie.id}`}>
+            <Link href={`/search/${movie.id}`}>
               <div className={`${styles.image}`}>
                 <Image
                   fill
                   src={`${process.env.NEXT_PUBLIC_TMDB_IMAGE_BASE_PATH}/w500${movie.poster_path}`}
                   alt={movie.title}
-                />{" "}
-                <div className={`${styles.content}`}>
-                  <p className={styles.vote}>{movie.vote_average.toFixed(1)}</p>
-                </div>
+                />
               </div>
             </Link>
           </div>
