@@ -18,14 +18,12 @@
       justify-content: left;
       gap: 30px;
     }
-
     &::-webkit-scrollbar {
       height: 0px;
     }
     &::-webkit-scrollbar-track {
       background: transparent;
     }
-
     //DIV CARD CONTAINER
     .cardContainer {
       padding: 30px 0;
@@ -43,7 +41,6 @@
           margin-right: 12px;
         }
       }
-
       .card {
         margin-top: 70px;
         font-family: var(--font-montserrat-);

@@ -25,7 +25,6 @@ export const authOptions = {
           placeholder: "Votre mot de passe",
         },
       },
-
       /*In questa funzione vado a convalidare ho meno il formulario di login*/
       async authorize(credentials) {
         // Controllo che i campi non siano vuoti

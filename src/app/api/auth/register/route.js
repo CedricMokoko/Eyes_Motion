@@ -22,12 +22,10 @@ export async function POST(request) {
     if (!name || !surname || !email || !password || !confirmPassword) {
       return new NextResponse("Missing Fields", { status: 400 });
     }
-
     // Validation e-mail regex
     if (!isValidEmail(email)) {
       return new NextResponse("Invalid Email Format", { status: 400 });
     }
-
     // Validation password regex
     if (!isValidPassword(password)) {
       return new NextResponse(
@@ -35,23 +33,19 @@ export async function POST(request) {
         { status: 400 }
       );
     }
-
     // Si verifica che le password coincidano
     if (password !== confirmPassword) {
       return new NextResponse("Passwords do not match", { status: 400 });
     }
-
     // Si controlla se l'email digitata nel form register esiste digià nel DB
     const userExist = await prisma.user.findUnique({
       where: {
         email,
       },
     });
-
     if (userExist) {
       return new NextResponse("Email already exists", { status: 400 });
     }
-
     // Creazione dello new user nel DB
     const user = await prisma.user.create({
       data: {
@@ -61,7 +55,6 @@ export async function POST(request) {
         password: await bcrypt.hash(body.password, 10),
       },
     });
-
     // Risposta di successo
     return new NextResponse("Registration successful", {
       status: 201,

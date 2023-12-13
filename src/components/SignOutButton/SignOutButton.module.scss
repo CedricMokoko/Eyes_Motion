@@ -5,6 +5,10 @@
   position: fixed;
   right: 0;
   bottom: 10px;
+  @include sm-lt {
+    right: 0;
+    bottom: 80px;
+  }
 }
 .button {
   display: flex;
@@ -23,13 +27,17 @@
   transition: opacity 0.2s, color 0.2s;
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
+  @include sm-lt {
+    h2 {
+      display: none;
+    }
+  }
   &:hover {
     opacity: 0.7;
     padding: 10px;
     background-color: $goldColor;
     color: $whiteColor;
   }
-
   .icon {
     transform: rotate(180deg);
     margin-left: 13px;

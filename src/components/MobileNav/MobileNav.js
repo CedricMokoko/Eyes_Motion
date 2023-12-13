@@ -5,7 +5,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faUser,
   faMagnifyingGlass,
+  faTv,
   faHouse,
+  faVideo,
 } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 
@@ -18,7 +20,7 @@ const MobileNav = () => {
           <nav>
             <ul>
               <li>
-                <Link href={`/`}>
+                <Link href={`/homepage`}>
                   <FontAwesomeIcon
                     icon={faHouse}
                     className={`${styles.icon}`}
@@ -26,7 +28,7 @@ const MobileNav = () => {
                 </Link>
               </li>
               <li>
-                <Link href={`/allmovies`}>
+                <Link href={`/search`}>
                   <FontAwesomeIcon
                     icon={faMagnifyingGlass}
                     className={`${styles.icon}`}
@@ -34,12 +36,25 @@ const MobileNav = () => {
                 </Link>
               </li>
               <li>
-                <Link href={`/user/profile`}>
+                <Link href={`/user`}>
                   <FontAwesomeIcon
                     icon={faUser}
                     className={`${styles.iconUser}`}
                   />
                   {/* | {session.user.name} */}
+                </Link>
+              </li>
+              <li>
+                <Link href={`/series`}>
+                  <FontAwesomeIcon icon={faTv} className={`${styles.icon}`} />
+                </Link>
+              </li>
+              <li>
+                <Link href={`/movies`}>
+                  <FontAwesomeIcon
+                    icon={faVideo}
+                    className={`${styles.icon}`}
+                  />
                 </Link>
               </li>
             </ul>

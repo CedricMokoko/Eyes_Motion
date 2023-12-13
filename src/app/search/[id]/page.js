@@ -1,10 +1,47 @@
-import React from "react";
+import React, { Suspense } from "react";
+import { notFound } from "next/navigation";
+import { getServerSession } from "next-auth";
+import { authOptions } from "../../api/auth/[...nextauth]/route";
+import { redirect } from "next/navigation";
+import MovieDetails from "@/components/ContentsDetails/MovieDetails/MovieDetails";
+import SimilarMovies from "@/components/ContentsDetails/SimilarMovies/SimilarMovies";
+import SeriesDetails from "@/components/ContentsDetails/SeriesDetails/SeriesDetails";
+import SimilarSeries from "@/components/ContentsDetails/SimilarSeries/SimilarSeries";
+import { getMovieByPath } from "@/utils/movieClient";
 
-const SearchIdPage = ({ params }) => {
-  return (
-    <div>
-      <h1>Movie Found with Id: {params}</h1>
-    </div>
-  );
+export const revalidate = 3600;
+
+const SearchIdPage = async ({ params: { id } }) => {
+  const session = await getServerSession(authOptions);
+  const multiSeries = await getMovieByPath(`/tv/${id}`, []);
+  const multiMovie = await getMovieByPath(`/movie/${id}`, []);
+  if (!session) {
+    redirect("/login");
+  }
+  if (session) {
+    // if (!multiMovie.original_title) {
+    //   return notFound();
+    // }
+    if (multiSeries.id) {
+      return (
+        <div>
+          <SeriesDetails series={multiSeries} />
+          <Suspense fallback={<p>Chargement ...</p>}>
+            <SimilarSeries seriesId={multiSeries.id} />
+          </Suspense>
+        </div>
+      );
+    }
+    if (multiMovie.id) {
+      return (
+        <div>
+          <MovieDetails movie={multiMovie} />
+          <Suspense fallback={<p>Chargement ...</p>}>
+            <SimilarMovies movieId={multiMovie.id} />
+          </Suspense>
+        </div>
+      );
+    }
+  }
 };
 export default SearchIdPage;

@@ -6,10 +6,11 @@ import { redirect } from "next/navigation";
 
 const userHomepage = async () => {
   const session = await getServerSession(authOptions);
+  if (!session) {
+    redirect("/login");
+  }
   if (session) {
     return <Homepage />;
-  } else {
-    redirect("/login");
   }
 };
 export default userHomepage;

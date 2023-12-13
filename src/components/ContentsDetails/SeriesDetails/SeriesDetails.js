@@ -10,7 +10,7 @@ const SeriesDetails = ({ series }) => {
       <div className={styles.background}>
         <Image
           src={`${process.env.NEXT_PUBLIC_TMDB_IMAGE_BASE_PATH}/original${series.backdrop_path}`}
-          alt={series.title}
+          alt={series.name}
           fill
         />
       </div>
@@ -19,13 +19,14 @@ const SeriesDetails = ({ series }) => {
           src={`${process.env.NEXT_PUBLIC_TMDB_IMAGE_BASE_PATH}/w342${series.poster_path}`}
           width={250}
           height={400}
-          alt={series.title}
+          alt={series.name}
         />
         <div className={styles.description}>
           <h1>
-            {series.title}{" "}
+            {series.name}{" "}
             <span className={styles.releaseDate}>
-              ({new Date(series.release_date).toLocaleDateString("fr-FR")})
+              ( {new Date(series.first_air_date).toLocaleDateString("fr-FR")} -{" "}
+              {new Date(series.last_air_date).toLocaleDateString("fr-FR")} )
             </span>
           </h1>
           <p className={styles.production}>
@@ -39,9 +40,9 @@ const SeriesDetails = ({ series }) => {
           <h2>Synopsis</h2>
           <p className={styles.overview}>{series.overview}</p>
           <div className={styles.credits}>
-            {/* <Suspense fallback={<p>Chargement ...</p>}> */}
-            <SeriesCredits seriesId={series.id} />
-            {/* </Suspense> */}
+            <Suspense fallback={<p>Chargement ...</p>}>
+              <SeriesCredits seriesId={series.id} />
+            </Suspense>
           </div>
         </div>
       </div>

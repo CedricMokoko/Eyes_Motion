@@ -1,6 +1,6 @@
 import { getMovieByPath } from "@/utils/movieClient";
 import React from "react";
-import MediaCard from "../../../MediaCard/MediaCard";
+import MediaCard from "../../../MediaCard/Homepage/MediaCardHomepage";
 import styles from "./NowPlaying.module.scss";
 
 const NowPlaying = async () => {

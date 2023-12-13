@@ -14,7 +14,6 @@
       margin: 0 0 5px 7px;
     }
   }
-
   .content {
     display: flex;
     flex-direction: row;
@@ -31,7 +30,6 @@
     @include sm-lt {
       gap: 7.5px;
     }
-
     //DIV CARD CONTAINER
     .cardContainer {
       margin: 0 0 20px 0;

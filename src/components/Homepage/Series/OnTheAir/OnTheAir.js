@@ -1,6 +1,5 @@
 import { getMovieByPath } from "@/utils/movieClient";
 import React from "react";
-//import MediaCard from "../../MediaCard/MediaCard";
 import styles from "./OnTheAir.module.scss";
 import Link from "next/link";
 import Image from "next/image";
@@ -16,7 +15,7 @@ const OnTheAir = async () => {
         {onTheAir.map((movie) => (
           <div key={movie.id} className={`${styles.cardContainer}`}>
             <div className={`${styles.card}`}>
-              <Link href={`/contents/${movie.id}`}>
+              <Link href={`/search/${movie.id}`}>
                 <div className={`${styles.image}`}>
                   <Image
                     src={`${process.env.NEXT_PUBLIC_TMDB_IMAGE_BASE_PATH}/w500${movie.poster_path}`}

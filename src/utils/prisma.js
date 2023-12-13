@@ -10,11 +10,10 @@ if (process.env.NODE_ENV !== "production") {
 }
 export default prisma;
 
-//E donc per le chiamate al data base abbiamo:
+/*  E donc per le chiamate al data base abbiamo:
 
-/**
- * prisma.user.findMany
- * prisma.user.findUnique
- * prisma.create
- * ecc...
+  prisma.user.findMany
+  prisma.user.findUnique
+  prisma.create
+  ecc...
  */

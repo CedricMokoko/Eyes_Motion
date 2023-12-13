@@ -57,5 +57,4 @@ const RegisterPage = async () => {
     </div>
   );
 };
-
 export default RegisterPage;

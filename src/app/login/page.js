@@ -57,5 +57,4 @@ const LoginFormPage = async () => {
     </div>
   );
 };
-
 export default LoginFormPage;

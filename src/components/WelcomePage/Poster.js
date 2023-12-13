@@ -74,5 +74,4 @@ const Poster = async () => {
     </div>
   );
 };
-
 export default Poster;

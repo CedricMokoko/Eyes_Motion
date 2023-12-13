@@ -1,12 +1,12 @@
 import React from "react";
 import Image from "next/image";
-import styles from "./MediaCardPages.module.scss";
+import styles from "./MediaCardHomepage.module.scss";
 import Link from "next/link";
 
-const MediaCardPages = ({ media }) => {
+const MediaCard = ({ media }) => {
   return (
     <div className={`${styles.card}`}>
-      <Link href={`/contents/${media.id}`}>
+      <Link href={`/search/${media.id}`}>
         <div className={`${styles.image}`}>
           <Image
             src={`${process.env.NEXT_PUBLIC_TMDB_IMAGE_BASE_PATH}/w500${media.poster_path}`}
@@ -18,4 +18,4 @@ const MediaCardPages = ({ media }) => {
     </div>
   );
 };
-export default MediaCardPages;
+export default MediaCard;

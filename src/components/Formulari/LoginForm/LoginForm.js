@@ -35,7 +35,6 @@ const LoginForm = () => {
           style: { marginTop: "90px" },
         });
       }
-
       if (callback?.ok && !callback?.error) {
         router.push("/homepage");
         router.refresh();
@@ -94,5 +93,4 @@ const LoginForm = () => {
     );
   }
 };
-
 export default LoginForm;

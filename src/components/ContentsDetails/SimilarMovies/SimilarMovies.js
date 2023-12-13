@@ -7,6 +7,7 @@ const SimilarMovies = async ({ movieId }) => {
   const { results } = await getMovieByPath(`/movie/${movieId}/similar`, []);
   return (
     <div className={styles.similar}>
+      <h2>Similar movies...</h2>
       <div className={styles.list}>
         {results.slice(0, 10).map((movie) => (
           <MediaCardMovies media={movie} key={movie.id} />

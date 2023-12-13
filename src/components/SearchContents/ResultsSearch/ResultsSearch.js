@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./ResultsSearch.module.scss";
-import SearchCard from "@/components/MediaCardRefact/Search/SearchCard";
+import SearchCard from "@/components/MediaCard/Search/SearchCard";
 
 const ResultsSearch = ({ contentsResults }) => {
   return (

@@ -39,9 +39,9 @@ const MovieDetails = ({ movie }) => {
           <h2>Synopsis</h2>
           <p className={styles.overview}>{movie.overview}</p>
           <div className={styles.credits}>
-            {/* <Suspense fallback={<p>Chargement ...</p>}> */}
-            <MovieCredits movieId={movie.id} />
-            {/* </Suspense> */}
+            <Suspense fallback={<p>Chargement ...</p>}>
+              <MovieCredits movieId={movie.id} />
+            </Suspense>
           </div>
         </div>
       </div>

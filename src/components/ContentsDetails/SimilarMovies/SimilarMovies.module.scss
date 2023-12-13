@@ -1,12 +1,21 @@
+@import "variables";
+@import "mixins_media_queries";
+
 .similar {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  margin-top: 10px;
   overflow-x: hidden;
+  margin: 20px;
+  h2 {
+    color: $goldColor;
+    margin-bottom: 10px;
+  }
   .list {
-    width: 98%;
+    padding: 10px 0 20px 0;
+    width: 100%;
     display: flex;
-    gap: 20px;
+    gap: 10px;
     overflow-x: scroll;
     &::-webkit-scrollbar {
       height: 2px;
