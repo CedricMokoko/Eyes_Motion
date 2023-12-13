@@ -1,12 +1,14 @@
 "use client";
 import styles from "./RegisterForm.module.scss";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
-
-// import HeaderHomePage from "../Header/HeaderHomePage/HeaderHomePage";
+import { useSession } from "next-auth/react";
 import { toast } from "react-hot-toast";
 
 const RegisterForm = () => {
+  const { data: session, status } = useSession();
+  const router = useRouter();
+
   const [data, setData] = useState({
     name: "",
     surname: "",
@@ -14,12 +16,16 @@ const RegisterForm = () => {
     password: "",
     confirmPassword: "",
   });
-
-  const router = useRouter();
+  //Uno dei modi per proteggere la pagina utente logato
+  useEffect(() => {
+    if (status === "authenticated") {
+      router.push("/homepage");
+      router.refresh();
+    }
+  }, [status, router]);
 
   const handleSigninFormSubmit = async (e) => {
     e.preventDefault();
-
     try {
       const response = await fetch("/api/auth/register", {
         method: "POST",
@@ -34,10 +40,8 @@ const RegisterForm = () => {
           confirmPassword: data.confirmPassword,
         }),
       });
-
       //Per avere accesso ai messaggi di NextResponse lato server
       const responseBody = await response.text();
-
       if (response.ok) {
         toast.success(responseBody, {
           id: "Messages",
@@ -52,64 +56,61 @@ const RegisterForm = () => {
           style: { marginTop: "60px" },
         });
       }
-    } catch (err0r) {
+    } catch (error) {
       toast.error(responseBody, { id: "ErrorGlobal" });
     }
   };
 
   return (
-    <>
-      {/* <HeaderHomePage /> */}
-      <div className={styles.signupForm}>
-        <form onSubmit={handleSigninFormSubmit}>
-          <h2>INSCRIPTION</h2>
-          <input
-            type="text"
-            name="name"
-            placeholder="Name"
-            value={data.name}
-            onChange={(e) => setData({ ...data, name: e.target.value })}
-            autoFocus
-            required
-          />
-          <input
-            type="text"
-            name="surname"
-            placeholder="Surname"
-            value={data.surname}
-            onChange={(e) => setData({ ...data, surname: e.target.value })}
-            required
-          />
-          <input
-            type="text"
-            name="email"
-            placeholder="E-mail"
-            value={data.email}
-            onChange={(e) => setData({ ...data, email: e.target.value })}
-            required
-          />
-          <input
-            type="password"
-            name="password"
-            placeholder="Password"
-            value={data.password}
-            onChange={(e) => setData({ ...data, password: e.target.value })}
-            required
-          />
-          <input
-            type="password"
-            name="confirmPassword"
-            placeholder="Confirm Password"
-            value={data.confirmPassword}
-            onChange={(e) =>
-              setData({ ...data, confirmPassword: e.target.value })
-            }
-            required
-          />
-          <input type="submit" value="Submit" />
-        </form>
-      </div>
-    </>
+    <div className={styles.signupForm}>
+      <form onSubmit={handleSigninFormSubmit}>
+        <h2>INSCRIPTION</h2>
+        <input
+          type="text"
+          name="name"
+          placeholder="Name"
+          value={data.name}
+          onChange={(e) => setData({ ...data, name: e.target.value })}
+          autoFocus
+          required
+        />
+        <input
+          type="text"
+          name="surname"
+          placeholder="Surname"
+          value={data.surname}
+          onChange={(e) => setData({ ...data, surname: e.target.value })}
+          required
+        />
+        <input
+          type="text"
+          name="email"
+          placeholder="E-mail"
+          value={data.email}
+          onChange={(e) => setData({ ...data, email: e.target.value })}
+          required
+        />
+        <input
+          type="password"
+          name="password"
+          placeholder="Password"
+          value={data.password}
+          onChange={(e) => setData({ ...data, password: e.target.value })}
+          required
+        />
+        <input
+          type="password"
+          name="confirmPassword"
+          placeholder="Confirm Password"
+          value={data.confirmPassword}
+          onChange={(e) =>
+            setData({ ...data, confirmPassword: e.target.value })
+          }
+          required
+        />
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
   );
 };
 

@@ -7,7 +7,7 @@
   top: 0;
   right: 0;
   left: 0;
-  z-index: 3;
+  z-index: 4;
   font-family: var(--font-cormorant);
   font-weight: bolder;
   display: flex;
@@ -86,7 +86,7 @@
   top: 0;
   right: 0;
   left: 0;
-  z-index: 3;
+  z-index: 4;
   font-family: var(--font-cormorant);
   font-weight: bolder;
   display: flex;
@@ -95,7 +95,7 @@
   color: $whiteColor;
   padding: 0 30px;
   height: 90px;
-  background: radial-gradient(circle, #62829a, #34373f);
+  background: transparent;
   @include sm-lt {
     padding: 0 25px;
     height: 70px;

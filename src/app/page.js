@@ -1,13 +1,18 @@
+import WelcomePage from "@/components/WelcomePage/WelcomePage";
 import styles from "./page.module.scss";
-import Homepage from "@/components/Homepage/Homepage";
-//import { getServerSession } from "next-auth";
-//import { authOptions } from "./api/auth/[...nextauth]/route";
+import { getServerSession } from "next-auth";
+import { authOptions } from "./api/auth/[...nextauth]/route";
+import { redirect } from "next/navigation";
 
 export default async function Home() {
-  // const session = await getServerSession(authOptions);
-  return (
-    <div className={styles.main}>
-      <Homepage />
-    </div>
-  );
+  const session = await getServerSession(authOptions);
+  if (session) {
+    redirect("/homepage");
+  } else {
+    return (
+      <div className={styles.main}>
+        <WelcomePage />
+      </div>
+    );
+  }
 }

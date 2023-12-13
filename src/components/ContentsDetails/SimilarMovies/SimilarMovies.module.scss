@@ -1,0 +1,21 @@
+.similar {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  overflow-x: hidden;
+  .list {
+    width: 98%;
+    display: flex;
+    gap: 20px;
+    overflow-x: scroll;
+    &::-webkit-scrollbar {
+      height: 2px;
+    }
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    > div {
+      width: 200px;
+    }
+  }
+}

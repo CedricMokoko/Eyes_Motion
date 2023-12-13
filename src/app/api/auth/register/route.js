@@ -41,7 +41,7 @@ export async function POST(request) {
       return new NextResponse("Passwords do not match", { status: 400 });
     }
 
-    // Si controlla se l'email digitata nel form register non esisté digià nel DB
+    // Si controlla se l'email digitata nel form register esiste digià nel DB
     const userExist = await prisma.user.findUnique({
       where: {
         email,
@@ -52,15 +52,13 @@ export async function POST(request) {
       return new NextResponse("Email already exists", { status: 400 });
     }
 
-    const hashedPassword = await bcrypt.hash(password, 10);
-
     // Creazione dello new user nel DB
     const user = await prisma.user.create({
       data: {
         name,
         surname,
         email,
-        password: hashedPassword,
+        password: await bcrypt.hash(body.password, 10),
       },
     });
 

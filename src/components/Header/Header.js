@@ -1,5 +1,4 @@
 "use client";
-import { useSession } from "next-auth/react";
 import styles from "./Header.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -16,13 +15,11 @@ import Link from "next/link";
 import { toast } from "react-hot-toast";
 import { useEffect, useState } from "react";
 
-const Header = () => {
-  const { data: session, status } = useSession();
-
+const Header = ({ session }) => {
   const [hasShownWelcomeToast, setHasShownWelcomeToast] = useState(false);
 
   useEffect(() => {
-    if (status === "authenticated" && !hasShownWelcomeToast) {
+    if (session && !hasShownWelcomeToast) {
       // Mostra un toast solo se l'utente è autenticato e il toast non è stato ancora mostrato
       toast.success(`Hi, ${session.user.name}!`, {
         id: "Messages",
@@ -31,7 +28,7 @@ const Header = () => {
       // Imposta la variabile di stato per indicare che il toast è stato mostrato
       setHasShownWelcomeToast(true);
     }
-  }, [status, session, hasShownWelcomeToast]);
+  }, [session, hasShownWelcomeToast]);
 
   return (
     <>
@@ -39,17 +36,16 @@ const Header = () => {
         <header className={`${styles.header}`}>
           <div className={`${styles.logo}`}>
             <h2>
-              <Link href={`/`}>
+              <Link href={`/homepage`}>
                 Eyes<small>_Motion</small>
               </Link>
             </h2>
           </div>
-
           <div className={`${styles.navigation}`}>
             <nav>
               <ul>
                 <li>
-                  <Link href={`/`}>
+                  <Link href={`/homepage`}>
                     <FontAwesomeIcon
                       icon={faHouse}
                       className={`${styles.icon}`}
@@ -104,7 +100,9 @@ const Header = () => {
         <header className={`${styles.header2}`}>
           <div className={`${styles.logo}`}>
             <h2>
-              Eyes<small>_Motion</small>
+              <Link href={`/`}>
+                Eyes<small>_Motion</small>
+              </Link>
             </h2>
           </div>
           <div className={`${styles.navigation}`}>

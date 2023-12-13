@@ -7,7 +7,7 @@ import Image from "next/image";
 
 const BestSeller = async () => {
   const { results } = await getMovieByPath("/tv/top_rated");
-  const bestSeller = results.slice(7, 11);
+  const bestSeller = results.slice(8, 12);
 
   return (
     <div className={styles.container}>

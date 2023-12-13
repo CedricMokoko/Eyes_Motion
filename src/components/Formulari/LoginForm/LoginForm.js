@@ -9,21 +9,19 @@ import { faGoogle, faGithub } from "@fortawesome/free-brands-svg-icons";
 
 const LoginForm = () => {
   const { data: session, status } = useSession();
-
   const router = useRouter();
 
   const [data, setData] = useState({
     email: "",
     password: "",
   });
-
   //Uno dei modi per proteggere la pagina utente logato
   useEffect(() => {
     if (status === "authenticated") {
-      router.push("/");
+      router.push("/homepage");
       router.refresh();
     }
-  });
+  }, [status, router]);
 
   const handleLoginFormSubmit = async (e) => {
     e.preventDefault();
@@ -39,7 +37,7 @@ const LoginForm = () => {
       }
 
       if (callback?.ok && !callback?.error) {
-        router.push("/");
+        router.push("/homepage");
         router.refresh();
       }
     });

@@ -1,3 +1,31 @@
+// @import "variables";
+// @import "mixins_media_queries";
+
+// .container {
+//   position: fixed;
+//   top: 90px;
+//   left: 0;
+//   right: 0;
+//   bottom: 0;
+//   font-family: var(--font-cormorant);
+
+//   margin: 0 0 50px 50px;
+//   .content {
+//     margin-top: 20px;
+//     display: flex;
+//     justify-content: space-between;
+
+//     h1 {
+//       color: $whiteColor;
+//     }
+//   }
+//   h3 {
+//     margin-top: 17px;
+//     color: $goldColor;
+//     font-weight: 700;
+//   }
+// }
+
 @import "variables";
 @import "mixins_media_queries";
 
@@ -8,13 +36,11 @@
   right: 0;
   bottom: 0;
   font-family: var(--font-cormorant);
-
   margin: 0 0 50px 50px;
   .content {
     margin-top: 20px;
     display: flex;
     justify-content: space-between;
-
     h1 {
       color: $whiteColor;
     }
@@ -23,5 +49,12 @@
     margin-top: 17px;
     color: $goldColor;
     font-weight: 700;
+  }
+
+  .userName {
+    display: none;
+    @include sm-lt {
+      display: flex;
+    }
   }
 }

@@ -1,17 +1,16 @@
 "use client";
-
 import { useState } from "react";
 import { DebounceInput } from "react-debounce-input";
-import MovieSearchResults from "./MovieSearchResults/MovieSearchResults";
-import styles from "./MovieSearch.module.scss";
+import styles from "./InputSearchBar.module.scss";
+import ResultsSearch from "../ResultsSearch/ResultsSearch";
 
-const MovieSearch = () => {
-  const [movieResults, setMovieResults] = useState([]);
+const InputSearchBar = () => {
+  const [contentsResults, setContentsResults] = useState([]);
 
-  const updateMovieSearch = async (query) => {
+  const updateInputSearchBar = async (query) => {
     const response = await fetch(`/api/auth/contents/search?query=${query}`);
     const { results } = await response.json();
-    setMovieResults(results.filter((movie) => movie.poster_path));
+    setContentsResults(results.filter((multi) => multi.poster_path));
   };
 
   return (
@@ -21,12 +20,12 @@ const MovieSearch = () => {
           className={styles.searchBar}
           minLength={2}
           debounceTimeout={500}
-          onChange={(e) => updateMovieSearch(e.target.value)}
+          onChange={(e) => updateInputSearchBar(e.target.value)}
           placeholder="Cerca..."
           autoFocus
         />
-        {movieResults.length > 0 ? (
-          <MovieSearchResults movieResults={movieResults} />
+        {contentsResults.length > 0 ? (
+          <ResultsSearch contentsResults={contentsResults} />
         ) : (
           <p className={`${styles.info}`}>
             Digitare il nome del film o della serie che stai cercando.
@@ -36,5 +35,4 @@ const MovieSearch = () => {
     </>
   );
 };
-
-export default MovieSearch;
+export default InputSearchBar;

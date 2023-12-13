@@ -10,7 +10,7 @@ const SignOutButton = () => {
       <button
         data-tooltip="Are you sure you want to exit the application?"
         className={`${styles.button}`}
-        onClick={() => signOut({ callbackUrl: "/login" })}
+        onClick={() => signOut({ callbackUrl: "/" })}
       >
         <h2>Sign out</h2>
         <FontAwesomeIcon icon={faRightToBracket} className={`${styles.icon}`} />
