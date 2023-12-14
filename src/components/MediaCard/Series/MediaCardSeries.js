@@ -10,7 +10,7 @@ const MediaCardSeries = ({ media }) => {
         <div className={`${styles.image}`}>
           <Image
             src={`${process.env.NEXT_PUBLIC_TMDB_IMAGE_BASE_PATH}/w500${media.poster_path}`}
-            alt={media.title}
+            alt={media.name}
             fill
           />
         </div>

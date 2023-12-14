@@ -8,7 +8,7 @@ const SimilarSeries = async ({ seriesId }) => {
 
   return (
     <div className={styles.similar}>
-      <h2>Similar series...</h2>
+      <h3>Similar series...</h3>
       <div className={styles.list}>
         {results.slice(0, 10).map((serie) => (
           <MediaCardSeries media={serie} key={serie.id} />

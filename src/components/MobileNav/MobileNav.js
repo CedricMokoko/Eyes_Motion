@@ -35,15 +35,7 @@ const MobileNav = () => {
                   />
                 </Link>
               </li>
-              <li>
-                <Link href={`/user`}>
-                  <FontAwesomeIcon
-                    icon={faUser}
-                    className={`${styles.iconUser}`}
-                  />
-                  {/* | {session.user.name} */}
-                </Link>
-              </li>
+
               <li>
                 <Link href={`/series`}>
                   <FontAwesomeIcon icon={faTv} className={`${styles.icon}`} />
@@ -54,6 +46,14 @@ const MobileNav = () => {
                   <FontAwesomeIcon
                     icon={faVideo}
                     className={`${styles.icon}`}
+                  />
+                </Link>
+              </li>
+              <li>
+                <Link href={`/user`}>
+                  <FontAwesomeIcon
+                    icon={faUser}
+                    className={`${styles.iconUser}`}
                   />
                 </Link>
               </li>

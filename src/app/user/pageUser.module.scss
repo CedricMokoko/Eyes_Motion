@@ -9,26 +9,44 @@
   bottom: 0;
   font-family: var(--font-cormorant);
   margin: 0 0 50px 50px;
+  @include sm-lt {
+    margin: 0 0 20px 20px;
+    top: 60px;
+  }
   .content {
     margin-top: 20px;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     h1 {
       color: $whiteColor;
     }
-  }
-  h3 {
-    margin-top: 17px;
-    color: $goldColor;
-    font-weight: 700;
-  }
-  .userName {
-    display: none;
-    color: $whiteColor;
-    margin-right: 30px;
-    // display: flex;
-    @include sm-lt {
+    .contentUser {
       display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      .user {
+        display: none;
+        color: $whiteColor;
+        margin-right: 30px;
+        @include sm-lt {
+          display: flex;
+        }
+      }
+    }
+    .contentLiked {
+      @include sm-lt {
+        margin-top: 10px;
+      }
+      h3 {
+        margin-top: 17px;
+        color: $goldColor;
+        font-weight: 700;
+        @include sm-lt {
+          margin-top: 7px;
+        }
+      }
     }
   }
 }

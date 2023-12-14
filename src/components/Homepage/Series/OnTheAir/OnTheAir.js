@@ -19,7 +19,7 @@ const OnTheAir = async () => {
                 <div className={`${styles.image}`}>
                   <Image
                     src={`${process.env.NEXT_PUBLIC_TMDB_IMAGE_BASE_PATH}/w500${movie.poster_path}`}
-                    alt={movie.title}
+                    alt={movie.name}
                     fill
                   />
                   <div className={`${styles.content}`}>

@@ -4,7 +4,11 @@ import styles from "./Poster.module.scss";
 import Link from "next/link";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCopyright, faRightLong } from "@fortawesome/free-solid-svg-icons";
+import {
+  faCopyright,
+  faPause,
+  faRightLong,
+} from "@fortawesome/free-solid-svg-icons";
 
 const Poster = async () => {
   const { results } = await getMovieByPath("/tv/top_rated", []);
@@ -17,7 +21,7 @@ const Poster = async () => {
           <div className={styles.background}>
             <Image
               src={`${process.env.NEXT_PUBLIC_TMDB_IMAGE_BASE_PATH}/original${movie.backdrop_path}`}
-              alt={movie.id}
+              alt={movie.name}
               fill
             />
           </div>
@@ -40,7 +44,9 @@ const Poster = async () => {
                   icon={faRightLong}
                   className={`${styles.icon}`}
                 />
-                <Link href={`/register`}> registrati...</Link>
+                <Link href={`/register`}> registrati... </Link>
+                <FontAwesomeIcon icon={faPause} className={`${styles.icon}`} />
+                <Link href={`/login`}> accedi...</Link>
               </h3>
             </div>
           </div>
@@ -65,7 +71,9 @@ const Poster = async () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <span>Eyes Motion</span> by Cédric Mokoko
+                <span className={`${styles.copyText}`}>
+                  Eyes Motion by Cédric Mokoko
+                </span>
               </Link>
             </p>
           </div>

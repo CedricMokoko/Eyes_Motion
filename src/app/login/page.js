@@ -18,7 +18,7 @@ const LoginFormPage = async () => {
           <div className={styles.background}>
             <Image
               src={`${process.env.NEXT_PUBLIC_TMDB_IMAGE_BASE_PATH}/original${movie.backdrop_path}`}
-              alt={movie.id}
+              alt={movie.name}
               fill
             />
           </div>
@@ -48,7 +48,9 @@ const LoginFormPage = async () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <span>Eyes Motion</span> by Cédric Mokoko
+                <span className={`${styles.copyText}`}>
+                  Eyes Motion by Cédric Mokoko
+                </span>
               </Link>
             </p>
           </div>

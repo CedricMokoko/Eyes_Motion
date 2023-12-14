@@ -91,6 +91,7 @@
       font-weight: 700;
       color: $whiteColor;
       cursor: pointer;
+
       .link {
         margin: 0;
         display: flex;
@@ -105,6 +106,9 @@
         &:hover {
           opacity: 0.6;
         }
+      }
+      .copyText {
+        color: $goldColor;
       }
       .copyRight {
         margin-top: 20px;
