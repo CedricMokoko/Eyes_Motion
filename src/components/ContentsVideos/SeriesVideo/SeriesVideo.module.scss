@@ -1,0 +1,26 @@
+@import "variables";
+@import "mixins_media_queries";
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 85vh;
+  background-color: black;
+  .videoContent {
+    margin-top: 90px;
+    height: 360px;
+    width: 40%;
+    p {
+      color: $goldColor;
+      text-align: center;
+      margin-top: 150px;
+      .icon {
+        color: rgb(169, 18, 18);
+        margin-right: 5px;
+        font-size: 20px;
+      }
+    }
+  }
+}

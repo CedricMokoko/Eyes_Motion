@@ -3,6 +3,8 @@ import { useState } from "react";
 import { DebounceInput } from "react-debounce-input";
 import styles from "./InputSearchBar.module.scss";
 import ResultsSearch from "../ResultsSearch/ResultsSearch";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faKeyboard } from "@fortawesome/free-regular-svg-icons";
 
 const InputSearchBar = () => {
   const [contentsResults, setContentsResults] = useState([]);
@@ -28,7 +30,8 @@ const InputSearchBar = () => {
           <ResultsSearch contentsResults={contentsResults} />
         ) : (
           <p className={`${styles.info}`}>
-            Digitare il nome del film o della serie che stai cercando.
+            Digitare il nome del film o della serie che stai cercando
+            <FontAwesomeIcon icon={faKeyboard} className={`${styles.icon}`} />
           </p>
         )}
       </div>

@@ -28,6 +28,7 @@
     "react-debounce-input": "^3.3.0",
     "react-dom": "^18",
     "react-hot-toast": "^2.4.1",
+    "react-youtube": "^10.1.0",
     "sass": "^1.69.5",
     "server-only": "^0.0.1",
     "sharp": "^0.33.0"

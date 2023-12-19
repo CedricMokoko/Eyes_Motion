@@ -3,6 +3,9 @@ import Image from "next/image";
 import styles from "./SeriesDetails.module.scss";
 import { Suspense } from "react";
 import SeriesCredits from "../SeriesCredits/SeriesCredits";
+import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHeart, faPlay } from "@fortawesome/free-solid-svg-icons";
 
 const SeriesDetails = ({ series }) => {
   return (
@@ -39,6 +42,15 @@ const SeriesDetails = ({ series }) => {
           </p>
           <h2>Synopsis</h2>
           <p className={styles.overview}>{series.overview}</p>
+          <div className={styles.actions}>
+            <Link href={`/video/${series.id}`}>
+              <button className={styles.btn}>
+                <FontAwesomeIcon icon={faPlay} className={`${styles.icon}`} />
+                TRAILER
+              </button>
+            </Link>
+            <FontAwesomeIcon icon={faHeart} className={`${styles.icon}`} />
+          </div>
           <div className={styles.credits}>
             <Suspense fallback={<p>Chargement ...</p>}>
               <SeriesCredits seriesId={series.id} />

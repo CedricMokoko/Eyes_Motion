@@ -71,6 +71,38 @@
         -webkit-box-orient: vertical;
         overflow: hidden;
       }
+      .actions {
+        margin: 10px 0;
+        display: flex;
+        width: 150px;
+        flex-direction: row;
+        align-items: center;
+        gap: 40px;
+        .btn {
+          cursor: pointer;
+          width: 90px;
+          height: 30px;
+          padding: 2px;
+          font-weight: 900;
+          font-size: 10px;
+          background-color: $goldColor;
+          border: none;
+          border-radius: 6px;
+          &:hover {
+            opacity: 0.7;
+          }
+          .icon {
+            margin-left: 4px;
+          }
+        }
+        & > .icon {
+          cursor: pointer;
+          font-size: 22px;
+          &:hover {
+            opacity: 0.7;
+          }
+        }
+      }
       .credits {
         margin-top: auto;
       }

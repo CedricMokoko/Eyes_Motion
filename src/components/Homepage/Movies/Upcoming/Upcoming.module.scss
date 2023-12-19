@@ -8,7 +8,7 @@
   overflow: hidden;
   margin: 10px 0 0 0;
   h3 {
-    margin: 0 0 5px 45px;
+    margin: 0 0 10px 45px;
     color: $whiteColor;
     @include sm-lt {
       margin: 0 0 5px 7px;
@@ -17,9 +17,9 @@
   .content {
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    gap: 14px;
     width: 100%;
-    margin: 0 auto;
+    margin: 5px auto;
     overflow: scroll;
     &::-webkit-scrollbar {
       height: 0px;

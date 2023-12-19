@@ -3,6 +3,9 @@ import Image from "next/image";
 import styles from "./MovieDetails.module.scss";
 import { Suspense } from "react";
 import MovieCredits from "../MovieCredits/MovieCredits";
+import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHeart, faPlay } from "@fortawesome/free-solid-svg-icons";
 
 const MovieDetails = ({ movie }) => {
   return (
@@ -38,6 +41,16 @@ const MovieDetails = ({ movie }) => {
           </p>
           <h2>Synopsis</h2>
           <p className={styles.overview}>{movie.overview}</p>
+          <div className={styles.actions}>
+            <Link href={`/video/${movie.id}`}>
+              <button className={styles.btn}>
+                <FontAwesomeIcon icon={faPlay} className={`${styles.icon}`} />
+                TRAILER
+              </button>
+            </Link>
+            <FontAwesomeIcon icon={faHeart} className={`${styles.icon}`} />
+          </div>
+
           <div className={styles.credits}>
             <Suspense fallback={<p>Chargement ...</p>}>
               <MovieCredits movieId={movie.id} />
