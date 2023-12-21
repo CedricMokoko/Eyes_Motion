@@ -6,6 +6,7 @@ import MovieCredits from "../MovieCredits/MovieCredits";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart, faPlay } from "@fortawesome/free-solid-svg-icons";
+import Like from "@/components/Like/Like";
 
 const MovieDetails = ({ movie }) => {
   return (
@@ -48,9 +49,8 @@ const MovieDetails = ({ movie }) => {
                 TRAILER
               </button>
             </Link>
-            <FontAwesomeIcon icon={faHeart} className={`${styles.icon}`} />
+            <Like likedId={movie.id} className={`${styles.icon}`} />
           </div>
-
           <div className={styles.credits}>
             <Suspense fallback={<p>Chargement ...</p>}>
               <MovieCredits movieId={movie.id} />

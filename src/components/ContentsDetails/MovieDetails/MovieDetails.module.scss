@@ -27,7 +27,6 @@
       content: "";
     }
   }
-
   .content {
     position: relative;
     z-index: 3;
@@ -36,6 +35,9 @@
     gap: 50px;
     height: calc(100vh - 90px);
     padding: 107px 0;
+    & > img {
+      border-radius: 6px;
+    }
     span {
       color: $greyColor;
     }
@@ -88,11 +90,12 @@
           background-color: $goldColor;
           border: none;
           border-radius: 6px;
+          transition: 0.3s;
           &:hover {
             opacity: 0.7;
           }
           .icon {
-            margin-left: 4px;
+            margin-right: 6px;
           }
         }
         & > .icon {
@@ -104,7 +107,7 @@
         }
       }
       .credits {
-        margin-top: auto;
+        margin-top: 20px;
       }
     }
   }

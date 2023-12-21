@@ -18,6 +18,7 @@ model User{
   password String
   accounts Account[] //Relazione one-to-many con Account
   movieLikes MovieLike[] //Relazione one-to-many con MovieLike
+  serieLikes SerieLike[] //Relazione one-to-many con MovieLike
 }
 
 model Account {
@@ -47,6 +48,14 @@ model MovieLike{
   id Int @id @default(autoincrement())
   userId Int
   movieId String 
+
+  user User @relation(fields: [userId], references: [id])
+}
+
+model SerieLike{
+  id Int @id @default(autoincrement())
+  userId Int
+  serieId String 
 
   user User @relation(fields: [userId], references: [id])
 }

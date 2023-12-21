@@ -1,0 +1,9 @@
+.icon {
+  margin-right: 6px;
+  cursor: pointer;
+  font-size: 22px;
+  transition: 0.3s;
+  &:hover {
+    opacity: 0.7;
+  }
+}
