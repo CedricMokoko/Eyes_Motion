@@ -63,7 +63,7 @@ const Header = ({ session }) => {
                   </Link>
                 </li>
                 <li>
-                  <Link href={`/user`}>
+                  <Link href={`/private/user`}>
                     <FontAwesomeIcon
                       icon={faPlus}
                       className={`${styles.icon}`}
@@ -90,7 +90,7 @@ const Header = ({ session }) => {
             </nav>
           </div>
           <div className={`${styles.user}`}>
-            <Link href={`/user`}>
+            <Link href={`/private/user`}>
               {session?.user?.name}
               <FontAwesomeIcon icon={faUser} className={`${styles.iconUser}`} />
             </Link>

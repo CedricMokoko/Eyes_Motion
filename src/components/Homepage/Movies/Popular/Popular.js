@@ -12,7 +12,7 @@ const Popular = async () => {
       <div className={styles.content}>
         {popularMovies.map((movie) => (
           <div key={movie.id} className={`${styles.cardContainer}`}>
-            {/* //La props media={movie} conterà toutes les infos de nos films popular */}
+            {/* La props media={movie} conterà toutes les infos de nos films popular */}
             <MediaCard media={movie} />
           </div>
         ))}

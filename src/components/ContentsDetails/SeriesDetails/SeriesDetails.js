@@ -5,7 +5,7 @@ import { Suspense } from "react";
 import SeriesCredits from "../SeriesCredits/SeriesCredits";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHeart, faPlay } from "@fortawesome/free-solid-svg-icons";
+import { faPlay } from "@fortawesome/free-solid-svg-icons";
 import Like from "@/components/Like/Like";
 
 const SeriesDetails = ({ series }) => {
@@ -37,6 +37,7 @@ const SeriesDetails = ({ series }) => {
             Production :{" "}
             <span>
               {series.production_companies
+                .slice(0, 2)
                 .map((company) => company.name)
                 .join(", ")}
             </span>

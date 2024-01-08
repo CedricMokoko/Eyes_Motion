@@ -27,8 +27,6 @@ const MoviesIdPage = async ({ params: { id } }) => {
           <Suspense fallback={<p>Chargement ...</p>}>
             <SimilarMovies movieId={movie.id} />
           </Suspense>
-          {/* Video */}
-          {/* <MoviesVideo movieId={movie.id} /> */}
         </div>
       );
     }

@@ -13,7 +13,6 @@ const MoviesVideoPlayer = ({ mediaVideoMovies }) => {
           controls: 1,
         },
       }}
-
       // defaults -> ''
       // id={string}                       // defaults -> ''
       // className={string}                // defaults -> ''

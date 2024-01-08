@@ -6,6 +6,9 @@
   top: 0;
   margin: 180px 0 30px 30px;
   color: $goldColor;
+  @include xs {
+    display: none;
+  }
 }
 .searchResults {
   display: flex;
@@ -16,6 +19,12 @@
   margin: 180px auto 18px;
   width: 65%;
   gap: 14px;
+  @include xs {
+    margin: 140px 0 80px 0;
+    justify-content: center;
+    width: 100vw;
+    gap: 10px;
+  }
   .card {
     font-family: var(--font-montserrat-);
     border-radius: 6px;
@@ -25,16 +34,17 @@
     &:hover {
       transform: scale(1.06);
     }
-    @include sm-lt {
-      min-width: 90px;
+    @include xs {
+      min-width: 60px;
       box-shadow: none;
+      height: 100px;
     }
     .image {
       position: relative;
       width: 100%;
       height: 230px;
-      @include sm-lt {
-        height: 90px;
+      @include xs {
+        height: 100px;
       }
       img {
         border-radius: 6px;
@@ -43,7 +53,7 @@
           border: 3px solid $whiteColor;
           border-radius: 8px;
         }
-        @include sm-lt {
+        @include xs {
           box-shadow: none;
         }
       }

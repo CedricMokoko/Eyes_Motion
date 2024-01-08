@@ -8,7 +8,6 @@ import { toast } from "react-hot-toast";
 const RegisterForm = () => {
   const { data: session, status } = useSession();
   const router = useRouter();
-
   const [data, setData] = useState({
     name: "",
     surname: "",
@@ -16,6 +15,7 @@ const RegisterForm = () => {
     password: "",
     confirmPassword: "",
   });
+
   //Uno dei modi per proteggere la pagina utente logato
   useEffect(() => {
     if (status === "authenticated") {
@@ -40,6 +40,7 @@ const RegisterForm = () => {
           confirmPassword: data.confirmPassword,
         }),
       });
+
       //Per avere accesso ai messaggi di NextResponse lato server
       const responseBody = await response.text();
       if (response.ok) {

@@ -21,7 +21,7 @@
   @include lg-lt {
     display: none;
   }
-  @include sm-lt {
+  @include xs {
     display: flex;
     height: 60px;
   }

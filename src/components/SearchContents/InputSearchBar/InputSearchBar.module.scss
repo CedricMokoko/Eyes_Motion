@@ -26,6 +26,13 @@
   &::placeholder {
     color: $whiteColor;
     opacity: 0.8;
+    @include xs {
+      font-size: 14px;
+    }
+  }
+  @include xs {
+    top: 70px;
+    height: 40px;
   }
 }
 .info {
@@ -36,6 +43,11 @@
   text-align: center;
   color: $goldColor;
   font-size: 17px;
+  @include xs {
+    left: 20px;
+    right: 20px;
+    font-size: 14px;
+  }
   .icon {
     margin-left: 15px;
   }

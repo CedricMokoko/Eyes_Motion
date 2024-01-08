@@ -20,7 +20,7 @@ const SimilarMovies = async ({ movieId }) => {
         </>
       ) : (
         <>
-          <p>
+          <p className={`${styles.notFoundSimilar}`}>
             No similar movies found
             <FontAwesomeIcon
               icon={faCircleExclamation}

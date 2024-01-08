@@ -13,9 +13,9 @@ export const revalidate = 3600;
 
 const VideoIdPage = async ({ params: { id } }) => {
   const session = await getServerSession(authOptions);
-
   const movieVideo = await getMovieByPath(`/movie/${id}`, []);
   const serieVideo = await getMovieByPath(`/tv/${id}`, []);
+
   if (!session) {
     redirect("/login");
   }

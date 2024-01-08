@@ -23,7 +23,7 @@ export default async function RootLayout({ children }) {
           <ToasterContext />
           <Header session={session} />
           <main>{children}</main>
-          <MobileNav />
+          <MobileNav session={session} />
         </AuthProvider>
       </body>
     </html>

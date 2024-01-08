@@ -16,7 +16,7 @@
   padding: 0 30px;
   height: 90px;
   background: radial-gradient(circle, #62829a, #34373f);
-  @include sm-lt {
+  @include xs {
     height: 70px;
     position: fixed;
     justify-content: center;
@@ -25,6 +25,9 @@
     h2 {
       font-family: var(--font-caveat);
       font-size: 40px;
+      @include xs {
+        font-size: 30px;
+      }
       small {
         font-size: 16px;
       }
@@ -33,7 +36,7 @@
   .navigation {
     display: flex;
     gap: 20px;
-    @include sm-lt {
+    @include xs {
       display: none;
     }
     nav {
@@ -70,7 +73,7 @@
         color: $goldColor;
       }
     }
-    @include sm-lt {
+    @include xs {
       display: none;
     }
     .iconUser {
@@ -94,7 +97,7 @@
   padding: 0 30px;
   height: 90px;
   background: transparent;
-  @include sm-lt {
+  @include xs {
     padding: 0 25px;
     height: 70px;
   }
@@ -115,7 +118,7 @@
       ul {
         display: flex;
         gap: 30px;
-        @include sm-lt {
+        @include xs {
           gap: 20px;
         }
         li {
@@ -143,7 +146,7 @@
               }
             }
           }
-          @include sm-lt {
+          @include xs {
             .icon {
               margin: 0;
             }

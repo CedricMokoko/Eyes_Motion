@@ -5,9 +5,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import styles from "./Like.module.scss";
 
-const Like = ({ likedId, likedSeriesId }) => {
-  console.log("Like Id Movie", likedId);
+const Like = ({ likedMoviesId, likedSeriesId }) => {
+  console.log("Like Id Movie", likedMoviesId);
   console.log("Like Id", likedSeriesId);
+
   const handleLikeClicked = (e) => {
     e.preventDefault();
     if (likedSeriesId) {
@@ -15,8 +16,8 @@ const Like = ({ likedId, likedSeriesId }) => {
         method: "POST",
       });
     }
-    if (likedId) {
-      fetch(`/api/auth/like/moviesLike/${likedId}`, {
+    if (likedMoviesId) {
+      fetch(`/api/auth/like/moviesLike/${likedMoviesId}`, {
         method: "POST",
       });
     }

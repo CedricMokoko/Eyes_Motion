@@ -21,7 +21,7 @@ const SimilarSeries = async ({ seriesId }) => {
         </>
       ) : (
         <>
-          <p>
+          <p className={`${styles.notFoundSimilar}`}>
             No similar series found
             <FontAwesomeIcon
               icon={faCircleExclamation}

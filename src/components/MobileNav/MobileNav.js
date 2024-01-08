@@ -1,5 +1,3 @@
-"use client";
-import { useSession } from "next-auth/react";
 import styles from "./MobileNav.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -11,9 +9,8 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 
-const MobileNav = () => {
-  const { data: session, status } = useSession();
-  if (status === "authenticated") {
+const MobileNav = ({ session }) => {
+  if (session) {
     return (
       <footer className={`${styles.container}`}>
         <div className={`${styles.navigation}`}>
@@ -50,7 +47,7 @@ const MobileNav = () => {
                 </Link>
               </li>
               <li>
-                <Link href={`/user`}>
+                <Link href={`/private/user`}>
                   <FontAwesomeIcon
                     icon={faUser}
                     className={`${styles.iconUser}`}

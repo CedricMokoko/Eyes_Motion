@@ -7,14 +7,27 @@
   justify-content: center;
   overflow-x: hidden;
   margin: 4px 20px 20px 20px;
+  @include xs {
+    margin: 0;
+    width: 100vw;
+    align-items: center;
+  }
   p {
-    font-weight: 700;
     color: $goldColor;
+    font-weight: 700;
+    @include xs {
+      align-self: flex-start;
+      margin: 15px;
+      font-size: 13px;
+    }
     .icon {
       color: rgb(169, 18, 18);
       margin-left: 5px;
       font-size: 20px;
     }
+  }
+  .notFoundSimilar {
+    margin-bottom: 80px;
   }
   .list {
     padding: 0 0 15px 0;
@@ -22,14 +35,24 @@
     display: flex;
     gap: 6px;
     overflow-x: scroll;
+
     &::-webkit-scrollbar {
       height: 2px;
     }
     &::-webkit-scrollbar-track {
       background: transparent;
     }
+    @include xs {
+      flex-flow: row wrap;
+      padding: 0 0 69px 0;
+      align-items: center;
+      justify-content: center;
+    }
     > div {
       width: 200px;
+      @include xs {
+        width: 80px;
+      }
     }
   }
 }

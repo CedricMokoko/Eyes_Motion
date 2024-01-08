@@ -7,13 +7,25 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  @include xs {
+    flex-direction: column;
+  }
   h2 {
     position: fixed;
     top: 120px;
     left: 30px;
     color: $goldColor;
-    @include sm-lt {
-      margin: 0 0 5px 7px;
+    @include xs {
+      font-family: var(--font-caveat);
+      position: fixed;
+      top: 69px;
+      left: 0px;
+      color: white;
+      margin: 0 0 5px 0px;
+      z-index: 2;
+      background: linear-gradient(to right, #262424, #3b3838);
+      width: 100vw;
+      padding: 7px 5px;
     }
   }
   .content {
@@ -24,8 +36,11 @@
     gap: 14px;
     width: 65%;
     margin: 120px auto 18px;
-    @include sm-lt {
+    @include xs {
       gap: 7.5px;
+      width: 100%;
+      margin: 120px auto 70px;
+      justify-content: center;
     }
     //DIV CARD CONTAINER
     .cardContainer {

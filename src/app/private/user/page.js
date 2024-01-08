@@ -3,11 +3,12 @@ import styles from "./pageUser.module.scss";
 import { getServerSession } from "next-auth";
 import prisma from "@/utils/prisma";
 import { getHydratedMovies, getHydratedSeries } from "@/utils/movieClient";
-import { authOptions } from "../api/auth/[...nextauth]/route";
+import { authOptions } from "../../api/auth/[...nextauth]/route";
 import { redirect } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 
+export const revalidate = 1;
 const UserPage = async () => {
   const { user: session } = await getServerSession(authOptions);
   const { movieLikes } = await prisma.user.findFirst({
@@ -41,7 +42,7 @@ const UserPage = async () => {
       <div className={`${styles.container}`}>
         <div className={`${styles.content}`}>
           <div className={`${styles.contentUser}`}>
-            <p className={`${styles.user}`}>{session?.user?.name}</p>
+            <p className={`${styles.user}`}>Ciao {session?.name}!</p>
             <SignOutButton />
           </div>
           <div className={`${styles.contentLiked}`}>

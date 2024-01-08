@@ -8,14 +8,24 @@
   justify-content: center;
   height: 85vh;
   background-color: black;
+  @include xs {
+    height: 65vh;
+  }
   .videoContent {
     margin-top: 90px;
     height: 360px;
     width: 40%;
+    @include xs {
+      width: 100vh;
+      margin-top: 70px;
+    }
     p {
       color: $goldColor;
       text-align: center;
       margin-top: 150px;
+      @include xs {
+        margin-top: 170px;
+      }
       .icon {
         color: rgb(169, 18, 18);
         margin-right: 5px;

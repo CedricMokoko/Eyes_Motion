@@ -5,7 +5,7 @@
   position: fixed;
   right: 0;
   bottom: 10px;
-  @include sm-lt {
+  @include xs {
     position: static;
   }
   .button {
@@ -25,11 +25,10 @@
     transition: opacity 0.2s, color 0.2s;
     border-bottom-left-radius: 6px;
     border-bottom-right-radius: 6px;
-    @include sm-lt {
+    @include xs {
       font-size: 6px;
       background-color: transparent;
       margin-right: 20px;
-
       h2 {
         display: none;
       }
@@ -43,7 +42,7 @@
     .icon {
       transform: rotate(180deg);
       margin-left: 13px;
-      @include sm-lt {
+      @include xs {
         margin-left: 0;
         font-size: 13px;
       }

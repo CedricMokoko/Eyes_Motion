@@ -35,7 +35,7 @@
       border: 1px solid $greyColor;
       padding: 10px;
       outline: none;
-      @include sm-lt {
+      @include xs {
         min-width: 100%;
       }
       &::placeholder {
