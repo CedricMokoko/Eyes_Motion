@@ -27,19 +27,23 @@ const RegisterForm = () => {
   const handleSigninFormSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("/api/auth/register", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          name: data.name,
-          surname: data.surname,
-          email: data.email,
-          password: data.password,
-          confirmPassword: data.confirmPassword,
-        }),
-      });
+      // const response = await fetch("/api/auth/register", {
+      const response = await fetch(
+        "https://eyes-motion.vercel.app/api/auth/register",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            name: data.name,
+            surname: data.surname,
+            email: data.email,
+            password: data.password,
+            confirmPassword: data.confirmPassword,
+          }),
+        }
+      );
 
       //Per avere accesso ai messaggi di NextResponse lato server
       const responseBody = await response.text();

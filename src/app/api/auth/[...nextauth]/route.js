@@ -35,16 +35,20 @@ export const authOptions = {
         quella che andrà ad controllare nel database tramite prisma se l'utente esiste
         o meno*/
         try {
-          const response = await fetch("http://localhost:3000/api/auth/login", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-              email: credentials?.email,
-              password: credentials?.password,
-            }),
-          });
+          // const response = await fetch("http://localhost:3000/api/auth/login", {
+          const response = await fetch(
+            "https://eyes-motion.vercel.app/api/auth/login",
+            {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({
+                email: credentials?.email,
+                password: credentials?.password,
+              }),
+            }
+          );
           /* Qui la risposta che ci ritorna poi dalla route di login dopo il controllo nel database */
           if (!response.ok) {
             const errorData = await response.json();
