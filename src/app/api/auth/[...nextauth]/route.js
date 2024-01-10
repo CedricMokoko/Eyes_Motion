@@ -3,6 +3,9 @@ import NextAuth from "next-auth/next";
 import CredentialsProvider from "next-auth/providers/credentials";
 import GoogleProvider from "next-auth/providers/google";
 import GithubProvider from "next-auth/providers/github";
+import prisma from "@/utils/prisma";
+import * as bcrypt from "bcrypt";
+
 export const authOptions = {
   providers: [
     GithubProvider({
@@ -30,27 +33,24 @@ export const authOptions = {
         quella che andrà ad controllare nel database tramite prisma se l'utente esiste
         o meno*/
         try {
-          const response = await fetch(
-            `${process.env.NEXTAUTH_URL}/api/auth/login`,
-            {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-              },
-              body: JSON.stringify({
-                email: credentials?.email,
-                password: credentials?.password,
-              }),
-            }
-          );
-          /* Qui la risposta che ci ritorna poi dalla route di login dopo il controllo nel database */
-          if (!response.ok) {
-            const errorData = await response.json();
-            throw new Error(errorData.message);
+          // Trova l'utente nel database in base all'email fornita
+          const user = await prisma.user.findFirst({
+            where: {
+              email: credentials?.email,
+            },
+          });
+
+          // Se l'utente non esiste o la password non corrisponde, lancia un errore
+          if (
+            !user ||
+            !(await bcrypt.compare(credentials?.password, user.password))
+          ) {
+            throw new Error();
           }
-          //Se tutto va bene ritorno lo user, ma solo l'email come spécificato nella route di login
-          const user = await response.json();
-          return user || null;
+
+          // Restituisci i dati dell'utente (escludendo la password)
+          const { password, ...rest } = user;
+          return rest;
         } catch (error) {
           throw new Error("Incorrect email and/or password");
         }
@@ -58,6 +58,11 @@ export const authOptions = {
     }),
   ],
   secret: process.env.NEXTAUTH_SECRET,
+  //In caso di uso di middleware, ci torna la notre pagina di login personnalizzata
+  pages: {
+    signIn: `/login`,
+  },
+  //--
   session: {
     strategy: "jwt",
     callbacks: {
@@ -75,6 +80,7 @@ export const authOptions = {
       },
     },
   },
+
   debug: process.env.NODE_ENV === "development",
 };
 const handler = NextAuth(authOptions);
