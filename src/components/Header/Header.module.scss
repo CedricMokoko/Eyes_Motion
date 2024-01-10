@@ -98,15 +98,33 @@
   height: 90px;
   background: transparent;
   @include xs {
-    padding: 0 25px;
-    height: 70px;
+    padding: 0 15px;
+    height: 60px;
   }
   .logo {
     h2 {
       font-family: var(--font-caveat);
       font-size: 40px;
+      @include xs {
+        font-size: 30px;
+        &:hover {
+          color: $goldColor;
+        }
+      }
       small {
         font-size: 16px;
+        @include xs {
+          font-size: 14px;
+        }
+      }
+      a {
+        &:hover {
+          padding: 3px;
+          background-color: #62829a;
+          color: $goldColor;
+          opacity: 1;
+          border-radius: 6px;
+        }
       }
     }
   }
@@ -143,12 +161,23 @@
                 left: 65%;
                 transform: translateX(-50%);
                 white-space: nowrap;
+                @include xs {
+                  top: 100%;
+                  left: 52%;
+                }
               }
             }
           }
           @include xs {
             .icon {
               margin: 0;
+              font-size: 14px;
+              padding: 6px;
+              border-radius: 6px;
+              &:hover {
+                background-color: #62829a;
+                opacity: 1;
+              }
             }
           }
         }

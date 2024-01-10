@@ -5,29 +5,32 @@
   position: static;
   display: flex;
   flex-direction: column;
-  margin-top: 0px;
+  // margin-top: 0px;
   .details {
     font-family: var(--font-caveat);
     position: relative;
-    width: 100%;
-    min-height: 100vh;
+    // width: 100%;
+    height: 100vh;
+
     .background {
       position: absolute;
       z-index: 1;
       top: 0;
       left: 0;
-      width: 100%;
-      height: 100%;
-      img {
-        object-fit: cover;
+      width: 100vw;
+      height: 100vh;
+      @include xs {
+        img {
+          object-fit: cover;
+        }
       }
       &::after {
         position: absolute;
         z-index: 2;
         top: 0;
         left: 0;
-        width: 100%;
-        height: 100%;
+        width: 100vw;
+        height: 100vh;
         background-color: rgba($color: #041226, $alpha: 0.8);
         content: "";
       }
@@ -39,17 +42,32 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      min-height: 80vh;
+      min-height: 65vh;
+      // background-color: black; //
+      @include xs {
+        // background-color: black;
+        height: 80vh;
+      }
       .description {
+        // background-color: rgb(95, 95, 88);
         display: flex;
         flex-direction: column;
-        width: 50%;
+        align-items: center;
+        width: 80%;
         height: 100%;
         color: $whiteColor;
+        @include xs {
+          width: 95%;
+          height: 55%;
+        }
         h1 {
           font-weight: 900;
-          font-size: 35px;
+          font-size: 28px;
           margin: 100px 0 0 0;
+          @include xs {
+            font-size: 18px;
+            text-align: center;
+          }
         }
         .production {
           font-size: 25px;
@@ -57,12 +75,20 @@
           span {
             color: $goldColor;
           }
+          @include xs {
+            font-size: 17px;
+            text-align: center;
+          }
         }
         h3 {
           color: $whiteColor;
           font-size: 22px;
           font-weight: 500;
           margin: 10px 0 0;
+          @include xs {
+            font-size: 15px;
+            text-align: center;
+          }
           .icon {
             font-size: 13px;
             margin: 0 5px;
@@ -77,27 +103,37 @@
       }
     }
     .footer {
+      // background-color: black;
       font-family: var(--font-cormorant);
       position: relative;
       z-index: 3;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      gap: 6px;
-      min-height: 20vh;
-      margin: 0 auto;
-      width: 70%;
+      justify-content: end;
+      gap: 2px;
+      min-height: 35vh;
+      width: 100vw;
       font-weight: 700;
       color: $whiteColor;
+      @include xs {
+        min-height: 20vh;
+      }
+
       cursor: pointer;
       .link {
         margin: 0;
         display: flex;
         flex-flow: row wrap;
         justify-content: center;
-        width: 80%;
+        width: 50%;
         gap: 10px;
+        @include xs {
+          font-weight: 900;
+          gap: 7px;
+          width: 95%;
+          font-size: 12px;
+        }
       }
       p {
         margin: 0;
@@ -108,11 +144,21 @@
       }
       .copyText {
         color: $goldColor;
+        margin-bottom: 30px;
+        @include xs {
+          font-size: 13px;
+          font-weight: 900;
+
+          margin-bottom: 20px;
+        }
       }
       .copyRight {
         margin-top: 20px;
         margin-right: 5px;
         font-size: 13px;
+        @include xs {
+          margin-top: 10px;
+        }
       }
     }
   }

@@ -74,7 +74,7 @@ const LoginForm = () => {
               onChange={(e) => setData({ ...data, password: e.target.value })}
               required
             />
-            <input type="submit" value="Sign in" />
+            <input type="submit" value="Sign In" />
             {/* <p>Or</p>
             <div className={`${styles.containerBtnLogin}`}>
               <button onClick={handleGithubLogin}>
