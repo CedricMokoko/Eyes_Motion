@@ -41,7 +41,7 @@ const UserPage = async () => {
       <div className={`${styles.container}`}>
         <div className={`${styles.content}`}>
           <div className={`${styles.contentUser}`}>
-            <p className={`${styles.user}`}>Ciao {session?.name}!</p>
+            <p className={`${styles.user}`}>Ciao {session?.user?.name}!</p>
             <SignOutButton />
           </div>
           <div className={`${styles.contentLiked}`}>
