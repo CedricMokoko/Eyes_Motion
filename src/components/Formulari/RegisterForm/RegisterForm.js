@@ -10,7 +10,7 @@ const RegisterForm = () => {
   const router = useRouter();
   const [data, setData] = useState({
     name: "",
-    surname: "",
+    // surname: "",
     email: "",
     password: "",
     confirmPassword: "",
@@ -34,7 +34,7 @@ const RegisterForm = () => {
         },
         body: JSON.stringify({
           name: data.name,
-          surname: data.surname,
+          // surname: data.surname,
           email: data.email,
           password: data.password,
           confirmPassword: data.confirmPassword,
@@ -76,14 +76,14 @@ const RegisterForm = () => {
           autoFocus
           required
         />
-        <input
+        {/* <input
           type="text"
           name="surname"
           placeholder="Surname"
           value={data.surname}
           onChange={(e) => setData({ ...data, surname: e.target.value })}
           required
-        />
+        /> */}
         <input
           type="text"
           name="email"

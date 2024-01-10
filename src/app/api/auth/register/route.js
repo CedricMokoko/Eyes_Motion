@@ -14,8 +14,8 @@ function isValidPassword(password) {
 export async function POST(request) {
   try {
     const body = await request.json();
-    const { name, surname, email, password, confirmPassword } = body;
-    if (!name || !surname || !email || !password || !confirmPassword) {
+    const { name, email, password, confirmPassword } = body;
+    if (!name || !email || !password || !confirmPassword) {
       return new NextResponse("Missing Fields", { status: 400 });
     }
     // Validation e-mail regex
@@ -46,7 +46,6 @@ export async function POST(request) {
     const user = await prisma.user.create({
       data: {
         name,
-        surname,
         email,
         password: await bcrypt.hash(body.password, 10),
       },
