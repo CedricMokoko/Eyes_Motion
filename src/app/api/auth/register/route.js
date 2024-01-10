@@ -132,7 +132,7 @@ export async function POST(request) {
 
     //Salvo il tutto sul database postgree di vercel
     const response = await sql`
-    INSERT INTO user (name, surname, email, password)
+    INSERT INTO users (name, surname, email, password)
     VALUES (${body.name},${body.surname},${body.email}, ${hashedPassword})`;
   } catch (error) {
     return new NextResponse("Error during registration", { status: 500 });

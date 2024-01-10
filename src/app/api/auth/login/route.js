@@ -28,7 +28,7 @@ export async function POST(request) {
   // Trova l'utente nel database in base all'email fornita
 
   const response = await sql`
-        SELECT * FROM user WHERE email=${body?.email}`;
+        SELECT * FROM users WHERE email=${body?.email}`;
 
   const user = response.rows[0];
   const passwordCorrect = await compare(body?.password, user.password);
