@@ -11,20 +11,20 @@ const BestSeller = async () => {
   return (
     <div className={styles.container}>
       <div className={styles.content}>
-        {bestSeller.map((movie) => (
-          <div key={movie.id} className={`${styles.cardContainer}`}>
+        {bestSeller.map((series) => (
+          <div key={series.id} className={`${styles.cardContainer}`}>
             <div className={`${styles.card}`}>
-              <Link href={`/search/${movie.id}`}>
+              <Link href={`/search/${series.id}`}>
                 <div className={`${styles.image}`}>
                   <Image
-                    src={`${process.env.NEXT_PUBLIC_TMDB_IMAGE_BASE_PATH}/w500${movie.poster_path}`}
-                    alt={movie.name}
+                    src={`${process.env.NEXT_PUBLIC_TMDB_IMAGE_BASE_PATH}/w500${series.poster_path}`}
+                    alt={series.name}
                     fill
                   />
                   <div className={`${styles.content}`}>
                     <p className={styles.vote}>
                       {" "}
-                      {movie.vote_average.toFixed(1)}
+                      {series.vote_average.toFixed(1)}
                     </p>
                   </div>
                 </div>

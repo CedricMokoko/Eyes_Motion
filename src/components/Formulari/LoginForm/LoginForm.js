@@ -25,7 +25,7 @@ const LoginForm = () => {
 
   const handleLoginFormSubmit = async (e) => {
     e.preventDefault();
-    signIn("credentials", {
+    const response = signIn("credentials", {
       ...data,
       redirect: false, //Per non andare sulla pagina di Login fatta di Next
     }).then((callback) => {
@@ -40,6 +40,7 @@ const LoginForm = () => {
         router.refresh();
       }
     });
+    console.log(response);
   };
 
   const handleGithubLogin = (e) => {

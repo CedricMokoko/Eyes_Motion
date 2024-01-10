@@ -10,10 +10,10 @@ const AiringToday = async () => {
     <div className={styles.container}>
       <h3>Series Airing Today</h3>
       <div className={styles.content}>
-        {airingToday.map((movie) => (
-          <div key={movie.id} className={`${styles.cardContainer}`}>
-            {/* //La props media={movie} conterà toutes les infos de nos series airing_Today */}
-            <MediaCard media={movie} />{" "}
+        {airingToday.map((series) => (
+          <div key={series.id} className={`${styles.cardContainer}`}>
+            {/* //La props mediaSeries={series} conterà toutes les infos de nos series airing_Today */}
+            <MediaCard mediaSeries={series} />{" "}
           </div>
         ))}
       </div>

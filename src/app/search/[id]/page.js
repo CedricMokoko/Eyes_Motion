@@ -35,7 +35,7 @@ const SearchIdPage = async ({ params: { id } }) => {
     if (multiMovie.id) {
       return (
         <div>
-          <MovieDetails movie={multiMovie} />
+          <MovieDetails movie={multiMovie} movieId={multiMovie.id} />
           <Suspense fallback={<p>Chargement ...</p>}>
             <SimilarMovies movieId={multiMovie.id} />
           </Suspense>

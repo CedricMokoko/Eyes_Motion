@@ -12,7 +12,7 @@ const TopRated = async () => {
       <div className={styles.content}>
         {topRatedMovies.map((movie) => (
           <div key={movie.id} className={`${styles.cardContainer}`}>
-            <MediaCard media={movie} />{" "}
+            <MediaCard mediaMovies={movie} />{" "}
             {/* //La props media={movie} conterà toutes les infos de nos films top_rated */}
           </div>
         ))}

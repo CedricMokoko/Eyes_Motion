@@ -12,8 +12,8 @@ const NowPlaying = async () => {
       <div className={styles.content}>
         {nowPlayingMovies.map((movie) => (
           <div key={movie.id} className={`${styles.cardContainer}`}>
-            {/* //La props media={movie} conterà toutes les infos de nos films now_playing */}
-            <MediaCard key={movie.id} media={movie} />
+            {/* //La props mediaMovies={movie} conterà toutes les infos de nos films now_playing */}
+            <MediaCard mediaMovies={movie} />
           </div>
         ))}
       </div>

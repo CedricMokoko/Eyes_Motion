@@ -11,33 +11,33 @@ import Image from "next/image";
 export const revalidate = 1;
 const UserPage = async () => {
   const { user: session } = await getServerSession(authOptions);
-  const { movieLikes } = await prisma.user.findFirst({
-    where: { email: session.email },
-    include: {
-      movieLikes: true,
-    },
-  });
+  // const { movieLikes } = await prisma.user.findFirst({
+  //   where: { email: session.email },
+  //   include: {
+  //     movieLikes: true,
+  //   },
+  // });
 
-  const { serieLikes } = await prisma.user.findFirst({
-    where: { email: session.email },
-    include: {
-      serieLikes: true,
-    },
-  });
+  // const { serieLikes } = await prisma.user.findFirst({
+  //   where: { email: session.email },
+  //   include: {
+  //     serieLikes: true,
+  //   },
+  // });
 
-  const movies = await getHydratedMovies(
-    movieLikes.map((movie) => movie.movieId)
-  );
-  const series = await getHydratedSeries(
-    serieLikes.map((serie) => serie.serieId)
-  );
+  // const movies = await getHydratedMovies(
+  //   movieLikes.map((movie) => movie.movieId)
+  // );
+  // const series = await getHydratedSeries(
+  //   serieLikes.map((serie) => serie.serieId)
+  // );
 
   if (!session) {
     redirect("/login");
   }
   if (session) {
     // Concatenare gli array movies e series
-    const combinedList = [...movies, ...series];
+    // const combinedList = [...movies, ...series];
     return (
       <div className={`${styles.container}`}>
         <div className={`${styles.content}`}>
@@ -49,7 +49,7 @@ const UserPage = async () => {
             <h1>La tua lista</h1>
             <h3>I tuoi film e serie</h3>
           </div>
-          <div className={styles.containerList}>
+          {/* <div className={styles.containerList}>
             <div className={styles.contentList}>
               {combinedList.map((item) => (
                 <div key={item.id} className={`${styles.cardContainer}`}>
@@ -67,7 +67,7 @@ const UserPage = async () => {
                 </div>
               ))}
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     );

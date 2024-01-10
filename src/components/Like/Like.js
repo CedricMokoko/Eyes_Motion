@@ -7,7 +7,7 @@ import styles from "./Like.module.scss";
 
 const Like = ({ likedMoviesId, likedSeriesId }) => {
   console.log("Like Id Movie", likedMoviesId);
-  console.log("Like Id", likedSeriesId);
+  console.log("Like Id Serie", likedSeriesId);
 
   const handleLikeClicked = (e) => {
     e.preventDefault();
