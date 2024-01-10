@@ -50,8 +50,10 @@
         flex-direction: column;
         width: 50%;
         height: 100%;
-        margin-top: 50px;
+        margin-top: 100px;
         @include xs {
+          margin-top: 80px;
+
           width: 95%;
           height: 27%;
         }
@@ -59,29 +61,30 @@
     }
   }
   .footer {
+    // background-color: black;
     font-family: var(--font-cormorant);
     position: relative;
     z-index: 3;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 6px;
-    min-height: 20vh;
-    margin: 0 auto;
-    width: 70%;
+    justify-content: end;
+    gap: 2px;
+    min-height: 25%;
+    width: 100%;
     font-weight: 700;
     color: $whiteColor;
     @include xs {
       min-height: 20vh;
     }
+
     cursor: pointer;
     .link {
       margin: 0;
       display: flex;
       flex-flow: row wrap;
       justify-content: center;
-      width: 80%;
+      width: 50%;
       gap: 10px;
       @include xs {
         font-weight: 900;
@@ -100,10 +103,10 @@
     .copyText {
       color: $goldColor;
       margin-bottom: 30px;
-
       @include xs {
         font-size: 13px;
         font-weight: 900;
+
         margin-bottom: 20px;
       }
     }
