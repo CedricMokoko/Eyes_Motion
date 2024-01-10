@@ -25,23 +25,21 @@ const LoginForm = () => {
 
   const handleLoginFormSubmit = async (e) => {
     e.preventDefault();
-    const response = signIn("credentials", {
+    signIn("credentials", {
       ...data,
       redirect: false, //Per non andare sulla pagina di Login fatta di Next
+    }).then((callback) => {
+      if (callback?.error) {
+        toast.error(callback.error, {
+          id: "Messages",
+          style: { marginTop: "90px" },
+        });
+      }
+      if (callback?.ok && !callback?.error) {
+        router.push("/homepage");
+        router.refresh();
+      }
     });
-    //   .then((callback) => {
-    //   if (callback?.error) {
-    //     toast.error(callback.error, {
-    //       id: "Messages",
-    //       style: { marginTop: "90px" },
-    //     });
-    //   }
-    //   if (callback?.ok && !callback?.error) {
-    //     router.push("/homepage");
-    //     router.refresh();
-    //   }
-    // });
-    console.log({ response });
   };
 
   const handleGithubLogin = (e) => {
