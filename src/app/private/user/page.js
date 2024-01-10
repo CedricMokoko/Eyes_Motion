@@ -8,9 +8,8 @@ import { redirect } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 
-export const revalidate = 1;
 const UserPage = async () => {
-  const { user: session } = await getServerSession(authOptions);
+  const session = await getServerSession(authOptions);
   // const { movieLikes } = await prisma.user.findFirst({
   //   where: { email: session.email },
   //   include: {
