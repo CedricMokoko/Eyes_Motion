@@ -7,7 +7,6 @@ export async function POST(request, { params: { movieId } }) {
   if (!token) {
     return NextResponse.json({ message: "unauthorized" }, { status: 401 });
   }
-
   const user = await prisma.user.update({
     where: {
       email: token.email,

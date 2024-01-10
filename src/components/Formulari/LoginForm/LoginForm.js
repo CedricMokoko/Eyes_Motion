@@ -42,15 +42,14 @@ const LoginForm = () => {
     });
   };
 
-  const handleGithubLogin = (e) => {
-    e.preventDefault();
-    signIn("github");
-  };
-
-  const handleGoogleLogin = (e) => {
-    e.preventDefault();
-    signIn("google");
-  };
+  // const handleGithubLogin = (e) => {
+  //   e.preventDefault();
+  //   signIn("github");
+  // };
+  // const handleGoogleLogin = (e) => {
+  //   e.preventDefault();
+  //   signIn("google");
+  // };
 
   if (status !== "authenticated") {
     return (
@@ -76,7 +75,7 @@ const LoginForm = () => {
               required
             />
             <input type="submit" value="Sign in" />
-            <p>Or</p>
+            {/* <p>Or</p>
             <div className={`${styles.containerBtnLogin}`}>
               <button onClick={handleGithubLogin}>
                 <FontAwesomeIcon icon={faGithub} className={`${styles.icon}`} />
@@ -86,7 +85,7 @@ const LoginForm = () => {
                 <FontAwesomeIcon icon={faGoogle} className={`${styles.icon}`} />
                 <h4>Sign in with Google</h4>
               </button>
-            </div>
+            </div> */}
           </form>
         </div>
       </>

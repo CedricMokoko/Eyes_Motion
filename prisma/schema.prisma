@@ -13,47 +13,25 @@ datasource db {
 
 model User{
   id Int @id @default(autoincrement())
-  name String ? 
+  name String? 
   surname String?
   email String @unique
   password String
-  accounts Account[] //Relazione one-to-many con Account
   movieLikes MovieLike[] //Relazione one-to-many con MovieLike
   serieLikes SerieLike[] //Relazione one-to-many con MovieLike
 }
 
-model Account {
-  id        Int       @id @default(autoincrement())
-  provider  String    // Provider di autenticazione (es. google, github, credentials)
-  providerAccountId String   // ID univoco fornito dal provider
-  userId    Int       // Chiave esterna per collegare l'account a un utente
-  createdAt DateTime  @default(now())
-  refresh_token String?
-  access_token  String?
-  expires_at    DateTime?
-  token_type    String?
-  scope         String?
-  id_token      String?
-  session_state String?
-  user User @relation(fields: [userId], references: [id])
-  @@index([userId], name: "idx_userId")
-  @@map("accounts") // Optional: Specify a custom name for the database table
-  @@unique([provider, providerAccountId], name: "idx_provider_providerAccountId")
-  @@unique([userId, provider], name: "idx_userId_provider")
-  @@unique([userId, providerAccountId], name: "idx_userId_providerAccountId")
-  @@unique([providerAccountId], name: "idx_providerAccountId")
-}
-model MovieLike{
-  id Int @id @default(autoincrement())
-  userId Int
+model MovieLike {
+  id      Int     @id @default(autoincrement())
+  userId  Int
   movieId String?
-
   user User? @relation(fields: [userId], references: [id])
+  @@unique([userId, movieId], name: "idx_userId_movieId") // Vincolo unico per impedire più "like" dallo stesso utente per lo stesso film
 }
-
-model SerieLike{
-  id Int @id @default(autoincrement())
-  userId Int
+model SerieLike {
+  id      Int     @id @default(autoincrement())
+  userId  Int
   serieId String?
   user User? @relation(fields: [userId], references: [id])
+  @@unique([userId, serieId], name: "idx_userId_serieId") // Vincolo unico per impedire più "like" dallo stesso utente per la stessa serie
 }

@@ -6,14 +6,12 @@ import { redirect } from "next/navigation";
 import MovieDetails from "@/components/ContentsDetails/MovieDetails/MovieDetails";
 import SimilarMovies from "@/components/ContentsDetails/SimilarMovies/SimilarMovies";
 import { getMovieByPath } from "@/utils/movieClient";
-import MoviesVideo from "@/components/ContentsVideos/MoviesVideo/MoviesVideo";
 
 export const revalidate = 3600;
 
 const MoviesIdPage = async ({ params: { id } }) => {
   const session = await getServerSession(authOptions);
   const movie = await getMovieByPath(`/movie/${id}`, []);
-
   if (!session) {
     redirect("/login");
   }

@@ -1,32 +1,39 @@
 "use client";
 
-import { faHeart } from "@fortawesome/free-solid-svg-icons";
+import { faPlus } from "@fortawesome/free-solid-svg-icons";
+import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
+import React, { useState } from "react";
 import styles from "./Like.module.scss";
 
 const Like = ({ likedMoviesId, likedSeriesId }) => {
+  const [isLiked, setIsLiked] = useState(false);
+
   console.log("Like Id Movie", likedMoviesId);
   console.log("Like Id Serie", likedSeriesId);
 
-  const handleLikeClicked = (e) => {
+  const handleLikeClicked = async (e) => {
     e.preventDefault();
     if (likedSeriesId) {
-      fetch(`/api/auth/like/seriesLike/${likedSeriesId}`, {
+      await fetch(`/api/auth/like/seriesLike/${likedSeriesId}`, {
         method: "POST",
       });
     }
     if (likedMoviesId) {
-      fetch(`/api/auth/like/moviesLike/${likedMoviesId}`, {
+      await fetch(`/api/auth/like/moviesLike/${likedMoviesId}`, {
         method: "POST",
       });
     }
+
+    // Inverte lo stato "liked"
+    setIsLiked(!isLiked);
   };
+
   return (
     <FontAwesomeIcon
       onClick={handleLikeClicked}
-      icon={faHeart}
-      className={`${styles.icon}`}
+      icon={isLiked ? faCheckCircle : faPlus}
+      className={`${styles.icon} ${isLiked ? styles.liked : ""}`}
     />
   );
 };
