@@ -5,6 +5,8 @@
   position: static;
   display: flex;
   flex-direction: column;
+  height: 100vh;
+
   // margin-top: 0px;
   .details {
     font-family: var(--font-caveat);
@@ -49,7 +51,7 @@
       justify-content: center;
       min-height: 75vh;
       @include lg {
-        height: 70vh;
+        height: 70%;
       }
       @include xs {
         height: 80vh;
@@ -66,7 +68,7 @@
         @include lg {
           margin-top: 100px;
           width: 95%;
-          height: 50%;
+          height: 65%;
         }
         @include xs {
           margin-top: 80px;
@@ -146,7 +148,7 @@
       font-weight: 700;
       color: $whiteColor;
       @include lg {
-        min-height: 20vh;
+        min-height: 20%;
       }
       @include xs {
         min-height: 20vh;

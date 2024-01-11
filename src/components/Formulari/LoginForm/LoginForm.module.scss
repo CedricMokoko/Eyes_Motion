@@ -15,9 +15,7 @@
     background: radial-gradient(circle, #62829a, #34373f);
     border-radius: 6px;
     padding: 15px;
-    @include sm {
-      width: 230px;
-    }
+
     @include xs {
       width: 250px;
     }

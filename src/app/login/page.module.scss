@@ -18,6 +18,11 @@
       left: 0;
       width: 100%;
       height: 100%;
+      @include lg {
+        img {
+          display: none;
+        }
+      }
       @include xs {
         img {
           object-fit: cover;
@@ -51,6 +56,11 @@
         width: 50%;
         height: 100%;
         margin-top: 100px;
+        @include lg {
+          margin-top: 0;
+          width: 95%;
+          height: 27%;
+        }
 
         @include xs {
           margin-top: 80px;
@@ -75,6 +85,9 @@
     width: 100%;
     font-weight: 700;
     color: $whiteColor;
+    @include lg {
+      min-height: 20vh;
+    }
     @include xs {
       min-height: 20vh;
     }
