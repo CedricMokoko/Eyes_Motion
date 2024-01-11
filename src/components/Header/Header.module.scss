@@ -97,6 +97,10 @@
   padding: 0 30px;
   height: 90px;
   background: transparent;
+  @include lg {
+    padding: 0 15px;
+    height: 60px;
+  }
   @include xs {
     padding: 0 15px;
     height: 60px;
@@ -105,6 +109,12 @@
     h2 {
       font-family: var(--font-caveat);
       font-size: 40px;
+      @include lg {
+        font-size: 35px;
+        &:hover {
+          color: $goldColor;
+        }
+      }
       @include xs {
         font-size: 30px;
         &:hover {
@@ -113,6 +123,9 @@
       }
       small {
         font-size: 16px;
+        @include lg {
+          font-size: 15px;
+        }
         @include xs {
           font-size: 14px;
         }
@@ -136,13 +149,15 @@
       ul {
         display: flex;
         gap: 30px;
+        @include lg {
+          gap: 25px;
+        }
         @include xs {
           gap: 20px;
         }
         li {
           display: flex;
           flex-direction: row;
-
           position: relative;
           .icon {
             margin-left: 10px;
@@ -151,7 +166,10 @@
             text-decoration: none;
             position: relative;
             &:hover {
+              background-color: #62829a;
               color: $goldColor;
+              opacity: 1;
+              border-radius: 6px;
               &::before {
                 content: attr(data-tooltip);
                 position: absolute;
@@ -161,10 +179,26 @@
                 left: 65%;
                 transform: translateX(-50%);
                 white-space: nowrap;
+                @include lg {
+                  top: 100%;
+                  left: 52%;
+                }
                 @include xs {
                   top: 100%;
                   left: 52%;
                 }
+              }
+            }
+          }
+          @include lg {
+            .icon {
+              margin: 0;
+              font-size: 16px;
+              padding: 6px;
+              border-radius: 6px;
+              &:hover {
+                background-color: #62829a;
+                opacity: 1;
               }
             }
           }

@@ -19,6 +19,11 @@
       left: 0;
       width: 100vw;
       height: 100vh;
+      @include lg {
+        img {
+          display: none;
+        }
+      }
       @include xs {
         img {
           object-fit: cover;
@@ -43,9 +48,10 @@
       align-items: center;
       justify-content: center;
       min-height: 75vh;
-      // background-color: black; //
+      @include lg {
+        height: 70vh;
+      }
       @include xs {
-        // background-color: black;
         height: 80vh;
       }
       .description {
@@ -57,6 +63,11 @@
         height: 100%;
         color: $whiteColor;
         margin-top: 100px;
+        @include lg {
+          margin-top: 100px;
+          width: 95%;
+          height: 50%;
+        }
         @include xs {
           margin-top: 80px;
           width: 95%;
@@ -66,6 +77,10 @@
           font-weight: 900;
           font-size: 28px;
           margin: 100px 0 0 0;
+          @include lg {
+            font-size: 20px;
+            text-align: center;
+          }
           @include xs {
             font-size: 18px;
             text-align: center;
@@ -76,6 +91,11 @@
           margin-top: 15px;
           span {
             color: $goldColor;
+          }
+          @include lg {
+            font-size: 18px;
+            margin-top: 0px;
+            text-align: center;
           }
           @include xs {
             font-size: 17px;
@@ -88,6 +108,11 @@
           font-size: 22px;
           font-weight: 500;
           margin: 10px 0 0;
+          @include lg {
+            margin: 0;
+            font-size: 16px;
+            text-align: center;
+          }
           @include xs {
             margin: 0;
             font-size: 15px;
@@ -120,6 +145,9 @@
       width: 100%;
       font-weight: 700;
       color: $whiteColor;
+      @include lg {
+        min-height: 20vh;
+      }
       @include xs {
         min-height: 20vh;
       }
@@ -132,6 +160,12 @@
         justify-content: center;
         width: 50%;
         gap: 10px;
+        @include lg {
+          font-weight: 900;
+          gap: 7px;
+          width: 60%;
+          font-size: 14px;
+        }
         @include xs {
           font-weight: 900;
           gap: 7px;
@@ -149,10 +183,14 @@
       .copyText {
         color: $goldColor;
         margin-bottom: 30px;
+        @include lg {
+          font-size: 15px;
+          font-weight: 900;
+          margin-bottom: 15px;
+        }
         @include xs {
           font-size: 13px;
           font-weight: 900;
-
           margin-bottom: 20px;
         }
       }
@@ -160,6 +198,9 @@
         margin-top: 20px;
         margin-right: 5px;
         font-size: 13px;
+        @include lg {
+          margin-top: 7px;
+        }
         @include xs {
           margin-top: 10px;
         }
