@@ -83,7 +83,8 @@
               border-radius: 8px;
             }
             @include sm-lt {
-              box-shadow: none;
+              box-shadow: 3px 5px 5px rgb(26, 25, 25);
+              // box-shadow: none;
             }
           }
         }

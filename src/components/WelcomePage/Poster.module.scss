@@ -18,19 +18,11 @@
       left: 0;
       right: 0;
       bottom: 0;
-      // @include lg {
-      //   img {
-      //     display: none;
-      //   }
-      // }
       @include sm-lt {
         img {
           object-fit: cover;
         }
       }
-      // img {
-      //   object-fit: cover;
-      // }
       &::after {
         position: absolute;
         z-index: 2;
@@ -53,12 +45,6 @@
       @include lg-lt {
         height: 70%;
       }
-      // @include md {
-      // height: 70%;
-      // }
-      // @include sm-lt {
-      // height: 70%;
-      // }
       .description {
         display: flex;
         flex-direction: column;
@@ -151,10 +137,6 @@
       @include lg-lt {
         height: 30%;
       }
-      // @include sm-lt {
-      // height: 30%;
-      // padding-bottom: 10px;
-      // }
       .link {
         margin: 0;
         display: flex;

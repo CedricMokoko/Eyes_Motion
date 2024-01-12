@@ -22,8 +22,8 @@
     margin: 5px auto;
     overflow: scroll;
     @include sm-lt {
-      gap: 5px;
-      width: 103%;
+      gap: 7.5px;
+      width: 106%;
     }
     &::-webkit-scrollbar {
       height: 0px;
