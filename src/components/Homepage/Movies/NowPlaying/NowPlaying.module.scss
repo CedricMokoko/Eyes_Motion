@@ -8,8 +8,8 @@
   h3 {
     margin: 0 0 10px 45px;
     color: $whiteColor;
-    @include sm-lt {
-      margin: 0 0 0px 7px;
+    @include xs {
+      margin: 0 0 0px 3.7vw;
     }
   }
   .content {
@@ -19,7 +19,7 @@
     width: 102%;
     margin: 5px auto;
     overflow: scroll;
-    @include sm-lt {
+    @include xs {
       gap: 7.5px;
       width: 106%;
     }
@@ -43,13 +43,13 @@
       &:last-child {
         margin-right: 30px;
       }
-      @include sm-lt {
+      @include xs {
         margin: 0 0 10px 0;
         &:nth-child(1) {
-          margin-left: 7px;
+          margin-left: 3.7vw;
         }
         &:last-child {
-          margin-right: 30px;
+          margin-right: 39px;
         }
       }
     }
