@@ -15,11 +15,10 @@
     background: radial-gradient(circle, #62829a, #34373f);
     border-radius: 6px;
     padding: 15px;
-    @include sm {
-      width: 230px;
-    }
     @include xs {
-      width: 250px;
+      min-width: 210px;
+      padding: 10px;
+      gap: 4px;
     }
     h2 {
       text-align: center;
@@ -27,7 +26,7 @@
       margin-bottom: 5px;
       @include xs {
         font-weight: 900;
-        font-size: 17px;
+        font-size: 16px;
       }
     }
     input {
@@ -41,10 +40,15 @@
       outline: none;
       @include xs {
         min-width: 100%;
+        padding: 6px;
+        font-size: 16px;
       }
       &::placeholder {
         font-family: var(--font-cormorant);
         font-weight: bolder;
+        @include xs {
+          font-size: 16px;
+        }
       }
     }
     input[type="submit"] {
@@ -65,8 +69,9 @@
         color: $goldColor;
       }
       @include xs {
-        margin-top: 2px;
+        margin-top: 3px;
         font-size: 16px;
+        padding: 8px;
       }
     }
   }
