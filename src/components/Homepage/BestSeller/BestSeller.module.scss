@@ -44,10 +44,10 @@
       @include xs {
         padding: 5px 0 10px 0;
         &:nth-child(1) {
-          margin: 15px 0 10px 4vw;
+          margin: 15px 0 10px 3.5vw;
         }
         &:last-child {
-          margin-right: 30px;
+          margin-right: 40px;
         }
       }
       .card {
