@@ -16,7 +16,7 @@
   padding: 0 30px;
   height: 90px;
   background: radial-gradient(circle, #62829a, #34373f);
-  @include xs {
+  @include sm-lt {
     height: 70px;
     position: fixed;
     justify-content: center;
@@ -25,7 +25,7 @@
     h2 {
       font-family: var(--font-caveat);
       font-size: 40px;
-      @include xs {
+      @include sm-lt {
         font-size: 30px;
       }
       small {
@@ -36,7 +36,7 @@
   .navigation {
     display: flex;
     gap: 20px;
-    @include xs {
+    @include sm-lt {
       display: none;
     }
     nav {
@@ -73,7 +73,7 @@
         color: $goldColor;
       }
     }
-    @include xs {
+    @include sm-lt {
       display: none;
     }
     .iconUser {
@@ -97,11 +97,11 @@
   padding: 0 30px;
   height: 90px;
   background: transparent;
-  @include lg {
+  @include lg-lt {
     padding: 0 20px;
     height: 75px;
   }
-  @include xs {
+  @include sm-lt {
     padding: 0 15px;
     height: 60px;
   }
@@ -109,13 +109,13 @@
     h2 {
       font-family: var(--font-caveat);
       font-size: 40px;
-      @include lg {
+      @include lg-lt {
         font-size: 33px;
         &:hover {
           color: $goldColor;
         }
       }
-      @include xs {
+      @include sm-lt {
         font-size: 30px;
         &:hover {
           color: $goldColor;
@@ -123,10 +123,10 @@
       }
       small {
         font-size: 16px;
-        @include lg {
+        @include lg-lt {
           font-size: 15px;
         }
-        @include xs {
+        @include sm-lt {
           font-size: 14px;
         }
       }
@@ -149,10 +149,10 @@
       ul {
         display: flex;
         gap: 30px;
-        @include lg {
+        @include lg-lt {
           gap: 25px;
         }
-        @include xs {
+        @include sm-lt {
           gap: 20px;
         }
         li {
@@ -166,10 +166,7 @@
             text-decoration: none;
             position: relative;
             &:hover {
-              background-color: #62829a;
               color: $goldColor;
-              opacity: 1;
-              border-radius: 6px;
               &::before {
                 content: attr(data-tooltip);
                 position: absolute;
@@ -179,18 +176,18 @@
                 left: 65%;
                 transform: translateX(-50%);
                 white-space: nowrap;
-                @include lg {
+                @include lg-lt {
                   top: 100%;
                   left: 52%;
                 }
-                @include xs {
-                  top: 100%;
-                  left: 52%;
-                }
+                // @include sm-lt {
+                // top: 100%;
+                // left: 52%;
+                // }
               }
             }
           }
-          @include lg {
+          @include lg-lt {
             .icon {
               margin: 0;
               font-size: 16px;
@@ -202,7 +199,7 @@
               }
             }
           }
-          @include xs {
+          @include sm-lt {
             .icon {
               margin: 0;
               font-size: 14px;

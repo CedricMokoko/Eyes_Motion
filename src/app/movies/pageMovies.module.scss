@@ -7,7 +7,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  @include xs {
+  @include sm-lt {
     flex-direction: column;
   }
   h2 {
@@ -15,7 +15,7 @@
     top: 120px;
     left: 30px;
     color: $goldColor;
-    @include xs {
+    @include sm-lt {
       font-family: var(--font-caveat);
       position: fixed;
       top: 69px;
@@ -36,7 +36,7 @@
     gap: 14px;
     width: 65%;
     margin: 120px auto 18px;
-    @include xs {
+    @include sm-lt {
       gap: 7.5px;
       width: 100%;
       margin: 120px auto 70px;

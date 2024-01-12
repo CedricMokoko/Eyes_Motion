@@ -18,15 +18,9 @@
       left: 0;
       right: 0;
       bottom: 0;
-      @include lg {
-        img {
-          display: none;
-        }
-      }
-      @include xs {
+      @include sm-lt {
         img {
           object-fit: cover;
-          height: 100%;
         }
       }
       &::after {
@@ -48,10 +42,7 @@
       align-items: center;
       justify-content: center;
       height: 70%;
-      @include lg {
-        height: 70%;
-      }
-      @include xs {
+      @include lg-lt {
         height: 70%;
       }
       .description {
@@ -59,14 +50,15 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        width: 50%;
+        width: 80%;
         height: 100%;
+        color: $whiteColor;
         margin-top: 90px;
-        @include lg {
-          margin-top: 90px;
+        @include lg-lt {
+          margin-top: 75px;
           width: 95%;
         }
-        @include xs {
+        @include sm-lt {
           margin-top: 60px;
           width: 95%;
         }
@@ -87,15 +79,13 @@
     font-weight: 700;
     color: $whiteColor;
     padding-bottom: 20px;
-    @include lg {
-      height: 20%;
-      padding-bottom: 10px;
-    }
-    @include xs {
+    @include lg-lt {
       height: 30%;
-      padding-bottom: 10px;
     }
-    cursor: pointer;
+    // @include sm-lt {
+    // height: 30%;
+    // padding-bottom: 10px;
+    // }
     .link {
       margin: 0;
       display: flex;
@@ -103,13 +93,13 @@
       justify-content: center;
       width: 50%;
       gap: 10px;
-      @include lg {
+      @include lg-lt {
         font-weight: 900;
         gap: 7px;
-        width: 60%;
+        width: 70%;
         font-size: 14px;
       }
-      @include xs {
+      @include sm-lt {
         font-weight: 900;
         gap: 7px;
         width: 95%;
@@ -125,11 +115,11 @@
     }
     .copyText {
       color: $goldColor;
-      @include lg {
+      @include lg-lt {
         font-size: 15px;
         font-weight: 900;
       }
-      @include xs {
+      @include sm-lt {
         font-size: 13px;
         font-weight: 900;
       }
@@ -138,10 +128,10 @@
       margin-top: 20px;
       margin-right: 5px;
       font-size: 13px;
-      @include lg {
+      @include lg-lt {
         margin-top: 7px;
       }
-      @include xs {
+      @include sm-lt {
         margin-top: 10px;
       }
     }

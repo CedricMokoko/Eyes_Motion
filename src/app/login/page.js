@@ -49,7 +49,7 @@ const LoginFormPage = async () => {
                 rel="noopener noreferrer"
               >
                 <span className={`${styles.copyText}`}>
-                  Eyes Motion by Cédric Mokoko
+                  Eyes_Motion by Cédric Mokoko
                 </span>
               </Link>
             </p>

@@ -9,7 +9,7 @@
   bottom: 0;
   //font-family: var(--font-cormorant);
   margin: 0 0 33px 33px;
-  @include xs {
+  @include sm-lt {
     margin: 0 0 20px 0px;
     top: 60px;
   }
@@ -31,27 +31,27 @@
         margin-right: 20px;
         margin-left: 20px;
         font-size: 14px;
-        @include xs {
+        @include sm-lt {
           display: block;
         }
         color: white;
       }
     }
     .contentLiked {
-      @include xs {
+      @include sm-lt {
         margin: 10px 0 0 20px;
       }
       h3 {
         margin-top: 17px;
         color: $goldColor;
         font-weight: 700;
-        @include xs {
+        @include sm-lt {
           margin-top: 7px;
         }
       }
       h1 {
         color: $whiteColor;
-        @include xs {
+        @include sm-lt {
           margin-top: 10px;
           font-size: 17px;
         }
@@ -65,7 +65,7 @@
       flex-direction: row;
       justify-content: center;
       overflow: hidden;
-      @include xs {
+      @include sm-lt {
         min-height: 70vh;
       }
       .contentList {
@@ -75,7 +75,7 @@
         width: 80%;
         padding: 5px 0 40px 20px;
         overflow: scroll;
-        @include xs {
+        @include sm-lt {
           justify-content: center;
           width: 100%;
           padding: 5px 0 50px 20px;
@@ -90,7 +90,7 @@
         .cardContainer {
           transition: transform 0.5s ease-out;
           height: 150px;
-          @include xs {
+          @include sm-lt {
             height: 100px;
           }
           &:hover {
@@ -101,14 +101,14 @@
             border-radius: 6px;
             box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25);
             min-width: 100px;
-            @include xs {
+            @include sm-lt {
               min-width: 80px;
             }
             .image {
               position: relative;
               width: 100%;
               height: 150px;
-              @include xs {
+              @include sm-lt {
                 height: 100px;
               }
               img {

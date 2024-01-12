@@ -6,7 +6,7 @@
   position: relative;
   width: 100%;
   min-height: calc(100vh - 90px);
-  @include xs {
+  @include sm-lt {
     margin-top: 70px;
     width: 100vw;
   }
@@ -17,12 +17,12 @@
     left: 0;
     width: 100%;
     min-height: 100%;
-    // @include xs {
+    // @include sm-lt {
     //   min-height: calc(100vh - 130px);
     // }
     img {
       object-fit: cover;
-      @include xs {
+      @include sm-lt {
         display: none;
       }
     }
@@ -45,14 +45,14 @@
     gap: 50px;
     height: calc(100vh - 90px);
     padding: 107px 0;
-    @include xs {
+    @include sm-lt {
       flex-direction: column;
       align-items: center;
       gap: 0px;
     }
     & > img {
       border-radius: 6px;
-      @include xs {
+      @include sm-lt {
         height: 300px;
         width: 80vw;
       }
@@ -66,20 +66,20 @@
       flex: 0.6;
       color: $whiteColor;
       font-family: var(--font-montserrat);
-      @include xs {
+      @include sm-lt {
         width: 80vw;
       }
       h1 {
         font-weight: 700;
         font-size: 26px;
         margin: 0;
-        @include xs {
+        @include sm-lt {
           margin-top: 15px;
           font-size: 13px;
         }
         span {
           font-size: 20px;
-          @include xs {
+          @include sm-lt {
             font-size: 10px;
           }
         }
@@ -92,7 +92,7 @@
         font-size: 20px;
         font-weight: 500;
         margin: 10px 0 0;
-        @include xs {
+        @include sm-lt {
           font-size: 14px;
         }
       }
@@ -104,7 +104,7 @@
         -webkit-line-clamp: 5;
         -webkit-box-orient: vertical;
         overflow: hidden;
-        @include xs {
+        @include sm-lt {
           -webkit-line-clamp: 2;
         }
       }
@@ -115,7 +115,7 @@
         flex-direction: row;
         align-items: center;
         gap: 40px;
-        @include xs {
+        @include sm-lt {
           width: 80vw;
           justify-content: space-between;
         }
@@ -147,7 +147,7 @@
       }
       .credits {
         margin-top: 20px;
-        @include xs {
+        @include sm-lt {
           display: none;
         }
       }

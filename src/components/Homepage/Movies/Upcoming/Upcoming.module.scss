@@ -7,13 +7,13 @@
   flex-direction: column;
   overflow: hidden;
   margin: 10px 0 0 0;
-  @include xs {
+  @include sm-lt {
     margin: 7px 0 0 0;
   }
   h3 {
     margin: 0 0 10px 45px;
     color: $whiteColor;
-    @include xs {
+    @include sm-lt {
       margin: 0 0 5px 7px;
     }
   }
@@ -30,7 +30,7 @@
     &::-webkit-scrollbar-track {
       background: transparent;
     }
-    @include xs {
+    @include sm-lt {
       width: 106%;
       gap: 7.5px;
     }
@@ -48,7 +48,7 @@
       &:last-child {
         margin-right: 10px;
       }
-      @include xs {
+      @include sm-lt {
         margin: 0 0 15px 0;
 
         &:nth-child(1) {
@@ -64,7 +64,7 @@
         border-radius: 6px;
         box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25);
         min-width: 250px;
-        @include xs {
+        @include sm-lt {
           min-width: 125px;
           box-shadow: none;
         }
@@ -72,7 +72,7 @@
           position: relative;
           width: 100%;
           height: 330px;
-          @include xs {
+          @include sm-lt {
             height: 200px;
           }
           img {
@@ -82,7 +82,7 @@
               border: 3px solid $whiteColor;
               border-radius: 8px;
             }
-            @include xs {
+            @include sm-lt {
               box-shadow: none;
             }
           }

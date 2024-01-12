@@ -7,7 +7,7 @@
   justify-content: center;
   overflow-x: hidden;
   margin: 4px 20px 20px 20px;
-  @include xs {
+  @include sm-lt {
     margin: 0;
     width: 100vw;
     align-items: center;
@@ -15,7 +15,7 @@
   p {
     color: $goldColor;
     font-weight: 700;
-    @include xs {
+    @include sm-lt {
       align-self: flex-start;
       margin: 15px;
       font-size: 13px;
@@ -42,7 +42,7 @@
     &::-webkit-scrollbar-track {
       background: transparent;
     }
-    @include xs {
+    @include sm-lt {
       flex-flow: row wrap;
       padding: 0 0 69px 0;
       align-items: center;
@@ -50,7 +50,7 @@
     }
     > div {
       width: 200px;
-      @include xs {
+      @include sm-lt {
         width: 80px;
       }
     }
