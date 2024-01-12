@@ -6,7 +6,7 @@ import Image from "next/image";
 
 const Upcoming = async () => {
   const { results } = await getMovieByPath("/movie/upcoming");
-  const upcomingdMovies = results.slice(7, 17);
+  const upcomingdMovies = results.slice(10, 20);
 
   return (
     <div className={styles.container}>
