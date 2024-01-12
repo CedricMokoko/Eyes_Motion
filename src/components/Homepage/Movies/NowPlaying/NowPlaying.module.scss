@@ -20,7 +20,7 @@
     margin: 5px auto;
     overflow: scroll;
     @include xs {
-      gap: 7.5px;
+      gap: 10px;
       width: 106%;
     }
     &::-webkit-scrollbar {
