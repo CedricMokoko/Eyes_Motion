@@ -14,7 +14,7 @@
     .background {
       position: absolute;
       z-index: 1;
-      top: 0;
+      top: 60px;
       left: 0;
       right: 0;
       bottom: 0;
@@ -43,7 +43,7 @@
       justify-content: center;
       height: 70%;
       @include lg-lt {
-        height: 70%;
+        height: 100%;
       }
       .description {
         display: flex;
@@ -80,7 +80,9 @@
     color: $whiteColor;
     padding-bottom: 20px;
     @include lg-lt {
-      height: 30%;
+      height: 25%;
+      justify-content: center;
+      padding-bottom: 0px;
     }
     .link {
       margin: 0;
