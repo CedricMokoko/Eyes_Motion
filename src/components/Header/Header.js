@@ -23,7 +23,7 @@ const Header = ({ session }) => {
       // Mostra un toast solo se l'utente è autenticato e il toast non è stato ancora mostrato
       toast.success(`Hi, ${session.user.name}!`, {
         id: "Messages",
-        style: { marginTop: "5px", marginRight: "900px" },
+        style: { marginTop: "90px", marginRight: "0px" },
       });
       // Imposta la variabile di stato per indicare che il toast è stato mostrato
       setHasShownWelcomeToast(true);

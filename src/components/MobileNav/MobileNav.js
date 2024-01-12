@@ -48,10 +48,7 @@ const MobileNav = ({ session }) => {
               </li>
               <li>
                 <Link href={`/private/user`}>
-                  <FontAwesomeIcon
-                    icon={faUser}
-                    className={`${styles.iconUser}`}
-                  />
+                  <FontAwesomeIcon icon={faUser} className={`${styles.icon}`} />
                 </Link>
               </li>
             </ul>

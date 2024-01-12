@@ -13,7 +13,7 @@
   h3 {
     margin: 0 0 10px 45px;
     color: $whiteColor;
-    @include sm-lt {
+    @include xs {
       margin: 0 0 3px 3.7vw;
     }
   }
