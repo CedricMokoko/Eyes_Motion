@@ -14,7 +14,7 @@
     width: 100%;
     margin: 0px auto;
     overflow: scroll;
-    padding: 20px 0;
+    padding: 30px 0;
     @include xs {
       padding: 0;
       justify-content: left;
@@ -51,13 +51,14 @@
         }
       }
       .card {
-        margin-top: 70px;
+        margin-top: 40px;
         font-family: var(--font-montserrat-);
         border-radius: 6px;
         box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25);
         min-width: 330px;
         @include xs {
-          margin-top: 70px;
+          margin-top: 65px;
+          margin-bottom: 7px;
           min-width: 92vw;
         }
         .image {
