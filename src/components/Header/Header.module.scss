@@ -15,7 +15,9 @@
   color: $whiteColor;
   padding: 0 30px;
   height: 90px;
-  background: radial-gradient(circle, #62829a, #34373f);
+  // background: radial-gradient(circle, #62829a, #34373f);
+  background: radial-gradient(circle, #526576, #34373f);
+
   @include sm-lt {
     padding: 0 15px;
     height: 60px;

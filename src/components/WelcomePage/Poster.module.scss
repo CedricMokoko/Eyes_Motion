@@ -14,11 +14,13 @@
     .background {
       position: absolute;
       z-index: 1;
-      top: 60px;
+      top: 0px;
       left: 0;
       right: 0;
       bottom: 0;
       @include sm-lt {
+        top: 60px;
+
         img {
           object-fit: cover;
         }
