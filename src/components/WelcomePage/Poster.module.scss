@@ -14,13 +14,18 @@
     .background {
       position: absolute;
       z-index: 1;
-      top: 0px;
+      top: 0;
       left: 0;
       right: 0;
       bottom: 0;
+      @include lg-lt {
+        top: 75px;
+        img {
+          display: none;
+        }
+      }
       @include sm-lt {
         top: 60px;
-
         img {
           object-fit: cover;
         }
@@ -59,9 +64,11 @@
         @include lg-lt {
           margin-top: 0px;
           width: 95%;
+          margin-bottom: 75px;
         }
         @include sm-lt {
           margin-top: 0px;
+          margin-bottom: 60px;
           width: 95%;
         }
         h1 {
