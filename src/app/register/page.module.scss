@@ -19,13 +19,13 @@
       right: 0;
       bottom: 0;
       @include lg-lt {
-        top: 75px;
+        top: 60px;
         img {
           display: none;
         }
       }
       @include sm-lt {
-        top: 60px;
+        // top: 60px;
         img {
           display: flex;
           object-fit: cover;
@@ -63,13 +63,13 @@
         color: $whiteColor;
         margin-top: 90px;
         @include lg-lt {
-          margin-top: 75px;
-          width: 95%;
-        }
-        @include sm-lt {
           margin-top: 60px;
           width: 95%;
         }
+        // @include sm-lt {
+        //   margin-top: 60px;
+        //   width: 95%;
+        // }
       }
     }
   }

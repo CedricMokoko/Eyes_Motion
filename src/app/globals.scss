@@ -5,12 +5,15 @@ html {
   @include lg-lt {
     font-size: 87.5%;
   }
-  @include md-lt {
-    font-size: 81.25%;
-  }
-  @include sm-lt {
+  @include lg-lt {
     font-size: 65%;
   }
+  // @include md-lt {
+  //   font-size: 81.25%;
+  // }
+  // @include sm-lt {
+  //   font-size: 65%;
+  // }
 }
 
 body {

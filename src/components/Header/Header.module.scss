@@ -141,12 +141,12 @@
   height: 90px;
   background: transparent;
   @include lg-lt {
-    padding: 0 20px;
+    padding: 0 15px;
     height: 60px;
   }
-  @include sm-lt {
-    padding: 0 15px;
-  }
+  // @include sm-lt {
+  //   padding: 0 15px;
+  // }
   .logo {
     h2 {
       font-family: var(--font-caveat);
@@ -163,13 +163,21 @@
           font-size: 14px;
         }
       }
-      a {
-        &:hover {
-          padding: 3px;
-          background-color: #62829a;
-          color: $goldColor;
-          opacity: 1;
-          border-radius: 6px;
+      @include lg-lt {
+        a {
+          &:hover {
+            color: $goldColor;
+          }
+        }
+      }
+      @include sm-lt {
+        a {
+          &:hover {
+            padding: 3px;
+            background-color: #62829a;
+            opacity: 1;
+            border-radius: 6px;
+          }
         }
       }
     }
@@ -183,7 +191,7 @@
         display: flex;
         gap: 30px;
         @include lg-lt {
-          gap: 25px;
+          gap: 20px;
         }
         @include sm-lt {
           gap: 20px;
