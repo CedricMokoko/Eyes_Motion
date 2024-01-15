@@ -2,9 +2,9 @@
 @import "mixins_media_queries";
 
 html {
-  @include lg-lt {
-    font-size: 87.5%;
-  }
+  // @include lg-lt {
+  // font-size: 87.5%;
+  // }
   @include lg-lt {
     font-size: 65%;
   }

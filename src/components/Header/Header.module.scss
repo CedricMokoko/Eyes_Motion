@@ -73,9 +73,6 @@
   .navigation {
     display: flex;
     gap: 20px;
-    @include lg-lt {
-      gap: 15px;
-    }
     @include sm-lt {
       display: none;
     }
@@ -85,7 +82,7 @@
         gap: 30px;
         margin-right: 20px;
         @include lg-lt {
-          gap: 20px;
+          gap: 25px;
         }
         li {
           a {
@@ -191,7 +188,7 @@
         display: flex;
         gap: 30px;
         @include lg-lt {
-          gap: 20px;
+          gap: 25px;
         }
         @include sm-lt {
           gap: 20px;

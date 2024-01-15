@@ -62,12 +62,12 @@
         height: 100%;
         color: $whiteColor;
         margin-top: 90px;
-        // @include lg-lt {
-        //   margin-top: 0px;
-        //   width: 95%;
-        //   margin-bottom: 75px;
-        // }
         @include lg-lt {
+          margin-top: 0px;
+          width: 95%;
+          //  margin-bottom: 60px;
+        }
+        @include sm-lt {
           margin-top: 0px;
           margin-bottom: 60px;
           width: 95%;
