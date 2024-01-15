@@ -30,12 +30,6 @@
     h2 {
       font-family: var(--font-caveat);
       font-size: 40px;
-      // @include lg-lt {
-      // font-size: 33px;
-      // &:hover {
-      // color: $goldColor;
-      // }
-      // }
       @include lg-lt {
         font-size: 30px;
         &:hover {
@@ -44,9 +38,6 @@
       }
       small {
         font-size: 16px;
-        // @include lg-lt {
-        //   font-size: 15px;
-        // }
         @include lg-lt {
           font-size: 14px;
         }
@@ -139,13 +130,10 @@
   background: transparent;
   @include lg-lt {
     position: relative; //
-
     padding: 0 15px;
     height: 60px;
   }
-  // @include sm-lt {
-  //   padding: 0 15px;
-  // }
+
   .logo {
     h2 {
       font-family: var(--font-caveat);
@@ -223,18 +211,6 @@
               }
             }
           }
-          // @include lg-lt {
-          //   .icon {
-          //     margin: 0;
-          //     font-size: 16px;
-          //     padding: 6px;
-          //     border-radius: 6px;
-          //     &:hover {
-          //       background-color: #62829a;
-          //       opacity: 1;
-          //     }
-          //   }
-          // }
           @include lg-lt {
             .icon {
               margin: 0;

@@ -67,9 +67,7 @@
           margin-bottom: 120px;
         }
         @include sm-lt {
-          margin-top: 0px;
           margin-bottom: 60px;
-          width: 95%;
         }
         h1 {
           font-weight: 900;
@@ -81,7 +79,6 @@
           }
           @include sm-lt {
             font-size: 18px;
-            text-align: center;
           }
         }
         .production {
@@ -92,13 +89,11 @@
           }
           @include lg-lt {
             font-size: 18px;
-            margin-top: 0px;
+            margin-top: 0;
             text-align: center;
           }
           @include sm-lt {
             font-size: 17px;
-            margin-top: 0px;
-            text-align: center;
           }
         }
         h3 {
@@ -112,9 +107,7 @@
             text-align: center;
           }
           @include sm-lt {
-            margin: 0;
             font-size: 15px;
-            text-align: center;
           }
           .icon {
             font-size: 13px;
@@ -163,8 +156,6 @@
           font-size: 14px;
         }
         @include sm-lt {
-          font-weight: 900;
-          gap: 7px;
           width: 95%;
           font-size: 12px;
         }
@@ -184,7 +175,6 @@
         }
         @include sm-lt {
           font-size: 13px;
-          font-weight: 900;
         }
       }
       .copyRight {
