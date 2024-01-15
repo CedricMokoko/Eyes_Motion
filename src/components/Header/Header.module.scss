@@ -18,22 +18,25 @@
   // background: radial-gradient(circle, #62829a, #34373f);
   background: radial-gradient(circle, #526576, #34373f);
 
+  @include lg-lt {
+    height: 60px;
+    padding: 0 20px;
+  }
   @include sm-lt {
     padding: 0 15px;
-    height: 60px;
     justify-content: center;
   }
   .logo {
     h2 {
       font-family: var(--font-caveat);
       font-size: 40px;
+      // @include lg-lt {
+      // font-size: 33px;
+      // &:hover {
+      // color: $goldColor;
+      // }
+      // }
       @include lg-lt {
-        font-size: 33px;
-        &:hover {
-          color: $goldColor;
-        }
-      }
-      @include sm-lt {
         font-size: 30px;
         &:hover {
           color: $goldColor;
@@ -41,11 +44,18 @@
       }
       small {
         font-size: 16px;
+        // @include lg-lt {
+        //   font-size: 15px;
+        // }
         @include lg-lt {
-          font-size: 15px;
-        }
-        @include sm-lt {
           font-size: 14px;
+        }
+      }
+      @include lg-lt {
+        a {
+          &:hover {
+            color: $goldColor;
+          }
         }
       }
       @include sm-lt {
@@ -53,7 +63,6 @@
           &:hover {
             padding: 3px;
             background-color: #62829a;
-            color: $goldColor;
             opacity: 1;
             border-radius: 6px;
           }
@@ -64,6 +73,9 @@
   .navigation {
     display: flex;
     gap: 20px;
+    @include lg-lt {
+      gap: 15px;
+    }
     @include sm-lt {
       display: none;
     }
@@ -72,6 +84,9 @@
         display: flex;
         gap: 30px;
         margin-right: 20px;
+        @include lg-lt {
+          gap: 20px;
+        }
         li {
           a {
             &:hover {
@@ -127,23 +142,16 @@
   background: transparent;
   @include lg-lt {
     padding: 0 20px;
-    height: 75px;
+    height: 60px;
   }
   @include sm-lt {
     padding: 0 15px;
-    height: 60px;
   }
   .logo {
     h2 {
       font-family: var(--font-caveat);
       font-size: 40px;
       @include lg-lt {
-        font-size: 33px;
-        &:hover {
-          color: $goldColor;
-        }
-      }
-      @include sm-lt {
         font-size: 30px;
         &:hover {
           color: $goldColor;
@@ -152,9 +160,6 @@
       small {
         font-size: 16px;
         @include lg-lt {
-          font-size: 15px;
-        }
-        @include sm-lt {
           font-size: 14px;
         }
       }
@@ -211,19 +216,19 @@
               }
             }
           }
+          // @include lg-lt {
+          //   .icon {
+          //     margin: 0;
+          //     font-size: 16px;
+          //     padding: 6px;
+          //     border-radius: 6px;
+          //     &:hover {
+          //       background-color: #62829a;
+          //       opacity: 1;
+          //     }
+          //   }
+          // }
           @include lg-lt {
-            .icon {
-              margin: 0;
-              font-size: 16px;
-              padding: 6px;
-              border-radius: 6px;
-              &:hover {
-                background-color: #62829a;
-                opacity: 1;
-              }
-            }
-          }
-          @include sm-lt {
             .icon {
               margin: 0;
               font-size: 14px;
