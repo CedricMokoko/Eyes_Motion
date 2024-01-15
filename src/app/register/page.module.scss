@@ -63,13 +63,10 @@
         color: $whiteColor;
         margin-top: 90px;
         @include lg-lt {
-          // margin-top: 100px;
-          margin-top: 0px;
           margin-bottom: 100px;
           width: 95%;
         }
         @include sm-lt {
-          // margin-top: 60px;
           width: 95%;
         }
       }
