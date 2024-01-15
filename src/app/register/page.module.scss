@@ -88,9 +88,10 @@
     color: $whiteColor;
     padding-bottom: 20px;
     @include lg-lt {
-      height: 25%;
+      height: min-content;
       justify-content: center;
       padding-bottom: 0px;
+      padding: 20px;
     }
     .link {
       margin: 0;
