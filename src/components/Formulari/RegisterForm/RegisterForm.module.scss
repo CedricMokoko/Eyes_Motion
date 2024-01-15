@@ -15,11 +15,11 @@
     background: radial-gradient(circle, #62829a, #34373f);
     border-radius: 6px;
     padding: 15px;
+    // @include lg-lt {
+    //   min-width: 230px;
+    //   padding: 13px;
+    // }
     @include lg-lt {
-      min-width: 230px;
-      padding: 13px;
-    }
-    @include sm-lt {
       min-width: 210px;
       padding: 10px;
       gap: 4px;
