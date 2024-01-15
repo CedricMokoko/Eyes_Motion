@@ -138,6 +138,8 @@
   height: 90px;
   background: transparent;
   @include lg-lt {
+    position: relative; //
+
     padding: 0 15px;
     height: 60px;
   }
