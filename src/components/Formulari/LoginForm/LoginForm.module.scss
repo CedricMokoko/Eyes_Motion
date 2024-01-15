@@ -16,7 +16,7 @@
     border-radius: 6px;
     padding: 15px;
     @include lg-lt {
-      min-width: 250px;
+      min-width: 230px;
       padding: 13px;
     }
     @include sm-lt {
@@ -28,7 +28,7 @@
       text-align: center;
       color: $goldColor;
       margin-bottom: 5px;
-      @include sm-lt {
+      @include lg-lt {
         font-weight: 900;
         font-size: 16px;
       }
@@ -42,14 +42,14 @@
       border: 1px solid $greyColor;
       padding: 10px;
       outline: none;
-      @include sm-lt {
+      @include lg-lt {
         min-width: 100%;
         padding: 6px;
       }
       &::placeholder {
         font-family: var(--font-cormorant);
         font-weight: bolder;
-        @include sm-lt {
+        @include lg-lt {
           font-size: 16px;
         }
       }
@@ -71,7 +71,7 @@
         opacity: 0.7;
         color: $goldColor;
       }
-      @include sm-lt {
+      @include lg-lt {
         margin-top: 3px;
         font-size: 16px;
         padding: 8px;
