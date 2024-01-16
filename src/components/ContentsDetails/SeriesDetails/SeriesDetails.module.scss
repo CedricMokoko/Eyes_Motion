@@ -14,7 +14,7 @@
   @include sm-lt {
     margin-top: 0px;
     // padding: 10px 0;
-    height: 69vh;
+    height: 65vh;
     // height: 70vh;
   }
 
@@ -52,16 +52,17 @@
     padding: 107px 0;
     @include sm-lt {
       height: 100%;
-      padding: 100px 0;
+      padding: 100px;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 30px;
+      gap: 15px;
     }
     & > img {
       border-radius: 6px;
       @include sm-lt {
+        margin-top: 10px;
         height: 150px;
         width: 40vw;
       }
