@@ -12,11 +12,11 @@
   }
   @include md {
     margin-top: 60px;
-    height: 65vh;
+    height: 70vh;
   }
   @include sm {
     margin-top: 0px;
-    height: 70vh;
+    height: 65vh;
   }
   @include xs {
     margin-top: 0px;
@@ -68,7 +68,15 @@
       align-items: center;
       justify-content: center;
     }
-    @include sm-lt {
+    @include sm {
+      padding: 0px 0;
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+    @include xs {
       height: 100%;
       padding: 0px;
       display: flex;
@@ -88,9 +96,8 @@
       }
 
       @include sm {
-        margin-top: 30px;
         height: 200px;
-        width: 40vw;
+        width: 25vw;
       }
 
       @include xs {
@@ -126,6 +133,11 @@
           @include lg {
             color: gray;
           }
+          @include md-lt {
+            color: gray;
+            font-size: 11px;
+          }
+
           @include sm-lt {
             font-size: 10px;
             color: gray;
@@ -179,7 +191,7 @@
         flex-direction: row;
         align-items: center;
         gap: 40px;
-        @include sm-lt {
+        @include xs {
           width: 80vw;
           justify-content: space-between;
         }

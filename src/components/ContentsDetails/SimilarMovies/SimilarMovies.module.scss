@@ -15,7 +15,7 @@
     color: $goldColor;
     font-weight: 700;
     margin: 10px 0 15px 20px;
-    @include sm-lt {
+    @include xs {
       padding: 0 40px 20px 10px;
     }
     .icon {
@@ -45,7 +45,7 @@
     @include lg-lt {
       padding: 0 40px 20px 20px;
     }
-    @include sm-lt {
+    @include xs {
       padding: 0 40px 20px 30px;
     }
     > div {
