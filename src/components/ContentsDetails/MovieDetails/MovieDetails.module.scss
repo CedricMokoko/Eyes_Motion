@@ -8,8 +8,7 @@
   height: calc(100vh - 90px);
   @include sm-lt {
     margin-top: 0px;
-    padding-top: 60px;
-    height: calc(80vh - 120px);
+    height: 65vh;
   }
   .background {
     position: absolute;
@@ -41,7 +40,6 @@
     display: flex;
     justify-content: center;
     gap: 50px;
-    height: calc(100vh - 90px);
     padding: 107px 0;
     @include sm-lt {
       height: 100%;
@@ -50,11 +48,12 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 0px;
+      gap: 15px;
     }
     & > img {
       border-radius: 6px;
       @include sm-lt {
+        margin-top: 30px;
         height: 150px;
         width: 40vw;
       }
@@ -75,9 +74,7 @@
         font-weight: 700;
         font-size: 26px;
         margin: 0;
-
         @include sm-lt {
-          margin-top: 20px;
           font-size: 11px;
         }
         span {
@@ -110,7 +107,6 @@
         margin: 10px 0 0;
         @include sm-lt {
           font-size: 11px;
-          margin: 0;
         }
       }
       .overview {
@@ -124,7 +120,6 @@
         @include sm-lt {
           font-size: 11px;
           color: gray;
-
           line-height: 16px;
           margin: 12px 0;
           -webkit-line-clamp: 2;
@@ -160,7 +155,6 @@
           }
           @include sm-lt {
             width: 70px;
-            height: 25px;
             font-size: 9px;
           }
         }

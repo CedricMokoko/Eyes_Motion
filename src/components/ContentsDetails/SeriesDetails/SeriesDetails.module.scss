@@ -6,18 +6,10 @@
   position: relative;
   width: 100%;
   height: calc(100vh - 90px);
-  // @include sm-lt {
-  //   margin-top: 0px;
-  //   padding-top: 60px;
-  //   height: calc(80vh - 120px);
-  // }
   @include sm-lt {
     margin-top: 0px;
-    // padding: 10px 0;
     height: 65vh;
-    // height: 70vh;
   }
-
   .background {
     position: absolute;
     z-index: 1;
@@ -48,11 +40,10 @@
     display: flex;
     justify-content: center;
     gap: 50px;
-    // height: calc(100vh - 90px);
     padding: 107px 0;
     @include sm-lt {
       height: 100%;
-      padding: 100px;
+      padding: 0px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -62,7 +53,7 @@
     & > img {
       border-radius: 6px;
       @include sm-lt {
-        margin-top: 10px;
+        margin-top: 30px;
         height: 150px;
         width: 40vw;
       }
@@ -83,9 +74,7 @@
         font-weight: 700;
         font-size: 26px;
         margin: 0;
-
         @include sm-lt {
-          //   margin-top: 20px;
           font-size: 11px;
         }
         span {
@@ -118,7 +107,6 @@
         margin: 10px 0 0;
         @include sm-lt {
           font-size: 11px;
-          //   margin: 0;
         }
       }
       .overview {
@@ -132,7 +120,6 @@
         @include sm-lt {
           font-size: 11px;
           color: gray;
-
           line-height: 16px;
           margin: 12px 0;
           -webkit-line-clamp: 2;
@@ -168,7 +155,6 @@
           }
           @include sm-lt {
             width: 70px;
-            // height: 25px;
             font-size: 9px;
           }
         }
@@ -189,187 +175,3 @@
     }
   }
 }
-
-// @import "variables";
-// @import "mixins_media_queries";
-
-// .details {
-//   margin-top: 90px;
-//   position: relative;
-//   width: 100%;
-//   height: calc(100vh - 90px);
-//   @include sm-lt {
-//     margin-top: 0px;
-//     padding-top: 60px;
-//     height: calc(80vh - 120px);
-//   }
-//   .background {
-//     position: absolute;
-//     z-index: 1;
-//     top: 0;
-//     left: 0;
-//     width: 100%;
-//     height: 100%;
-//     img {
-//       object-fit: cover;
-//       @include lg-lt {
-//         display: none;
-//       }
-//     }
-//     &::after {
-//       position: absolute;
-//       z-index: 2;
-//       top: 0;
-//       left: 0;
-//       width: 100%;
-//       height: 100%;
-//       background-color: rgba($color: #041226, $alpha: 0.8);
-//       content: "";
-//     }
-//   }
-//   .content {
-//     position: relative;
-//     z-index: 3;
-//     display: flex;
-//     justify-content: center;
-//     gap: 50px;
-//     height: calc(100vh - 90px);
-//     padding: 107px 0;
-//     @include sm-lt {
-//       height: 100%;
-//       padding: 0px;
-//       display: flex;
-//       flex-direction: column;
-//       align-items: center;
-//       justify-content: center;
-//       gap: 0px;
-//     }
-//     & > img {
-//       border-radius: 6px;
-//       @include sm-lt {
-//         height: 150px;
-//         width: 40vw;
-//       }
-//     }
-//     span {
-//       color: $greyColor;
-//     }
-//     .description {
-//       display: flex;
-//       flex-direction: column;
-//       flex: 0.6;
-//       color: $whiteColor;
-//       font-family: var(--font-montserrat);
-//       @include sm-lt {
-//         width: 80vw;
-//       }
-//       h1 {
-//         font-weight: 700;
-//         font-size: 26px;
-//         margin: 0;
-
-//         @include sm-lt {
-//           margin-top: 20px;
-//           font-size: 11px;
-//         }
-//         span {
-//           font-size: 20px;
-//           @include sm-lt {
-//             font-size: 10px;
-//             color: gray;
-//           }
-//         }
-//       }
-//       .production {
-//         font-size: 13px;
-//         @include sm-lt {
-//           font-size: 11px;
-//         }
-//         > span {
-//           @include sm-lt {
-//             display: -webkit-box;
-//             -webkit-line-clamp: 1;
-//             -webkit-box-orient: vertical;
-//             overflow: hidden;
-//             color: gray;
-//           }
-//         }
-//       }
-//       h2 {
-//         color: $whiteColor;
-//         font-size: 20px;
-//         font-weight: 500;
-//         margin: 10px 0 0;
-//         @include sm-lt {
-//           font-size: 11px;
-//           margin: 0;
-//         }
-//       }
-//       .overview {
-//         font-size: 14px;
-//         line-height: 18px;
-//         font-weight: 300;
-//         display: -webkit-box;
-//         -webkit-line-clamp: 5;
-//         -webkit-box-orient: vertical;
-//         overflow: hidden;
-//         @include sm-lt {
-//           font-size: 11px;
-//           color: gray;
-
-//           line-height: 16px;
-//           margin: 12px 0;
-//           -webkit-line-clamp: 2;
-//         }
-//       }
-//       .actions {
-//         margin: 10px 0;
-//         display: flex;
-//         width: 150px;
-//         flex-direction: row;
-//         align-items: center;
-//         gap: 40px;
-//         @include sm-lt {
-//           width: 80vw;
-//           justify-content: space-between;
-//         }
-//         .btn {
-//           cursor: pointer;
-//           width: 90px;
-//           height: 30px;
-//           padding: 2px;
-//           font-weight: 900;
-//           font-size: 10px;
-//           background-color: $goldColor;
-//           border: none;
-//           border-radius: 6px;
-//           transition: 0.3s;
-//           &:hover {
-//             opacity: 0.7;
-//           }
-//           .icon {
-//             margin-right: 6px;
-//           }
-//           @include sm-lt {
-//             width: 70px;
-//             height: 25px;
-//             font-size: 9px;
-//           }
-//         }
-//         & > .icon {
-//           cursor: pointer;
-//           font-size: 22px;
-//           &:hover {
-//             opacity: 0.7;
-//           }
-//         }
-//       }
-//       .credits {
-//         margin-top: 20px;
-//         @include sm-lt {
-//           display: none;
-//         }
-//       }
-//     }
-//   }
-// }

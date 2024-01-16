@@ -8,17 +8,13 @@
   overflow-x: hidden;
   margin: 4px 0px 20px 0px;
   @include sm-lt {
-    margin: 15px 0px 0px 0px;
+    margin: 0px;
+    height: min-content;
   }
   p {
     color: $goldColor;
     font-weight: 700;
     margin: 10px 0 15px 30px;
-    @include sm-lt {
-      align-self: flex-start;
-      margin: 0 0 15px 3.7vw;
-      font-size: 13px;
-    }
     .icon {
       color: rgb(169, 18, 18);
       margin-left: 5px;
@@ -32,7 +28,7 @@
     }
   }
   .list {
-    padding: 0 0 20px 0;
+    padding: 0 30px 20px 30px;
     width: 100%;
     display: flex;
     gap: 6px;
@@ -44,17 +40,10 @@
       background: transparent;
     }
     @include sm-lt {
-      padding: 0 0 0px 0;
-
-      margin: 0 0 0px 0;
-      align-items: center;
+      padding: 0 40px 0px 30px;
     }
     > div {
       width: 200px;
-      @include sm-lt {
-        width: 80px;
-        margin-bottom: 0;
-      }
     }
   }
 }

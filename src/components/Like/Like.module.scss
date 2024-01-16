@@ -5,35 +5,41 @@
   cursor: pointer;
   font-size: 16px;
   font-weight: 900;
-  transition: 0.3s;
+  transition: 0.1s;
   opacity: 1;
-  background-color: rgb(255, 255, 255);
-  color: black;
+  background-color: #62829a;
+  color: white;
   padding: 5px 7px;
-  border-radius: 50%;
+  border-radius: 6px;
   &:hover {
-    opacity: 0.7;
+    opacity: 1;
+    color: $goldColor;
     transform: scale(0.8); /* Riduci la dimensione durante l'hover */
   }
 }
-
 .liked {
   padding: 5px 7px;
-  animation: rotateAndFadeOut 0.2s forwards; // Imposta "forwards" per mantenere lo stato finale dell'animazione
+  animation: rotateAndFadeOut 0.1s forwards; // Imposta "forwards" per mantenere lo stato finale dell'animazione
+  &:hover {
+    background-color: #62829a;
+    opacity: 1;
+    color: $goldColor;
+  }
 }
 
 @keyframes rotateAndFadeOut {
   0% {
     transform: rotate(0deg);
-    opacity: 1;
-    color: green;
+    opacity: 0;
     background-color: transparent;
   }
   100% {
     transform: rotate(360deg);
+    font-size: 16px;
+    padding: 5px;
+    border-radius: 6px;
+    background-color: #62829a;
     opacity: 1;
-    color: green; // Rende il colore trasparente alla fine
-    background-color: transparent;
-    font-size: 20px;
+    color: $goldColor;
   }
 }
