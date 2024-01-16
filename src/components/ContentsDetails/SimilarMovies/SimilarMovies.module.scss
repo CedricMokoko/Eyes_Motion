@@ -29,6 +29,9 @@
   }
   .notFoundSimilar {
     margin-bottom: 80px;
+    @include sm-lt {
+      margin-bottom: 0px;
+    }
   }
   .list {
     padding: 0 0 20px 0;
