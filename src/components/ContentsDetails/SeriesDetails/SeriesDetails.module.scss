@@ -12,9 +12,10 @@
   //   height: calc(80vh - 120px);
   // }
   @include sm-lt {
-    margin-top: 60px;
-    padding: 80px;
-    height: 60vh;
+    margin-top: 0px;
+    // padding: 10px 0;
+    height: 69vh;
+    // height: 70vh;
   }
 
   .background {
