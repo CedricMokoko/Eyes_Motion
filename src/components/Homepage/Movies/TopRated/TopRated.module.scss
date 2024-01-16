@@ -8,6 +8,9 @@
   h3 {
     margin: 0 0 10px 45px;
     color: $whiteColor;
+    @include lg-lt {
+      margin: 0 0 0px 3.7vw;
+    }
     @include xs {
       margin: 0 0 0px 3.7vw;
     }
@@ -19,6 +22,10 @@
     width: 102%;
     margin: 5px auto;
     overflow: scroll;
+    @include lg-lt {
+      gap: 10px;
+      width: 106%;
+    }
     @include xs {
       gap: 10px;
       width: 106%;
@@ -33,6 +40,7 @@
     .cardContainer {
       margin: 0 0 20px 0;
       padding: 0;
+      border-radius: 6px;
       transition: transform 0.5s ease-out;
       &:hover {
         transform: scale(1.06);
@@ -43,13 +51,25 @@
       &:last-child {
         margin-right: 30px;
       }
+      @include lg-lt {
+        margin: 0 0 10px 0;
+        &:hover {
+          transform: scale(1.02);
+        }
+        &:nth-child(1) {
+          margin-left: 3.7vw;
+        }
+        &:last-child {
+          margin-right: 100px;
+        }
+      }
       @include xs {
         margin: 0 0 10px 0;
         &:nth-child(1) {
           margin-left: 3.7vw;
         }
         &:last-child {
-          margin-right: 39px;
+          margin-right: 50px;
         }
       }
     }

@@ -88,6 +88,7 @@
         .image {
           position: relative;
           width: 100%;
+          border-radius: 6px;
           height: 350px;
           @include lg-lt {
             height: 400px;
