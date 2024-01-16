@@ -47,6 +47,15 @@
       &:last-child {
         margin-right: 30px;
       }
+      @include lg-lt {
+        padding: 5px 0 10px 0;
+        &:nth-child(1) {
+          margin: 15px 0 10px 3.7vw;
+        }
+        &:last-child {
+          margin-right: 89px;
+        }
+      }
       @include xs {
         padding: 5px 0 10px 0;
         &:nth-child(1) {
@@ -54,7 +63,7 @@
         }
         &:last-child {
           // margin-right: 39px;
-          margin-right: 3.7vw;
+          margin-right: 49px;
         }
       }
       .card {
@@ -63,6 +72,11 @@
         border-radius: 6px;
         box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25);
         min-width: 330px;
+        @include lg-lt {
+          margin-top: 65px;
+          margin-bottom: 7px;
+          min-width: 46vw;
+        }
         @include xs {
           margin-top: 65px;
           margin-bottom: 7px;
@@ -72,6 +86,9 @@
           position: relative;
           width: 100%;
           height: 350px;
+          @include lg-lt {
+            height: 450px;
+          }
           @include xs {
             height: 250px;
           }
