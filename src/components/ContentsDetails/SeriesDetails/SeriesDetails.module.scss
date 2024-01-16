@@ -8,7 +8,7 @@
   height: calc(100vh - 90px);
   @include sm-lt {
     margin-top: 60px;
-    height: 73vh;
+    height: 53vh;
   }
   .background {
     position: absolute;
@@ -54,8 +54,8 @@
     & > img {
       border-radius: 6px;
       @include sm-lt {
-        height: 270px;
-        width: 55vw;
+        height: 150px;
+        width: 40vw;
       }
     }
     span {
@@ -77,7 +77,7 @@
 
         @include sm-lt {
           margin-top: 20px;
-          font-size: 13px;
+          font-size: 11px;
         }
         span {
           font-size: 20px;
@@ -89,6 +89,9 @@
       }
       .production {
         font-size: 13px;
+        @include sm-lt {
+          font-size: 11px;
+        }
         > span {
           @include sm-lt {
             display: -webkit-box;
@@ -105,7 +108,7 @@
         font-weight: 500;
         margin: 10px 0 0;
         @include sm-lt {
-          font-size: 14px;
+          font-size: 11px;
           margin: 0;
         }
       }
@@ -118,7 +121,7 @@
         -webkit-box-orient: vertical;
         overflow: hidden;
         @include sm-lt {
-          font-size: 13px;
+          font-size: 11px;
           color: gray;
 
           line-height: 16px;
@@ -154,12 +157,20 @@
           .icon {
             margin-right: 6px;
           }
+          @include sm-lt {
+            width: 70px;
+            height: 25px;
+            font-size: 8px;
+          }
         }
         & > .icon {
           cursor: pointer;
           font-size: 22px;
           &:hover {
             opacity: 0.7;
+          }
+          @include sm-lt {
+            font-size: 7px;
           }
         }
       }
