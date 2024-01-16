@@ -6,6 +6,14 @@
   position: relative;
   width: 100%;
   height: calc(100vh - 90px);
+  @include lg {
+    margin-top: 60px;
+    height: calc(100vh - 60px);
+  }
+  @include md {
+    margin-top: 60px;
+    height: 100vh;
+  }
   @include sm-lt {
     margin-top: 0px;
     height: 65vh;
@@ -41,6 +49,16 @@
     justify-content: center;
     gap: 50px;
     padding: 107px 0;
+    @include lg {
+      padding: 81px 0;
+    }
+    @include md {
+      padding: 160px 0;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
     @include sm-lt {
       height: 100%;
       padding: 0px;
@@ -52,6 +70,13 @@
     }
     & > img {
       border-radius: 6px;
+      @include lg-lt {
+        width: 25vw;
+      }
+      @include md {
+        height: 230px;
+      }
+
       @include sm-lt {
         margin-top: 30px;
         height: 150px;
@@ -74,11 +99,17 @@
         font-weight: 700;
         font-size: 26px;
         margin: 0;
-        @include sm-lt {
+        @include lg {
+          font-size: 20px;
+        }
+        @include md-lt {
           font-size: 11px;
         }
         span {
           font-size: 20px;
+          @include lg {
+            color: gray;
+          }
           @include sm-lt {
             font-size: 10px;
             color: gray;
@@ -87,16 +118,16 @@
       }
       .production {
         font-size: 13px;
-        @include sm-lt {
+        @include md-lt {
           font-size: 11px;
         }
         > span {
+          color: gray;
           @include sm-lt {
             display: -webkit-box;
             -webkit-line-clamp: 1;
             -webkit-box-orient: vertical;
             overflow: hidden;
-            color: gray;
           }
         }
       }
@@ -105,7 +136,7 @@
         font-size: 20px;
         font-weight: 500;
         margin: 10px 0 0;
-        @include sm-lt {
+        @include md-lt {
           font-size: 11px;
         }
       }
@@ -117,9 +148,9 @@
         -webkit-line-clamp: 5;
         -webkit-box-orient: vertical;
         overflow: hidden;
-        @include sm-lt {
+        color: gray;
+        @include md-lt {
           font-size: 11px;
-          color: gray;
           line-height: 16px;
           margin: 12px 0;
           -webkit-line-clamp: 2;
@@ -153,7 +184,7 @@
           .icon {
             margin-right: 6px;
           }
-          @include sm-lt {
+          @include md-lt {
             width: 70px;
             font-size: 9px;
           }
@@ -168,7 +199,7 @@
       }
       .credits {
         margin-top: 20px;
-        @include sm-lt {
+        @include md-lt {
           display: none;
         }
       }
