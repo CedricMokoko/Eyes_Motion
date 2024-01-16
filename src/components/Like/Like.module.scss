@@ -19,7 +19,7 @@
 
 .liked {
   padding: 5px 7px;
-  animation: rotateAndFadeOut 0.5s forwards; // Imposta "forwards" per mantenere lo stato finale dell'animazione
+  animation: rotateAndFadeOut 0.2s forwards; // Imposta "forwards" per mantenere lo stato finale dell'animazione
 }
 
 @keyframes rotateAndFadeOut {
