@@ -82,7 +82,7 @@
           box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25);
           margin-bottom: 6.8px;
         }
-        @include sm {
+        @include md-lt {
           // min-width: 125px;
           min-width: 30vw;
           box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25);
@@ -103,9 +103,9 @@
             // height: 170px;
             height: 300px;
           }
-          @include sm {
+          @include md-lt {
             // height: 170px;
-            height: 280px;
+            height: 260px;
           }
           @include xs {
             // height: 170px;

@@ -22,12 +22,12 @@ const TopRatedSeries = async () => {
                     alt={series.name}
                     fill
                   />
-                  <div className={`${styles.content}`}>
+                  {/* <div className={`${styles.content}`}>
                     <p className={styles.vote}>
                       {" "}
                       {series.vote_average.toFixed(1)}
                     </p>
-                  </div>
+                  </div> */}
                 </div>
               </Link>
             </div>
