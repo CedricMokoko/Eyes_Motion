@@ -5,10 +5,11 @@
   margin-top: 90px;
   position: relative;
   width: 100%;
-  min-height: calc(100vh - 90px);
-  @include sm-lt {
-    margin-top: 70px;
-    width: 100vw;
+  // min-height: calc(100vh - 90px);
+  height: calc(100vh - 90px);
+  @include xs {
+    margin-top: 60px;
+    height: calc(100vh - 120px);
   }
   .background {
     position: absolute;
@@ -16,15 +17,13 @@
     top: 0;
     left: 0;
     width: 100%;
-    min-height: 100%;
-    // @include sm-lt {
-    //   min-height: calc(100vh - 130px);
-    // }
+    // min-height: 100%;
+    height: 100%;
+    @include xs {
+      background-color: goldenrod;
+    }
     img {
       object-fit: cover;
-      @include sm-lt {
-        display: none;
-      }
     }
     &::after {
       position: absolute;
@@ -45,16 +44,21 @@
     gap: 50px;
     height: calc(100vh - 90px);
     padding: 107px 0;
-    @include sm-lt {
+
+    @include xs {
+      height: calc(100vh - 60px);
+      padding: 20px 0;
+      display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: flex-start;
       gap: 0px;
     }
     & > img {
       border-radius: 6px;
-      @include sm-lt {
-        height: 300px;
-        width: 80vw;
+      @include xs {
+        height: 250px;
+        width: 55vw;
       }
     }
     span {
