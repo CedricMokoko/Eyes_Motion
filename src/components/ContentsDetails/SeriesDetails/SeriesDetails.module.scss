@@ -9,7 +9,6 @@
   @include sm-lt {
     margin-top: 0px;
     padding-top: 60px;
-    // height: 53vh;
     height: calc(80vh - 120px);
   }
   .background {
@@ -162,7 +161,7 @@
           @include sm-lt {
             width: 70px;
             height: 25px;
-            font-size: 8px;
+            font-size: 9px;
           }
         }
         & > .icon {
@@ -170,9 +169,6 @@
           font-size: 22px;
           &:hover {
             opacity: 0.7;
-          }
-          @include sm-lt {
-            font-size: 7px;
           }
         }
       }
