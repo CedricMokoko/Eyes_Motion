@@ -10,7 +10,7 @@
   @include sm-lt {
     margin-top: 60px;
     // height: calc(100vh - 120px);
-    height: 73vh;
+    height: 63vh;
   }
   .background {
     position: absolute;
@@ -63,7 +63,7 @@
       border-radius: 6px;
       @include sm-lt {
         // margin-top: 20px;
-        height: 270px;
+        height: 200px;
         width: 55vw;
       }
     }

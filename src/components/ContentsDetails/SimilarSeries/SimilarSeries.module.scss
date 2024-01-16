@@ -9,7 +9,8 @@
   margin: 4px 0px 20px 0px;
   @include sm-lt {
     margin: 15px 0px 20px 0px;
-    height: max-content;
+    // height: max-content;
+    // height: ;
   }
   p {
     color: $goldColor;
@@ -47,7 +48,7 @@
       background: transparent;
     }
     @include sm-lt {
-      padding: 0 0 75px 0;
+      padding: 0 0 0px 0;
       align-items: center;
       // justify-content: center;
     }
