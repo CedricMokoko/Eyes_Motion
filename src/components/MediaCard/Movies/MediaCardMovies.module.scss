@@ -27,7 +27,7 @@
     width: 100%;
     height: 230px;
     @include sm-lt {
-      height: 100px; //200px
+      height: 100px;
     }
     img {
       border-radius: 6px;

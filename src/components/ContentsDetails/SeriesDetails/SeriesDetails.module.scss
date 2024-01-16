@@ -5,11 +5,9 @@
   margin-top: 90px;
   position: relative;
   width: 100%;
-  // min-height: calc(100vh - 90px);
   height: calc(100vh - 90px);
   @include sm-lt {
     margin-top: 60px;
-    // height: calc(100vh - 120px);
     height: 73vh;
   }
   .background {
@@ -18,11 +16,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    // min-height: 100%;
     height: 100%;
-    // @include xs {
-    //   background-color: goldenrod;
-    // }
     img {
       object-fit: cover;
       @include lg-lt {
@@ -48,7 +42,6 @@
     gap: 50px;
     height: calc(100vh - 90px);
     padding: 107px 0;
-
     @include sm-lt {
       height: 100%;
       padding: 0px;
@@ -56,13 +49,11 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      // justify-content: flex-start;
       gap: 0px;
     }
     & > img {
       border-radius: 6px;
       @include sm-lt {
-        // margin-top: 20px;
         height: 270px;
         width: 55vw;
       }

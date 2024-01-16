@@ -15,7 +15,6 @@
     color: $goldColor;
     font-weight: 700;
     margin: 10px 0 15px 30px;
-
     @include sm-lt {
       align-self: flex-start;
       margin: 0 0 15px 3.7vw;
@@ -49,7 +48,6 @@
     @include sm-lt {
       padding: 0 0 75px 0;
       align-items: center;
-      // justify-content: center;
     }
     > div {
       width: 200px;

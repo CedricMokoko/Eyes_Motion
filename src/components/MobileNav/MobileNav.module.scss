@@ -35,20 +35,7 @@
         margin: 0;
         display: flex;
         gap: 30px;
-
         li {
-          // @include lg-lt {
-          //   .icon {
-          //     margin: 0;
-          //     padding: 6px;
-          //     border-radius: 6px;
-          //     &:hover {
-          //       background-color: #62829a;
-          //       opacity: 1;
-          //       color: $goldColor;
-          //     }
-          //   }
-          // }
           @include sm-lt {
             .icon {
               font-size: 16px;
