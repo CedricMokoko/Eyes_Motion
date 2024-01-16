@@ -7,7 +7,7 @@
   width: 100%;
   // min-height: calc(100vh - 90px);
   height: calc(100vh - 90px);
-  @include xs {
+  @include sm-lt {
     margin-top: 60px;
     height: calc(100vh - 120px);
   }
@@ -19,11 +19,14 @@
     width: 100%;
     // min-height: 100%;
     height: 100%;
-    @include xs {
-      background-color: goldenrod;
-    }
+    // @include xs {
+    //   background-color: goldenrod;
+    // }
     img {
       object-fit: cover;
+      @include lg-lt {
+        display: none;
+      }
     }
     &::after {
       position: absolute;
@@ -45,19 +48,19 @@
     height: calc(100vh - 90px);
     padding: 107px 0;
 
-    @include xs {
+    @include sm-lt {
       height: calc(100vh - 60px);
-      padding: 20px 0;
+      padding: 0px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: flex-start;
+      justify-content: center;
       gap: 0px;
     }
     & > img {
       border-radius: 6px;
-      @include xs {
-        height: 250px;
+      @include sm-lt {
+        height: 270px;
         width: 55vw;
       }
     }
@@ -78,7 +81,7 @@
         font-size: 26px;
         margin: 0;
         @include sm-lt {
-          margin-top: 15px;
+          margin-top: 20px;
           font-size: 13px;
         }
         span {
