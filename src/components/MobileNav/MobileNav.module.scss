@@ -35,8 +35,8 @@
         margin: 0;
         display: flex;
         gap: 30px;
+
         li {
-          font-size: 16px;
           // @include lg-lt {
           //   .icon {
           //     margin: 0;
@@ -51,6 +51,7 @@
           // }
           @include sm-lt {
             .icon {
+              font-size: 16px;
               margin: 0;
               padding: 8px;
               border-radius: 6px;
