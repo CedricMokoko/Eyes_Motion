@@ -101,7 +101,7 @@
         @include sm {
           margin-top: 65px;
           margin-bottom: 7px;
-          min-width: 45vw;
+          min-width: 40vw;
         }
         @include xs {
           margin-top: 65px;
@@ -117,7 +117,7 @@
             height: 290px;
           }
           @include md-lt {
-            height: 200px;
+            height: 220px;
           }
           @include xs {
             height: 265px;
