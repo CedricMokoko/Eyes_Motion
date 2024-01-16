@@ -9,6 +9,7 @@
   margin: 4px 0px 20px 0px;
   @include sm-lt {
     margin: 15px 0px 20px 0px;
+    height: max-content;
   }
   p {
     color: $goldColor;

@@ -36,7 +36,7 @@ const MovieDetails = ({ movie }) => {
             Production :{" "}
             <span>
               {movie.production_companies
-                .slice(0, 2)
+                .slice(0, 4)
                 .map((company) => company.name)
                 .join(", ")}
             </span>

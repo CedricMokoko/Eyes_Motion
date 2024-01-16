@@ -29,15 +29,15 @@ const SeriesDetails = ({ series }) => {
           <h1>
             {series.name}{" "}
             <span className={styles.releaseDate}>
-              ( {new Date(series.first_air_date).toLocaleDateString("fr-FR")} -{" "}
-              {new Date(series.last_air_date).toLocaleDateString("fr-FR")} )
+              {/* ( {new Date(series.first_air_date).toLocaleDateString("fr-FR")} -{" "} */}
+              ( {new Date(series.last_air_date).toLocaleDateString("fr-FR")} )
             </span>
           </h1>
           <p className={styles.production}>
             Production :{" "}
             <span>
               {series.production_companies
-                .slice(0, 2)
+                .slice(0, 4)
                 .map((company) => company.name)
                 .join(", ")}
             </span>
