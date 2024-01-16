@@ -4,11 +4,11 @@
 .similar {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   overflow-x: hidden;
   margin: 4px 0px 20px 0px;
   @include sm-lt {
-    margin: 15px 0px 20px 0px;
+    margin: 15px 0px 0px 0px;
     height: max-content;
   }
   p {
@@ -46,7 +46,7 @@
       background: transparent;
     }
     @include sm-lt {
-      padding: 0 0 0 0;
+      padding: 0 0 75px 0;
       align-items: center;
     }
     > div {
