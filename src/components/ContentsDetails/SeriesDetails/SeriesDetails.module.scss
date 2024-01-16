@@ -7,9 +7,10 @@
   width: 100%;
   height: calc(100vh - 90px);
   @include sm-lt {
-    margin-top: 60px;
+    margin-top: 0px;
+    padding-top: 60px;
     // height: 53vh;
-    height: calc(83vh - 120px);
+    height: calc(75vh - 120px);
   }
   .background {
     position: absolute;
