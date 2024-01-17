@@ -10,7 +10,7 @@
     min-width: 160px;
   }
   @include md {
-    min-width: 140px;
+    min-width: 80px;
   }
   @include sm {
     min-width: 120px;
@@ -27,7 +27,7 @@
       height: 200px;
     }
     @include md {
-      height: 170px;
+      height: 100px;
     }
     @include sm {
       height: 150px;

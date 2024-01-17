@@ -12,16 +12,10 @@
   }
   @include md {
     margin-top: 60px;
-    height: 70vh;
+    height: calc(100vh - 116px);
   }
-  // @include sm {
-  //   margin-top: 0px;
-  //   height: 65vh;
-  // }
   @include sm-lt {
     margin-top: 60px;
-    // margin-top: 60px;
-    // height: 65vh;
     height: calc(100vh - 176px);
   }
   .background {
@@ -63,21 +57,13 @@
       justify-content: center;
     }
     @include md {
-      padding: 60px 0;
+      padding: 0px;
       height: 100%;
       display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: center;
     }
-    // @include sm {
-    //   padding: 0px 0;
-    //   height: 100%;
-    //   display: flex;
-    //   flex-direction: row;
-    //   align-items: center;
-    //   justify-content: center;
-    // }
     @include sm-lt {
       height: 100%;
       padding: 0px;
@@ -85,7 +71,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 25px;
+      gap: 30px;
     }
     & > img {
       border-radius: 6px;
@@ -95,19 +81,14 @@
       }
       @include md {
         width: 20vw;
-        height: 190px;
+        height: 200px;
       }
-
       @include sm {
         height: 260px;
         width: 25vw;
       }
-
       @include xs {
-        // margin-top: 30px;
-        // height: 150px;
         height: 230px;
-
         width: 40vw;
       }
     }
@@ -190,13 +171,13 @@
         }
         @include md-lt {
           font-size: 11px;
-          line-height: 16px;
+          line-height: 15px;
           margin: 12px 0;
-          -webkit-line-clamp: 2;
-        }
-        @include sm-lt {
           -webkit-line-clamp: 3;
         }
+        // @include sm-lt {
+        //   -webkit-line-clamp: 3;
+        // }
       }
       .actions {
         margin: 10px 0;
