@@ -12,6 +12,10 @@
   // }
   @include lg-lt {
     margin-top: 60px;
+    height: calc(100vh - 136px);
+  }
+  @include md {
+    margin-top: 60px;
     height: calc(100vh - 116px);
   }
   @include sm-lt {
@@ -77,7 +81,7 @@
       border-radius: 6px;
       @include lg {
         width: 23vw;
-        height: 330px;
+        height: 350px;
       }
       @include md {
         width: 20vw;

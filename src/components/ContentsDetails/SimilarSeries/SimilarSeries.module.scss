@@ -15,11 +15,10 @@
     color: $goldColor;
     font-weight: 700;
     margin: 10px 0 15px 30px;
-    @include lg-lt {
-      margin: 10px 0 10px 0px;
-      padding-left: 3.7vw;
+    @include lg {
+      font-size: 13px;
     }
-    @include sm-lt {
+    @include lg-lt {
       margin: 10px 0 10px 0px;
       padding-left: 3.7vw;
     }
