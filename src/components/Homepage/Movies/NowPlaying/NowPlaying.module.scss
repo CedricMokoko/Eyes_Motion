@@ -7,7 +7,7 @@
   justify-content: flex-end;
   overflow-x: hidden;
   h3 {
-    margin: 0 0 10px 45px;
+    margin: 0 20px 0px 30px;
     color: $whiteColor;
     @include lg-lt {
       margin: 0 20px 0px 20px;
@@ -17,7 +17,7 @@
     }
   }
   .content {
-    padding: 0 30px 20px 30px;
+    padding: 7px 30px 5px 30px;
     width: 100%;
     display: flex;
     gap: 12px;
@@ -45,31 +45,16 @@
       &:hover {
         transform: scale(1.06);
       }
-      &:nth-child(1) {
-        margin-left: 45px;
-      }
-      &:last-child {
-        margin-right: 30px;
-      }
       @include lg-lt {
         margin: 0 0 10px 0;
         &:hover {
           transform: scale(1.02);
-        }
-        &:nth-child(1) {
-          margin-left: 0px;
-        }
-        &:last-child {
-          margin-right: 0px;
         }
       }
       @include sm-lt {
         margin: 0 0 10px 0;
         &:nth-child(1) {
           margin-left: 3.7vw;
-        }
-        &:last-child {
-          margin-right: 0px;
         }
       }
     }
