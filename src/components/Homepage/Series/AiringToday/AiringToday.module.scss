@@ -22,23 +22,26 @@
     padding: 0 30px 20px 30px;
     width: 100%;
     display: flex;
-    gap: 6px;
+    gap: 12px;
+    margin: 5px auto; //
+
     overflow-x: scroll;
     &::-webkit-scrollbar {
-      height: 2px;
+      height: 0px;
     }
     &::-webkit-scrollbar-track {
       background: transparent;
     }
     @include lg-lt {
+      gap: 10px;
       padding: 0 40px 20px 20px;
     }
     @include xs {
-      padding: 0 40px 20px 30px;
+      padding: 0 0px 0px 0px;
     }
-    > div {
-      width: 200px;
-    }
+    // > div {
+    // width: 200px;
+    // }
     // display: flex;
     // flex-direction: row;
     // gap: 12px;
