@@ -67,11 +67,11 @@
         @include lg-lt {
           margin-top: 0;
           width: 95%;
-          margin-bottom: 120px;
+          // margin-bottom: 120px;
         }
-        @include sm-lt {
-          margin-bottom: 60px;
-        }
+        // @include sm-lt {
+        //   margin-bottom: 60px;
+        // }
       }
     }
   }
