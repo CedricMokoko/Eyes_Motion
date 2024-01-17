@@ -20,14 +20,6 @@
     &::-webkit-scrollbar-track {
       background: transparent;
     }
-    // display: flex;
-    // flex-direction: row;
-    // justify-content: center;
-    // gap: 20px;
-    // width: 100%;
-    // margin: 0px auto;
-    // overflow: scroll;
-    // padding: 30px 20px 5px 0;
     @include lg-lt {
       gap: 10px;
       padding: 0 40px 20px 20px;
@@ -89,7 +81,6 @@
         @include lg-lt {
           margin-top: 65px;
           margin-bottom: 7px;
-          // min-width: 45vw;
         }
         @include md {
           min-width: 25vw;

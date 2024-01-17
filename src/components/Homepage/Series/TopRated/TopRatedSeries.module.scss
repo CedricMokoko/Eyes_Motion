@@ -19,20 +19,26 @@
   }
   .content {
     display: flex;
-    flex-direction: row;
+    padding: 0 30px 20px 30px;
+    width: 100%;
     gap: 14px;
-    width: 102%;
     margin: 5px auto;
-    overflow: scroll;
+    overflow-x: scroll;
     &::-webkit-scrollbar {
       height: 0px;
+      background: transparent;
+      color: transparent;
     }
     &::-webkit-scrollbar-track {
       background: transparent;
+      color: transparent;
     }
     @include lg-lt {
-      width: 106%;
+      padding: 0 40px 20px 20px;
       gap: 10px;
+    }
+    @include xs {
+      padding: 0 4.1vw 0px 0px;
     }
     //DIV CARD CONTAINER
     .cardContainer {
@@ -58,7 +64,7 @@
           margin-left: 3.7vw;
         }
         &:last-child {
-          margin-right: 100px;
+          margin-right: 0px;
         }
       }
       @include sm-lt {
@@ -67,7 +73,7 @@
           margin-left: 3.7vw;
         }
         &:last-child {
-          margin-right: 70px;
+          margin-right: 0px;
         }
       }
       .card {

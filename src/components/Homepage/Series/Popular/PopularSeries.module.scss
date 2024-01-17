@@ -26,16 +26,18 @@
     &::-webkit-scrollbar {
       height: 0px;
       background: transparent;
+      color: transparent;
     }
     &::-webkit-scrollbar-track {
       background: transparent;
+      color: transparent;
     }
     @include lg-lt {
       gap: 10px;
       padding: 0 40px 20px 20px;
     }
     @include xs {
-      padding: 0 50px 0px 0px;
+      padding: 0 4.1vw 0px 0px;
     }
     .cardContainer {
       margin: 0 0 20px 0;
@@ -59,11 +61,17 @@
         &:nth-child(1) {
           margin-left: 3.7vw;
         }
+        &:last-child {
+          margin-right: 0px;
+        }
       }
       @include sm-lt {
         margin: 0 0 10px 0;
         &:nth-child(1) {
           margin-left: 3.7vw;
+        }
+        &:last-child {
+          margin-right: 0px;
         }
       }
     }

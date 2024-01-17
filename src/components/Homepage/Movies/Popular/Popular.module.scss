@@ -59,6 +59,9 @@
         &:nth-child(1) {
           margin-left: 3.7vw;
         }
+        &:last-child {
+          margin-right: 0px;
+        }
       }
       @include sm-lt {
         margin: 0 0 10px 0;
