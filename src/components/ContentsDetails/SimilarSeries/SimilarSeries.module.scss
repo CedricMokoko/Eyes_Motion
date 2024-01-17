@@ -15,14 +15,12 @@
     color: $goldColor;
     font-weight: 700;
     margin: 10px 0 15px 30px;
-    @include md {
+    @include lg-lt {
       margin: 10px 0 10px 0px;
       padding-left: 3.7vw;
     }
     @include sm-lt {
       margin: 10px 0 10px 0px;
-
-      // padding: 0 30px 0px 0px;
       padding-left: 3.7vw;
     }
     .icon {
@@ -33,7 +31,7 @@
   }
   .notFoundSimilar {
     margin-bottom: 80px;
-    @include md-lt {
+    @include lg-lt {
       margin-bottom: 0px;
     }
   }
@@ -50,14 +48,9 @@
       background: transparent;
     }
     @include lg-lt {
-      padding: 0 40px 20px 20px;
-    }
-    @include md {
-      // padding: 0 40px 20px 30px;
       padding: 5px 4.1vw 20px 3.7vw;
     }
     @include sm-lt {
-      // padding: 0 40px 20px 30px;
       padding: 5px 4.1vw 80px 3.7vw;
     }
     > div {
