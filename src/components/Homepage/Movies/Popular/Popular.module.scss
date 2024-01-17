@@ -35,7 +35,7 @@
       padding: 0 40px 20px 20px;
     }
     @include xs {
-      padding: 0 0px 0px 0px;
+      padding: 0 3.9vw 0px 0px;
     }
     .cardContainer {
       margin: 0 0 20px 0;
@@ -64,6 +64,9 @@
         margin: 0 0 10px 0;
         &:nth-child(1) {
           margin-left: 3.7vw;
+        }
+        &:last-child {
+          margin-right: 0px;
         }
       }
     }
