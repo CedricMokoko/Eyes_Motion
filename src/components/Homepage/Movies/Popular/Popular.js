@@ -1,7 +1,7 @@
 import { getMovieByPath } from "@/utils/movieClient";
 import React from "react";
-import MediaCard from "../../../MediaCard/Homepage/MediaCardHomepage";
 import styles from "./Popular.module.scss";
+import MediaCardHomepage from "../../../MediaCard/Homepage/MediaCardHomepage";
 
 const Popular = async () => {
   const { results } = await getMovieByPath("/movie/popular");
@@ -13,7 +13,7 @@ const Popular = async () => {
         {popularMovies.map((movie) => (
           <div key={movie.id} className={`${styles.cardContainer}`}>
             {/* La props mediaMovies={movie} conterà toutes les infos de nos films popular */}
-            <MediaCard mediaMovies={movie} />
+            <MediaCardHomepage mediaMovies={movie} />
           </div>
         ))}
       </div>

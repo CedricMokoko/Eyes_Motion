@@ -3,7 +3,7 @@ import Image from "next/image";
 import styles from "./MediaCardHomepage.module.scss";
 import Link from "next/link";
 
-const MediaCard = ({ mediaMovies, mediaSeries }) => {
+const MediaCardHomepage = ({ mediaMovies, mediaSeries }) => {
   if (mediaMovies) {
     return (
       <div className={`${styles.card}`}>
@@ -35,4 +35,4 @@ const MediaCard = ({ mediaMovies, mediaSeries }) => {
     );
   }
 };
-export default MediaCard;
+export default MediaCardHomepage;

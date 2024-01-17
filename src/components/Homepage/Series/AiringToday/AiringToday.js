@@ -1,7 +1,7 @@
 import { getMovieByPath } from "@/utils/movieClient";
 import React from "react";
-import MediaCard from "../../../MediaCard/Homepage/MediaCardHomepage";
 import styles from "./AiringToday.module.scss";
+import MediaCardHomepage from "../../../MediaCard/Homepage/MediaCardHomepage";
 
 const AiringToday = async () => {
   const { results } = await getMovieByPath("/tv/airing_today");
@@ -13,7 +13,7 @@ const AiringToday = async () => {
         {airingToday.map((series) => (
           <div key={series.id} className={`${styles.cardContainer}`}>
             {/* //La props mediaSeries={series} conterà toutes les infos de nos series airing_Today */}
-            <MediaCard mediaSeries={series} />{" "}
+            <MediaCardHomepage mediaSeries={series} />{" "}
           </div>
         ))}
       </div>
