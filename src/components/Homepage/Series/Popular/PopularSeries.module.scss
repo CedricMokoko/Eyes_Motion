@@ -10,9 +10,9 @@
     margin: 0 0 10px 45px;
     color: $whiteColor;
     @include lg-lt {
-      margin: 0 0 0px 3.7vw;
+      margin: 0 20px 0px 20px;
     }
-    @include xs {
+    @include sm-lt {
       margin: 0 0 0px 3.7vw;
     }
   }
@@ -26,17 +26,15 @@
     &::-webkit-scrollbar {
       height: 0px;
       background: transparent;
-      color: transparent;
     }
     &::-webkit-scrollbar-track {
       background: transparent;
-      color: transparent;
     }
     @include lg-lt {
       gap: 10px;
-      padding: 0 40px 20px 20px;
+      padding: 0 40px 0px 20px;
     }
-    @include xs {
+    @include sm-lt {
       padding: 0 4.1vw 0px 0px;
     }
     .cardContainer {
@@ -59,7 +57,7 @@
           transform: scale(1.02);
         }
         &:nth-child(1) {
-          margin-left: 3.7vw;
+          margin-left: 0px;
         }
         &:last-child {
           margin-right: 0px;

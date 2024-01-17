@@ -9,9 +9,6 @@
   @include lg {
     min-width: 140px;
   }
-  // @include md {
-  //   min-width: 80px;
-  // }
   @include md-lt {
     min-width: 120px;
   }
@@ -26,9 +23,6 @@
     @include lg {
       height: 180px;
     }
-    // @include md {
-    //   height: 100px;
-    // }
     @include md-lt {
       height: 150px;
     }

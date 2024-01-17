@@ -6,21 +6,17 @@
   position: relative;
   width: 100%;
   height: calc(100vh - 90px);
-  @include lg {
+  @include lg-lt {
     margin-top: 60px;
-    height: 80vh;
+    height: calc(100vh - 146px);
   }
   @include md {
     margin-top: 60px;
-    height: 70vh;
+    height: calc(100vh - 116px);
   }
-  @include sm {
-    margin-top: 0px;
-    height: 65vh;
-  }
-  @include xs {
-    margin-top: 0px;
-    height: 65vh;
+  @include sm-lt {
+    margin-top: 60px;
+    height: calc(100vh - 176px);
   }
   .background {
     position: absolute;
@@ -53,37 +49,22 @@
     justify-content: center;
     gap: 50px;
     padding: 107px 0;
-    @include lg {
-      padding: 60px 0;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-    }
-    @include md {
-      padding: 60px 0;
+    @include lg-lt {
+      padding: 0px;
       height: 100%;
       display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: center;
     }
-    @include sm {
-      padding: 0px 0;
-      height: 100%;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-    }
-    @include xs {
+    @include sm-lt {
       height: 100%;
       padding: 0px;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 15px;
+      gap: 30px;
     }
     & > img {
       border-radius: 6px;
@@ -93,17 +74,14 @@
       }
       @include md {
         width: 20vw;
-        height: 190px;
-      }
-
-      @include sm {
         height: 200px;
+      }
+      @include sm {
+        height: 260px;
         width: 25vw;
       }
-
       @include xs {
-        margin-top: 30px;
-        height: 150px;
+        height: 230px;
         width: 40vw;
       }
     }
@@ -124,24 +102,22 @@
         font-size: 26px;
         margin: 0;
         @include lg {
-          font-size: 16px;
+          font-size: 15px;
         }
         @include md-lt {
           font-size: 11px;
         }
         span {
           font-size: 20px;
+          color: gray;
           @include lg {
-            font-size: 16px;
-            color: gray;
+            font-size: 15px;
           }
           @include md-lt {
-            color: gray;
             font-size: 11px;
           }
           @include sm-lt {
             font-size: 10px;
-            color: gray;
           }
         }
       }
@@ -166,7 +142,7 @@
         font-weight: 500;
         margin: 10px 0 0;
         @include lg {
-          font-size: 16px;
+          font-size: 15px;
         }
         @include md-lt {
           font-size: 11px;
@@ -181,14 +157,13 @@
         -webkit-box-orient: vertical;
         overflow: hidden;
         color: gray;
-        @include lg {
-          -webkit-line-clamp: 2;
+        @include lg-lt {
+          -webkit-line-clamp: 3;
         }
         @include md-lt {
           font-size: 11px;
-          line-height: 16px;
+          line-height: 15px;
           margin: 12px 0;
-          -webkit-line-clamp: 2;
         }
       }
       .actions {
@@ -198,7 +173,7 @@
         flex-direction: row;
         align-items: center;
         gap: 40px;
-        @include xs {
+        @include sm-lt {
           width: 80vw;
           justify-content: space-between;
         }

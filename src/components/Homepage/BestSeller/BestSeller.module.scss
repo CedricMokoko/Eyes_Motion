@@ -21,17 +21,12 @@
       background: transparent;
     }
     @include lg-lt {
-      gap: 10px;
-      padding: 0 40px 20px 20px;
+      gap: 15px;
+      padding: 0px;
+      justify-content: center;
     }
-    @include sm {
-      padding: 0 50px 0 0;
-      justify-content: left;
-      gap: 10px;
-    }
-    @include xs {
+    @include sm-lt {
       padding: 0 4.1vw 0px 0px;
-
       justify-content: left;
       gap: 20px;
     }
@@ -42,6 +37,7 @@
     &::-webkit-scrollbar-track {
       background: transparent;
     }
+
     //DIV CARD CONTAINER
     .cardContainer {
       margin: 0 0 20px 0;
@@ -63,13 +59,19 @@
           transform: scale(1.02);
         }
         &:nth-child(1) {
-          margin-left: 3.7vw;
+          margin-left: 0;
+        }
+        &:last-child {
+          margin-right: 0px;
         }
       }
       @include sm-lt {
         margin: 0 0 10px 0;
         &:nth-child(1) {
           margin-left: 3.7vw;
+        }
+        &:last-child {
+          margin-right: 0px;
         }
       }
       .card {
@@ -79,14 +81,14 @@
         box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25);
         min-width: 25vw;
         @include lg-lt {
-          margin-top: 65px;
+          margin-top: 75px;
           margin-bottom: 7px;
         }
         @include md {
-          min-width: 25vw;
+          min-width: 20vw;
         }
         @include sm {
-          margin-top: 65px;
+          margin-top: 70px;
           margin-bottom: 7px;
           min-width: 40vw;
         }
@@ -100,10 +102,13 @@
           width: 100%;
           border-radius: 6px;
           height: 320px;
-          @include lg-lt {
+          @include lg {
             height: 290px;
           }
-          @include md-lt {
+          @include md {
+            height: 200px;
+          }
+          @include sm {
             height: 220px;
           }
           @include xs {

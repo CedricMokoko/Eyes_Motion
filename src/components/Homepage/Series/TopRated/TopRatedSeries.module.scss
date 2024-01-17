@@ -6,15 +6,14 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  margin: 10px 0 0 0;
-  @include xs {
-    margin: 0;
-  }
   h3 {
     margin: 0 0 10px 45px;
     color: $whiteColor;
     @include lg-lt {
-      margin: 0 0 3px 3.7vw;
+      margin: 0 20px 0px 20px;
+    }
+    @include sm-lt {
+      margin: 0 0 0px 3.7vw;
     }
   }
   .content {
@@ -34,12 +33,13 @@
       color: transparent;
     }
     @include lg-lt {
-      padding: 0 40px 20px 20px;
       gap: 10px;
+      padding: 0 40px 0px 20px;
     }
     @include xs {
       padding: 0 4.1vw 0px 0px;
     }
+
     //DIV CARD CONTAINER
     .cardContainer {
       margin: 0 0 20px 0;
@@ -61,7 +61,7 @@
           transform: scale(1.02);
         }
         &:nth-child(1) {
-          margin-left: 3.7vw;
+          margin-left: 0px;
         }
         &:last-child {
           margin-right: 0px;
@@ -83,19 +83,16 @@
         box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25);
         min-width: 250px;
         @include lg-lt {
-          // min-width: 125px;
           min-width: 20vw;
           box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25);
           margin-bottom: 6.8px;
         }
         @include md-lt {
-          // min-width: 125px;
           min-width: 30vw;
           box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25);
           margin-bottom: 6.8px;
         }
         @include xs {
-          // min-width: 125px;
           min-width: 45vw;
           box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25);
           margin-bottom: 6.8px;
@@ -106,15 +103,12 @@
           height: 330px;
           border-radius: 6px;
           @include lg-lt {
-            // height: 170px;
             height: 300px;
           }
           @include md-lt {
-            // height: 170px;
             height: 260px;
           }
           @include xs {
-            // height: 170px;
             height: 245px;
           }
           img {
