@@ -37,7 +37,7 @@
       padding: 0 40px 20px 20px;
     }
     @include xs {
-      padding: 0 0px 0px 0px;
+      padding: 0 0px 0px 50px;
     }
     // > div {
     // width: 200px;
@@ -96,7 +96,7 @@
           margin-left: 3.7vw;
         }
         &:last-child {
-          margin-right: 50px;
+          margin-right: 0px;
         }
       }
     }
