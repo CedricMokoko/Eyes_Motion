@@ -19,12 +19,12 @@
     @include lg-lt {
       height: calc(100vh - 146px);
     }
-    // @include md {
-    //   height: calc(100vh - 116px);
-    // }
-    // @include sm-lt {
-    //   height: calc(100vh - 176px);
-    // }
+    @include md {
+      height: calc(100vh - 116px);
+    }
+    @include sm-lt {
+      height: calc(100vh - 176px);
+    }
     .background {
       position: absolute;
       z-index: 1;
