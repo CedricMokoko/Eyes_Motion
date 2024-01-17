@@ -5,50 +5,51 @@
   display: flex;
   position: relative;
   flex-direction: column;
-}
-.searchBar {
-  position: fixed;
-  top: 90px;
-  left: 0;
-  right: 0;
-  z-index: 2;
-  background: linear-gradient(to right, #262424, #3b3838);
-  padding: 0 30px;
-  height: 60px;
-  min-width: 260px;
-  color: $whiteColor;
-  font-family: var(--font-cormorant);
-  font-size: 18px;
-  font-weight: 700;
-  margin: 0;
-  border: none;
-  outline: none;
-  &::placeholder {
+  .searchBar {
+    position: fixed;
+    top: 90px;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    background: linear-gradient(to right, #262424, #3b3838);
+    padding: 0 30px;
+    height: 60px;
+    min-width: 260px;
     color: $whiteColor;
-    opacity: 0.8;
+    font-family: var(--font-cormorant);
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+    border: none;
+    outline: none;
+    &::placeholder {
+      color: $whiteColor;
+      opacity: 0.8;
+      @include sm-lt {
+        font-size: 14px;
+      }
+    }
     @include sm-lt {
       font-size: 14px;
+      top: 60px;
+      height: 40px;
     }
   }
-  @include sm-lt {
-    top: 60px;
-    height: 40px;
-  }
-}
-.info {
-  position: fixed;
-  top: 50%;
-  left: 0;
-  right: 0;
-  text-align: center;
-  color: $goldColor;
-  font-size: 17px;
-  @include sm-lt {
-    left: 20px;
-    right: 20px;
-    font-size: 14px;
-  }
-  .icon {
-    margin-left: 15px;
+  .info {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: $goldColor;
+    font-size: 17px;
+    @include sm-lt {
+      left: 20px;
+      right: 20px;
+      font-size: 14px;
+    }
+    .icon {
+      margin-left: 15px;
+    }
   }
 }
