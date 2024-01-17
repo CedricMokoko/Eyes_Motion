@@ -63,13 +63,14 @@
           margin-right: 100px;
         }
       }
-      @include xs {
+      // @include xs {
+      @include sm-lt {
         margin: 0 0 10px 0;
         &:nth-child(1) {
           margin-left: 3.7vw;
         }
         &:last-child {
-          margin-right: 50px;
+          margin-right: 70px;
         }
       }
     }
