@@ -41,7 +41,7 @@
       padding: 0 3.7vw 0px 0px;
 
       justify-content: left;
-      gap: 25px;
+      gap: 20px;
     }
     &::-webkit-scrollbar {
       height: 0px;
@@ -100,7 +100,7 @@
           min-width: 40vw;
         }
         @include xs {
-          margin-top: 65px;
+          margin-top: 70px;
           margin-bottom: 7px;
           min-width: 92vw;
         }
