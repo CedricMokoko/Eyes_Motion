@@ -14,7 +14,10 @@
   p {
     color: $goldColor;
     font-weight: 700;
-    margin: 10px 0 15px 30px;
+    margin: 10px 0 15px 20px;
+    @include xs {
+      padding: 0 40px 0px 10px;
+    }
     .icon {
       color: rgb(169, 18, 18);
       margin-left: 5px;
@@ -39,7 +42,10 @@
     &::-webkit-scrollbar-track {
       background: transparent;
     }
-    @include sm-lt {
+    @include lg-lt {
+      padding: 0 40px 20px 20px;
+    }
+    @include xs {
       padding: 0 40px 20px 30px;
     }
     > div {

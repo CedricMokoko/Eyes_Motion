@@ -6,7 +6,19 @@
   position: relative;
   width: 100%;
   height: calc(100vh - 90px);
-  @include sm-lt {
+  @include lg {
+    margin-top: 60px;
+    height: 80vh;
+  }
+  @include md {
+    margin-top: 60px;
+    height: 70vh;
+  }
+  @include sm {
+    margin-top: 0px;
+    height: 65vh;
+  }
+  @include xs {
     margin-top: 0px;
     height: 65vh;
   }
@@ -41,7 +53,30 @@
     justify-content: center;
     gap: 50px;
     padding: 107px 0;
-    @include sm-lt {
+    @include lg {
+      padding: 60px 0;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+    @include md {
+      padding: 60px 0;
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+    @include sm {
+      padding: 0px 0;
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+    @include xs {
       height: 100%;
       padding: 0px;
       display: flex;
@@ -52,7 +87,21 @@
     }
     & > img {
       border-radius: 6px;
-      @include sm-lt {
+      @include lg {
+        width: 23vw;
+        height: 350px;
+      }
+      @include md {
+        width: 20vw;
+        height: 190px;
+      }
+
+      @include sm {
+        height: 200px;
+        width: 25vw;
+      }
+
+      @include xs {
         margin-top: 30px;
         height: 150px;
         width: 40vw;
@@ -74,11 +123,22 @@
         font-weight: 700;
         font-size: 26px;
         margin: 0;
-        @include sm-lt {
+        @include lg {
+          font-size: 16px;
+        }
+        @include md-lt {
           font-size: 11px;
         }
         span {
           font-size: 20px;
+          @include lg {
+            font-size: 16px;
+            color: gray;
+          }
+          @include md-lt {
+            color: gray;
+            font-size: 11px;
+          }
           @include sm-lt {
             font-size: 10px;
             color: gray;
@@ -87,16 +147,16 @@
       }
       .production {
         font-size: 13px;
-        @include sm-lt {
+        @include md-lt {
           font-size: 11px;
         }
         > span {
+          color: gray;
           @include sm-lt {
             display: -webkit-box;
             -webkit-line-clamp: 1;
             -webkit-box-orient: vertical;
             overflow: hidden;
-            color: gray;
           }
         }
       }
@@ -105,7 +165,10 @@
         font-size: 20px;
         font-weight: 500;
         margin: 10px 0 0;
-        @include sm-lt {
+        @include lg {
+          font-size: 16px;
+        }
+        @include md-lt {
           font-size: 11px;
         }
       }
@@ -117,9 +180,12 @@
         -webkit-line-clamp: 5;
         -webkit-box-orient: vertical;
         overflow: hidden;
-        @include sm-lt {
+        color: gray;
+        @include lg {
+          -webkit-line-clamp: 2;
+        }
+        @include md-lt {
           font-size: 11px;
-          color: gray;
           line-height: 16px;
           margin: 12px 0;
           -webkit-line-clamp: 2;
@@ -132,7 +198,7 @@
         flex-direction: row;
         align-items: center;
         gap: 40px;
-        @include sm-lt {
+        @include xs {
           width: 80vw;
           justify-content: space-between;
         }
@@ -153,7 +219,7 @@
           .icon {
             margin-right: 6px;
           }
-          @include sm-lt {
+          @include md-lt {
             width: 70px;
             font-size: 9px;
           }
@@ -168,7 +234,7 @@
       }
       .credits {
         margin-top: 20px;
-        @include sm-lt {
+        @include md-lt {
           display: none;
         }
       }
