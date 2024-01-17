@@ -98,13 +98,12 @@
         height: 190px;
       }
 
-      // @include sm {
-      //   height: 200px;
+      @include sm {
+        height: 260px;
+        width: 25vw;
+      }
 
-      //   width: 25vw;
-      // }
-
-      @include sm-lt {
+      @include xs {
         // margin-top: 30px;
         // height: 150px;
         height: 230px;
@@ -194,6 +193,9 @@
           line-height: 16px;
           margin: 12px 0;
           -webkit-line-clamp: 2;
+        }
+        @include md-lt {
+          -webkit-line-clamp: 3;
         }
       }
       .actions {

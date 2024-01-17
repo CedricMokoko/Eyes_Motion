@@ -12,10 +12,10 @@
   @include md {
     min-width: 140px;
   }
-  // @include sm {
-  //   min-width: 120px;
-  // }
-  @include sm-lt {
+  @include sm {
+    min-width: 120px;
+  }
+  @include xs {
     min-width: 80px;
   }
   .image {
@@ -29,10 +29,10 @@
     @include md {
       height: 170px;
     }
-    // @include sm {
-    //   height: 150px;
-    // }
-    @include sm-lt {
+    @include sm {
+      height: 150px;
+    }
+    @include xs {
       height: 100px;
     }
     img {
