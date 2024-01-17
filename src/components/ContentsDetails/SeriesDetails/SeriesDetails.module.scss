@@ -194,7 +194,7 @@
           margin: 12px 0;
           -webkit-line-clamp: 2;
         }
-        @include md-lt {
+        @include sm-lt {
           -webkit-line-clamp: 3;
         }
       }
