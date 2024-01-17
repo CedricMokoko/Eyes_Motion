@@ -4,7 +4,8 @@
 .container {
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  justify-content: flex-end;
+  overflow-x: hidden;
   h3 {
     margin: 0 0 10px 45px;
     color: $whiteColor;
@@ -16,27 +17,26 @@
     }
   }
   .content {
+    padding: 0 30px 20px 30px;
+    width: 100%;
     display: flex;
-    flex-direction: row;
     gap: 12px;
-    width: 102%;
     margin: 5px auto;
-    overflow: scroll;
-    @include lg-lt {
-      gap: 10px;
-      width: 106%;
-    }
-    @include xs {
-      gap: 10px;
-      width: 106%;
-    }
+    overflow-x: scroll;
     &::-webkit-scrollbar {
       height: 0px;
+      background: transparent;
     }
     &::-webkit-scrollbar-track {
       background: transparent;
     }
-    //DIV CARD CONTAINER
+    @include lg-lt {
+      gap: 10px;
+      padding: 0 40px 20px 20px;
+    }
+    @include xs {
+      padding: 0 50px 0px 0px;
+    }
     .cardContainer {
       margin: 0 0 20px 0;
       padding: 0;
@@ -53,25 +53,17 @@
       }
       @include lg-lt {
         margin: 0 0 10px 0;
-
         &:hover {
           transform: scale(1.02);
         }
         &:nth-child(1) {
           margin-left: 3.7vw;
         }
-        &:last-child {
-          margin-right: 100px;
-        }
       }
-      // @include xs {
       @include sm-lt {
         margin: 0 0 10px 0;
         &:nth-child(1) {
           margin-left: 3.7vw;
-        }
-        &:last-child {
-          margin-right: 70px;
         }
       }
     }
