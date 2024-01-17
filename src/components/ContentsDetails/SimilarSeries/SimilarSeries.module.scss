@@ -20,7 +20,7 @@
     }
     @include lg-lt {
       margin: 10px 0 10px 0px;
-      padding-left: 3.7vw;
+      padding-left: 20px;
     }
     .icon {
       color: rgb(169, 18, 18);
@@ -47,7 +47,7 @@
       background: transparent;
     }
     @include lg-lt {
-      padding: 5px 4.1vw 20px 3.7vw;
+      padding: 5px 4.1vw 20px 20px;
     }
     @include sm-lt {
       padding: 5px 4.1vw 80px 3.7vw;

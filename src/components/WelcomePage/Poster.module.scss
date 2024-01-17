@@ -6,6 +6,11 @@
   display: flex;
   flex-direction: column;
   height: 100vh;
+  width: 100vw;
+  @include lg-lt {
+    height: calc(100vh - 60px);
+  }
+
   .details {
     font-family: var(--font-caveat);
     position: relative;
@@ -16,10 +21,9 @@
       z-index: 1;
       top: 0;
       left: 0;
-      right: 0;
-      bottom: 0;
+      width: 100%;
+      height: 100%;
       @include lg-lt {
-        // top: 60px;
         img {
           display: none;
         }
@@ -35,8 +39,8 @@
         z-index: 2;
         top: 0;
         left: 0;
-        right: 0;
-        bottom: 0;
+        width: 100%;
+        height: 100%;
         background-color: rgba($color: #041226, $alpha: 0.9);
         content: "";
       }
@@ -66,9 +70,9 @@
           width: 95%;
           margin-bottom: 120px;
         }
-        @include sm-lt {
-          margin-bottom: 60px;
-        }
+        // @include sm-lt {
+        //   margin-bottom: 80px;
+        // }
         h1 {
           font-weight: 900;
           font-size: 28px;
