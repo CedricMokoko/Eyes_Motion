@@ -67,9 +67,9 @@
         color: $whiteColor;
         margin-top: 90px;
         @include lg-lt {
-          margin-top: 0;
+          // background-color: aquamarine;
+          margin-top: 0px;
           width: 95%;
-          // margin-bottom: 120px;
         }
         // @include sm-lt {
         //   margin-bottom: 80px;
@@ -79,6 +79,8 @@
           font-size: 28px;
           margin: 100px 0 0 0;
           @include lg-lt {
+            margin: 0;
+
             font-size: 20px;
             text-align: center;
           }
