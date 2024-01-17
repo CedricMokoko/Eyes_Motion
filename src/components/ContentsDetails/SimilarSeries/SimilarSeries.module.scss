@@ -15,7 +15,7 @@
     color: $goldColor;
     font-weight: 700;
     margin: 10px 0 15px 30px;
-    @include xs {
+    @include sm-lt {
       margin: 10px 0 15px 0px;
 
       // padding: 0 30px 0px 0px;
@@ -48,7 +48,7 @@
     @include lg-lt {
       padding: 0 40px 20px 20px;
     }
-    @include xs {
+    @include sm-lt {
       // padding: 0 40px 20px 30px;
       padding: 0 4.1vw 80px 3.7vw;
     }
