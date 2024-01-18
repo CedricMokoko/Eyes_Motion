@@ -64,7 +64,19 @@
         height: 100%;
         color: $whiteColor;
         margin-top: 90px;
-        @include lg-lt {
+        @include lg {
+          width: 95%;
+          margin: 0 0 80px 0;
+        }
+        @include md {
+          width: 95%;
+          margin: 0 0 60px 0;
+        }
+        @include sm {
+          width: 95%;
+          margin: 0 0 70px 0;
+        }
+        @include xs {
           width: 95%;
           margin: 0 0 60px 0;
         }
