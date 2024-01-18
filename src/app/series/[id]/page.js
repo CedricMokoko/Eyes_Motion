@@ -20,7 +20,13 @@ const SeriesIdPage = async ({ params: { id } }) => {
     return (
       <div>
         <SeriesDetails series={series} />
-        <Suspense fallback={<p>Chargement ...</p>}>
+        <Suspense
+          fallback={
+            <p style={{ fontSize: "50px", color: "red" }}>
+              Chargement similar series...
+            </p>
+          }
+        >
           <SimilarSeries seriesId={series.id} />
         </Suspense>
       </div>

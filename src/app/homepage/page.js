@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import Homepage from "@/components/Homepage/Homepage";
 import { getServerSession } from "next-auth";
 import { authOptions } from "../api/auth/[...nextauth]/route";
@@ -10,7 +10,11 @@ const userHomepage = async () => {
     redirect("/login");
   }
   if (session) {
-    return <Homepage />;
+    return (
+      <Suspense fallback={<p>Chargement homepage ...</p>}>
+        <Homepage />
+      </Suspense>
+    );
   }
 };
 export default userHomepage;
