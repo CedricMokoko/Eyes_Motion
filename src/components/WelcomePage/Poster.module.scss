@@ -6,7 +6,7 @@
   display: flex;
   flex-direction: column;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   @include lg-lt {
     height: calc(100vh - 60px);
   }
@@ -15,7 +15,6 @@
     position: relative;
     width: 100%;
     height: 100%;
-
     .background {
       position: absolute;
       z-index: 1;
@@ -23,13 +22,13 @@
       left: 0;
       width: 100%;
       height: 100%;
-      @include lg-lt {
-        img {
+      img {
+        display: flex;
+        object-fit: cover;
+        @include lg-lt {
           display: none;
         }
-      }
-      @include sm-lt {
-        img {
+        @include sm-lt {
           display: flex;
           object-fit: cover;
         }
@@ -52,7 +51,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 70%;
+      height: 100%;
       @include lg-lt {
         height: 100%;
       }
@@ -61,10 +60,10 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        width: 80%;
+        width: 70%;
         height: 100%;
         color: $whiteColor;
-        margin-top: 90px;
+        margin: 70px 0 0 0;
         @include lg {
           width: 95%;
           margin: 0 0 60px 0;
@@ -83,11 +82,8 @@
         }
         h1 {
           font-weight: 900;
-          font-size: 28px;
-          margin: 100px 0 0 0;
+          font-size: 25px;
           @include lg-lt {
-            margin: 0;
-
             font-size: 20px;
             text-align: center;
           }
@@ -96,8 +92,10 @@
           }
         }
         .production {
-          font-size: 25px;
-          margin-top: 15px;
+          font-weight: 900;
+          font-size: 22px;
+          margin-top: 5px;
+          text-align: center;
           span {
             color: $goldColor;
           }
@@ -112,9 +110,9 @@
         }
         h3 {
           color: $whiteColor;
-          font-size: 22px;
-          font-weight: 500;
-          margin: 10px 0 0;
+          font-size: 20px;
+          font-weight: 900;
+          margin: 15px 0;
           @include lg-lt {
             margin: 0;
             font-size: 16px;
@@ -143,26 +141,25 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: flex-end;
+      justify-content: center;
       gap: 2px;
-      height: 30%;
+      height: min-content;
       width: 100%;
       font-weight: 700;
       color: $whiteColor;
-      padding-bottom: 20px;
+      padding: 20px;
+
       @include lg-lt {
         height: min-content;
         justify-content: center;
-        padding-bottom: 0;
         padding: 20px;
       }
       .link {
-        margin: 0;
         display: flex;
         flex-flow: row wrap;
         justify-content: center;
-        width: 50%;
-        gap: 10px;
+        width: 55%;
+        gap: 7px;
         @include lg-lt {
           font-weight: 900;
           gap: 7px;
@@ -183,16 +180,17 @@
       }
       .copyText {
         color: $goldColor;
+        font-weight: 900;
+        font-size: 16px;
         @include lg-lt {
           font-size: 15px;
-          font-weight: 900;
         }
         @include sm-lt {
           font-size: 13px;
         }
       }
       .copyRight {
-        margin-top: 20px;
+        margin-top: 15px;
         margin-right: 5px;
         font-size: 13px;
         @include lg-lt {

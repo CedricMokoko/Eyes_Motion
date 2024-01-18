@@ -14,7 +14,7 @@
   justify-content: space-between;
   color: $whiteColor;
   padding: 0 30px;
-  height: 90px;
+  height: 70px;
   // background: radial-gradient(circle, #62829a, #34373f);
   background: radial-gradient(circle, #526576, #34373f);
 
@@ -29,7 +29,7 @@
   .logo {
     h2 {
       font-family: var(--font-caveat);
-      font-size: 40px;
+      font-size: 35px;
       @include lg-lt {
         font-size: 30px;
         &:hover {
@@ -37,7 +37,7 @@
         }
       }
       small {
-        font-size: 16px;
+        font-size: 15px;
         @include lg-lt {
           font-size: 14px;
         }
@@ -126,7 +126,7 @@
   justify-content: space-between;
   color: $whiteColor;
   padding: 0 30px;
-  height: 90px;
+  height: 70px;
   background: transparent;
   @include lg-lt {
     position: relative; //
@@ -137,7 +137,7 @@
   .logo {
     h2 {
       font-family: var(--font-caveat);
-      font-size: 40px;
+      font-size: 35px;
       @include lg-lt {
         font-size: 30px;
         &:hover {
@@ -145,7 +145,7 @@
         }
       }
       small {
-        font-size: 16px;
+        font-size: 15px;
         @include lg-lt {
           font-size: 14px;
         }

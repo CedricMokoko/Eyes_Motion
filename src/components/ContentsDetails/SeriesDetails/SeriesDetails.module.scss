@@ -167,6 +167,9 @@
           line-height: 15px;
           margin: 12px 0;
         }
+        @include sm {
+          -webkit-line-clamp: 5;
+        }
       }
       .actions {
         margin: 10px 0;
