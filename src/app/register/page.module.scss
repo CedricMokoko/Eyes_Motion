@@ -66,19 +66,19 @@
         margin: 70px 0 0 0;
         @include lg {
           width: 95%;
-          margin: 0 0 50px 0;
+          margin: 60px 0 50px 0;
         }
         @include md {
           width: 95%;
-          margin: 0 0 30px 0;
+          margin: 60px 0 30px 0;
         }
         @include sm {
           width: 95%;
-          margin: 0 0 55px 0;
+          margin: 60px 0 55px 0;
         }
         @include xs {
           width: 95%;
-          margin: 0 0 40px 0;
+          margin: 60px 0 40px 0;
         }
       }
     }
