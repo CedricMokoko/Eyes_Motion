@@ -20,6 +20,10 @@
     }
     @include lg-lt {
       margin: 10px 0 10px 0px;
+      padding-left: 20px;
+    }
+    @include sm-lt {
+      margin: 10px 0 10px 0px;
       padding-left: 3.7vw;
     }
     .icon {

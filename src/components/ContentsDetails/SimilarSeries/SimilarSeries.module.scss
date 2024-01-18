@@ -22,6 +22,10 @@
       margin: 10px 0 10px 0px;
       padding-left: 20px;
     }
+    @include sm-lt {
+      margin: 10px 0 10px 0px;
+      padding-left: 3.7vw;
+    }
     .icon {
       color: rgb(169, 18, 18);
       margin-left: 5px;
