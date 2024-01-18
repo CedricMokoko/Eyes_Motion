@@ -2,7 +2,6 @@
 @import "mixins_media_queries";
 
 .details {
-  padding: 50px 0;
   margin-top: 70px;
   position: relative;
   width: 100%;
@@ -16,6 +15,7 @@
     height: calc(100vh - 116px);
   }
   @include sm-lt {
+    padding: 50px 0;
     margin-top: 60px;
     height: calc(100vh - 176px);
   }
