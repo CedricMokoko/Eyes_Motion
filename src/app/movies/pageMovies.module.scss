@@ -11,10 +11,15 @@
     flex-direction: column;
   }
   h2 {
+    font-size: 16px;
     position: fixed;
-    top: 120px;
+    top: 90px;
     left: 30px;
-    color: $goldColor;
+    color: black;
+    border-radius: 3px;
+    opacity: 0.8;
+    padding: 6px;
+    background-color: $goldColor;
     @include sm-lt {
       font-family: var(--font-caveat);
       position: fixed;
@@ -25,7 +30,7 @@
       z-index: 2;
       background: linear-gradient(to right, #262424, #3b3838);
       width: 100vw;
-      padding: 10px 5px;
+      padding: 7px 5px;
     }
   }
   .content {
@@ -35,7 +40,7 @@
     align-self: center;
     gap: 14px;
     width: 65%;
-    margin: 120px auto 18px;
+    margin: 95px auto 18px;
     @include sm-lt {
       gap: 7.5px;
       width: 100%;

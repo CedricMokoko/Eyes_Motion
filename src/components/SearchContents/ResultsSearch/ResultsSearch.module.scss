@@ -2,9 +2,10 @@
 @import "mixins_media_queries";
 
 .entete {
+  font-size: 18px;
   position: fixed;
   top: 0;
-  margin: 180px 0 30px 30px;
+  margin: 150px 0 30px 30px;
   color: $goldColor;
   @include sm-lt {
     display: none;
@@ -16,7 +17,7 @@
   flex-wrap: wrap;
   align-content: flex-start;
   align-items: flex-start;
-  margin: 180px auto 18px;
+  margin: 150px auto 18px;
   width: 65%;
   gap: 14px;
   @include sm-lt {

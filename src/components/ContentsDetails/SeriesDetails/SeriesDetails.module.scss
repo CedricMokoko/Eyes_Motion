@@ -2,10 +2,10 @@
 @import "mixins_media_queries";
 
 .details {
-  margin-top: 90px;
+  margin-top: 70px;
   position: relative;
   width: 100%;
-  height: calc(100vh - 90px);
+  height: calc(100vh - 70px);
   @include lg-lt {
     margin-top: 60px;
     height: calc(100vh - 146px);
@@ -45,21 +45,21 @@
   .content {
     position: relative;
     z-index: 3;
+    height: 100%;
     display: flex;
+    flex-direction: row;
+    align-items: center;
     justify-content: center;
     gap: 50px;
-    padding: 107px 0;
     @include lg-lt {
-      padding: 0px;
       height: 100%;
       display: flex;
       flex-direction: row;
-      align-items: center;
+      align-items: baseline;
       justify-content: center;
     }
     @include sm-lt {
       height: 100%;
-      padding: 0px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -68,8 +68,8 @@
     }
     & > img {
       border-radius: 6px;
-      width: 14vw;
-      height: 280px;
+      width: 15vw;
+      height: 330px;
       @include lg {
         width: 23vw;
         height: 350px;

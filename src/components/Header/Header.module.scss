@@ -76,6 +76,10 @@
           gap: 25px;
         }
         li {
+          font-size: 15px;
+          @include lg-lt {
+            font-size: 14px;
+          }
           a {
             &:hover {
               color: $goldColor;
@@ -99,6 +103,10 @@
     align-items: center;
   }
   .user {
+    font-size: 15px;
+    @include lg-lt {
+      font-size: 14px;
+    }
     a {
       &:hover {
         color: $goldColor;

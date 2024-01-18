@@ -8,7 +8,7 @@ const SignOutButton = () => {
   return (
     <div className={`${styles.container}`}>
       <button
-        data-tooltip="Are you sure you want to exit the application?"
+        // data-tooltip="Are you sure you want to exit the application?"
         className={`${styles.button}`}
         onClick={() => signOut({ callbackUrl: "/" })}
       >

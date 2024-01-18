@@ -2,11 +2,11 @@
 @import "mixins_media_queries";
 
 .container {
-  position: fixed;
-  top: 90px;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  // position: fixed;
+  // top: 70px;
+  // left: 0;
+  // right: 0;
+  // bottom: 0;
   //font-family: var(--font-cormorant);
   margin: 0 0 33px 33px;
   @include sm-lt {
@@ -14,12 +14,11 @@
     top: 60px;
   }
   .content {
-    // margin-top: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     .contentUser {
-      margin: 0px 0 0 0px;
+      margin: 80px 0 0 0px;
       display: flex;
       flex-direction: row;
       align-items: center;
@@ -38,29 +37,34 @@
       }
     }
     .contentLiked {
+      position: fixed;
+      top: 65px;
       @include sm-lt {
         margin: 10px 0 0 20px;
       }
-      h3 {
-        margin-top: 17px;
-        color: $goldColor;
-        font-weight: 700;
-        @include sm-lt {
-          margin-top: 7px;
-        }
-      }
       h1 {
+        margin-top: 25px;
+        font-size: 18px;
         color: $whiteColor;
         @include sm-lt {
           margin-top: 10px;
           font-size: 17px;
         }
       }
+      h3 {
+        font-size: 16px;
+        margin-top: 5px;
+        color: $goldColor;
+        font-weight: 700;
+        @include sm-lt {
+          margin-top: 7px;
+        }
+      }
     }
     .containerList {
-      margin-top: 20px;
-      height: 370px;
-      width: 100vw;
+      // height: 370px;
+      height: max-content;
+      width: 100%;
       display: flex;
       flex-direction: row;
       justify-content: center;
@@ -72,8 +76,8 @@
         display: flex;
         flex-flow: row wrap;
         gap: 13px;
-        width: 80%;
-        padding: 5px 0 40px 20px;
+        width: 70%;
+        padding: 15px 0 20px 20px;
         overflow: scroll;
         @include sm-lt {
           justify-content: center;
