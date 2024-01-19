@@ -132,14 +132,14 @@
           width: 100%;
           height: max-content;
           gap: 11px;
-          padding: 10px 3.7vw 80px 3.7vw;
+          padding: 10px 3.7vw 90px 3.7vw;
         }
         @include xs {
           grid-template-columns: repeat(3, 1fr);
           width: 100%;
           height: max-content;
           gap: 10px;
-          padding: 10px 3.7vw 80px 3.7vw;
+          padding: 10px 3.7vw 90px 3.7vw;
         }
         &::-webkit-scrollbar {
           height: 0px;
