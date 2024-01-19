@@ -51,6 +51,8 @@
       background-color: #62829a;
       color: $whiteColor;
       @include sm-lt {
+        padding: 6px 6px 6px 0;
+
         background-color: $goldColor;
         color: black;
       }
