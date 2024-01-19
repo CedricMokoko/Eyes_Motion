@@ -25,6 +25,15 @@
     transition: opacity 0.2s, scale 0.2s;
     border-bottom-left-radius: 6px;
     border-bottom-right-radius: 6px;
+    @include lg-lt {
+      margin-right: 20px;
+      font-size: 8px;
+    }
+    @include md {
+      margin-right: 20px;
+      font-size: 6.5px;
+    }
+
     @include sm-lt {
       color: $goldColor;
       font-size: 6px;

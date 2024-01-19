@@ -6,10 +6,12 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  @include lg-lt {
+    margin-top: 70px;
+  }
   @include sm-lt {
     margin-top: 60px;
     position: fixed;
-    // top: 60px;
     left: 0;
     right: 0;
   }
@@ -47,6 +49,9 @@
       right: 0;
       left: 0;
       z-index: 6;
+      @include lg-lt {
+        top: 60px;
+      }
 
       @include sm-lt {
         position: static;
@@ -59,9 +64,18 @@
         margin-top: 25px;
         font-size: 18px;
         color: $whiteColor;
+        @include lg-lt {
+          margin-top: 30px;
+          font-size: 15px;
+          padding-left: 20px;
+        }
+        @include md {
+          font-size: 14px;
+          margin-top: 30px;
+        }
         @include sm-lt {
           margin-top: 3px;
-          font-size: 15px;
+          font-size: 14px;
           padding-left: 3.7vw;
         }
       }
@@ -71,10 +85,19 @@
         margin-top: 5px;
         color: $goldColor;
         font-weight: 700;
+
+        @include lg-lt {
+          margin-top: 3px;
+          font-size: 14px;
+          padding-left: 20px;
+        }
+        @include md {
+          font-size: 13.5px;
+        }
         @include sm-lt {
           padding-left: 3.7vw;
           margin-top: 2px;
-          font-size: 14px;
+          font-size: 13px;
         }
       }
     }
@@ -95,18 +118,26 @@
         gap: 13px;
         width: 60%;
         padding: 30px;
+        @include lg {
+          grid-template-columns: repeat(5, 1fr);
+          padding: 20px 0;
+        }
+        @include md {
+          grid-template-columns: repeat(4, 1fr);
+          padding: 20px 0;
+        }
         @include sm {
           grid-template-columns: repeat(5, 1fr);
           width: 100%;
           height: max-content;
-          gap: 7px;
+          gap: 11px;
           padding: 10px 3.7vw 80px 3.7vw;
         }
         @include xs {
           grid-template-columns: repeat(3, 1fr);
           width: 100%;
           height: max-content;
-          gap: 7px;
+          gap: 10px;
           padding: 10px 3.7vw 80px 3.7vw;
         }
         &::-webkit-scrollbar {
@@ -123,7 +154,7 @@
             height: 160px;
           }
           @include xs {
-            height: 120px;
+            height: 140px;
           }
           &:hover {
             transform: scale(1.06);
@@ -147,7 +178,7 @@
                 height: 160px;
               }
               @include xs {
-                height: 120px;
+                height: 140px;
               }
               img {
                 border-radius: 6px;
