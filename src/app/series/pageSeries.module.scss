@@ -23,15 +23,14 @@
     background-color: $goldColor;
     @include lg {
       top: 81px;
-
       font-size: 15px;
     }
     @include md {
       top: 81px;
-
       font-size: 14px;
     }
     @include sm-lt {
+      border-radius: 0px;
       position: fixed;
       top: 59px;
       left: 0px;
@@ -49,11 +48,11 @@
     // flex-wrap: wrap;
     // align-self: center;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(3, 1fr);
 
     gap: 13px;
-    width: 80%;
+    width: 60%;
     margin: 90px auto 18px;
     // @include sm-lt {
     //   gap: 7.5px;
@@ -73,24 +72,31 @@
       gap: 11px;
     }
     @include sm {
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(5, 1fr);
       width: 100%;
       gap: 11px;
-      padding: 20px 3.7vw 80px 3.7vw;
+      padding: 20px 3.7vw 90px 3.7vw;
     }
     @include xs {
       grid-template-columns: repeat(3, 1fr);
       width: 100%;
-      gap: 7.5px;
+      gap: 10px;
       padding: 20px 3.7vw 90px 3.7vw;
     }
 
     //DIV CARD CONTAINER
     .cardContainer {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+      // display: flex;
+      // flex-direction: column;
+      // justify-content: center;
       transition: transform 0.5s ease-out;
+      height: 150px;
+      @include sm {
+        height: 160px;
+      }
+      @include xs {
+        height: 140px;
+      }
       &:hover {
         transform: scale(1.06);
       }
