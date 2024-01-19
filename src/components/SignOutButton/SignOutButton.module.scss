@@ -38,9 +38,8 @@
       color: $goldColor;
       font-size: 6px;
       background-color: transparent;
-      margin-right: 0;
-      padding: 8px 3.7vw 8px 8px;
-
+      margin-right: 3.7vw;
+      padding: 6px 6px 6px 0;
       h2 {
         display: none;
       }
@@ -61,7 +60,6 @@
       padding: 2px;
       margin-left: 9px;
       @include sm-lt {
-        margin-left: 3.7vw;
         font-size: 13px;
       }
     }

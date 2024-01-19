@@ -120,11 +120,12 @@
         padding: 30px;
         @include lg {
           grid-template-columns: repeat(5, 1fr);
-          padding: 20px 0;
+          padding: 20px 0 20px 30px;
         }
         @include md {
           grid-template-columns: repeat(4, 1fr);
-          padding: 20px 0;
+          padding: 20px 0 20px 30px;
+          gap: 11px;
         }
         @include sm {
           grid-template-columns: repeat(5, 1fr);
