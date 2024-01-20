@@ -3,4 +3,10 @@
 
 .youtubeComponent {
   height: 100%;
+  @include lg {
+    height: 360px;
+  }
+  @include md {
+    height: 270px;
+  }
 }
