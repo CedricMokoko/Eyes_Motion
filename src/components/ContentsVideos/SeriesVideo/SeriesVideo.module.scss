@@ -20,10 +20,14 @@
     }
     @include md {
       width: 100%;
-      height: 271px;
+      height: 270px;
     }
 
-    @include sm-lt {
+    @include sm {
+      height: 70vh;
+      width: 100%;
+    }
+    @include xs {
       height: 50vh;
       width: 100%;
     }
