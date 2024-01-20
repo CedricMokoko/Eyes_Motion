@@ -4,9 +4,9 @@
 .youtubeComponent {
   height: 100%;
   @include lg {
-    height: 80vh;
+    height: 70vh;
   }
   @include md {
-    height: 210px;
+    height: 270px;
   }
 }
