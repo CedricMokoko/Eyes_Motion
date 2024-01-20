@@ -13,6 +13,12 @@
     margin-top: 70px;
     height: max-content;
     width: 100%;
+    @include md {
+      width: 60%;
+      height: 360px;
+
+      margin-top: 60px;
+    }
     @include sm-lt {
       width: 100%;
       margin-top: 60px;

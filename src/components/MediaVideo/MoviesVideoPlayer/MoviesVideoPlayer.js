@@ -11,6 +11,11 @@ const MoviesVideoPlayer = ({ mediaVideoMovies }) => {
         playerVars: {
           autoplay: 1,
           controls: 1,
+          modestbranding: 1, // Rimuovi il logo di YouTube
+          rel: 0, // Nascondi i video correlati alla fine
+          fs: 1,
+          quality: "hd1080", // Imposta la qualità del video a HD (1080p)
+          origin: window.location.origin, // Imposta l'origine per evitare il redirect a YouTube
         },
       }}
       // defaults -> ''
