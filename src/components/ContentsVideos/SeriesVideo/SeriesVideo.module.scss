@@ -6,21 +6,30 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: max-content;
+  height: 100vh;
+  width: 100%;
   background-color: black;
+  @include sm-lt {
+    height: 45vh;
+    width: 100%;
+  }
 
   .videoContent {
     margin-top: 70px;
-    height: max-content;
+    height: 100%;
     width: 100%;
-    @include md {
-      width: 100%;
-      height: 270px;
+    // @include md {
+    //   width: 100%;
+    //   height: 270px;
+    //   margin-top: 60px;
+    // }
+    @include lg-lt {
       margin-top: 60px;
     }
     @include sm-lt {
-      width: 100%;
+      height: 45%;
       margin-top: 60px;
+      width: 100%;
     }
     p {
       color: $goldColor;

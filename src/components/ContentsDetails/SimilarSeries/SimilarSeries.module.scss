@@ -7,10 +7,6 @@
   justify-content: flex-end;
   overflow-x: hidden;
   margin: 4px 0px 20px 0px;
-  @include sm-lt {
-    margin: 0px;
-    height: min-content;
-  }
   p {
     color: $goldColor;
     font-weight: 700;
@@ -53,27 +49,29 @@
     @include lg-lt {
       padding: 5px 20px 20px 20px;
     }
-    // @include md {
-    //   display: grid;
-    //   grid-template-columns: repeat(5, 1fr);
-    //   grid-template-rows: repeat(3, 1fr);
-    //   overflow-x: scroll;
-
-    //   padding: 5px 20px 20px 20px;
-    // }
     @include sm-lt {
       display: grid;
-
-      grid-template-columns: repeat(6, 1fr);
       grid-template-rows: repeat(3, 1fr);
-      overflow-x: scroll;
-      padding: 5px 4.1vw 70px 3.7vw;
+      grid-template-columns: repeat(5, 1fr);
+      width: 100%;
+      height: max-content;
+      gap: 11px;
+      padding: 10px 3.7vw 90px 3.7vw;
+      overflow-x: hidden;
     }
     @include xs {
-      grid-template-columns: repeat(5, 1fr);
+      display: grid;
+      grid-template-rows: repeat(3, 1fr);
+      grid-template-columns: repeat(3, 1fr);
+      width: 100%;
+      height: max-content;
+      gap: 10px;
+      padding: 10px 3.7vw 90px 3.7vw;
     }
-    > div {
-      width: 200px;
-    }
+    // > div {
+    //   width: 200px;
+    // }
   }
+  // }
+  // }
 }

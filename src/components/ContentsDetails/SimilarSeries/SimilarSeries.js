@@ -12,11 +12,15 @@ const SimilarSeries = async ({ seriesId }) => {
     <div className={styles.similar}>
       {results && results.length > 0 ? (
         <>
-          <p>Similar series</p>
-          <div className={styles.list}>
-            {results.slice(0, 10).map((serie) => (
-              <SimilarCardSeries media={serie} key={serie.id} />
-            ))}
+          <div className={`${styles.content}`}>
+            <p>Similar series</p>
+            <div className={styles.containerList}>
+              <div className={styles.list}>
+                {results.slice(0, 10).map((serie) => (
+                  <SimilarCardSeries media={serie} key={serie.id} />
+                ))}
+              </div>
+            </div>
           </div>
         </>
       ) : (
