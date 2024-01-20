@@ -51,17 +51,17 @@
     }
     @include sm-lt {
       display: grid;
-      grid-template-rows: repeat(3, 1fr);
+      grid-template-rows: repeat(1, 1fr);
       grid-template-columns: repeat(5, 1fr);
       width: 100%;
       height: max-content;
       gap: 11px;
-      padding: 10px 3.7vw 0px 3.7vw;
+      padding: 10px 3.7vw 90px 3.7vw;
       overflow-x: hidden;
     }
     @include xs {
       display: grid;
-      grid-template-rows: repeat(3, 1fr);
+      grid-template-rows: repeat(1, 1fr);
       grid-template-columns: repeat(3, 1fr);
       width: 100%;
       height: max-content;

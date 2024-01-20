@@ -38,7 +38,7 @@ const VideoIdPage = async ({ params: { id } }) => {
     if (serieVideo.id) {
       return (
         // <div style={{ backgroundColor: "black" }}>
-        <div>
+        <div style={{ backgroundColor: "black" }}>
           <SeriesVideo serieVideoId={serieVideo.id} />
           <Suspense fallback={<p>Chargement ...</p>}>
             <SimilarSeries seriesId={serieVideo.id} />
