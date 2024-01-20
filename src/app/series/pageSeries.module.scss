@@ -72,14 +72,14 @@
       gap: 11px;
     }
     @include sm {
-      margin: 60px auto 0px;
+      margin: 100px auto 0px;
       grid-template-columns: repeat(5, 1fr);
       width: 100%;
       gap: 11px;
       padding: 20px 3.7vw 90px 3.7vw;
     }
     @include xs {
-      margin: 60px auto 0px;
+      margin: 100px auto 0px;
       grid-template-columns: repeat(3, 1fr);
       width: 100%;
       gap: 10px;
