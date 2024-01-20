@@ -19,8 +19,7 @@
   .image {
     position: relative;
     width: 100%;
-    // height: 230px;
-    height: 150px;
+    height: 230px;
     @include lg-lt {
       height: 150px;
     }
