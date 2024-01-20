@@ -3,29 +3,27 @@
 
 .container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 85vh;
+  height: max-content;
   background-color: black;
-  @include sm-lt {
-    height: 65vh;
-  }
+
   .videoContent {
-    margin-top: 90px;
-    height: 360px;
-    width: 40%;
+    margin-top: 70px;
+    height: max-content;
+    width: 100%;
     @include sm-lt {
-      width: 100vh;
-      margin-top: 70px;
+      width: 100%;
+      margin-top: 60px;
     }
     p {
       color: $goldColor;
       text-align: center;
       margin-top: 150px;
-      @include sm-lt {
-        margin-top: 170px;
-      }
+      // @include sm-lt {
+      // margin-top: 170px;
+      // }
       .icon {
         color: rgb(169, 18, 18);
         margin-right: 5px;
