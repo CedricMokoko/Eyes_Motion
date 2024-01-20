@@ -1,9 +1,9 @@
 import React from "react";
 import { getMovieByPath } from "@/utils/movieClient";
 import styles from "./SimilarSeries.module.scss";
-import MediaCardSeries from "@/components/MediaCard/Series/MediaCardSeries";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleExclamation } from "@fortawesome/free-solid-svg-icons";
+import SimilarCardSeries from "@/components/MediaCard/Similar/SimilarCardSeries/SimilarCardSeries";
 
 const SimilarSeries = async ({ seriesId }) => {
   const { results } = await getMovieByPath(`/tv/${seriesId}/similar`, []);
@@ -15,7 +15,7 @@ const SimilarSeries = async ({ seriesId }) => {
           <p>Similar series</p>
           <div className={styles.list}>
             {results.slice(0, 10).map((serie) => (
-              <MediaCardSeries media={serie} key={serie.id} />
+              <SimilarCardSeries media={serie} key={serie.id} />
             ))}
           </div>
         </>
