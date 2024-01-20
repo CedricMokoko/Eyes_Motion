@@ -13,24 +13,15 @@
   padding: 6px;
   background-color: $goldColor;
   @include lg {
-    top: 121px;
+    top: 131px;
     font-size: 15px;
   }
   @include md {
-    top: 81px;
+    top: 131px;
     font-size: 14px;
   }
   @include sm-lt {
-    border-radius: 0px;
-    position: fixed;
-    top: 59px;
-    left: 0px;
-    color: white;
-    z-index: 2;
-    background: linear-gradient(to right, #262424, #3b3838);
-    width: 100vw;
-    padding: 7px 3.7vw;
-    opacity: 1;
+    display: none;
   }
 }
 .searchResults {
@@ -52,23 +43,27 @@
   //   justify-content: center;
   // }
   @include lg {
-    margin: 60px auto 18px;
+    margin: 110px auto 18px;
     grid-template-columns: repeat(5, 1fr);
     padding: 20px 0 20px 30px;
   }
   @include md {
-    margin: 60px auto 18px;
+    margin: 110px auto 18px;
     grid-template-columns: repeat(4, 1fr);
     padding: 20px 0 20px 30px;
     gap: 11px;
   }
   @include sm {
+    margin: 100px auto 18px;
+
     grid-template-columns: repeat(5, 1fr);
     width: 100%;
     gap: 11px;
     padding: 20px 3.7vw 90px 3.7vw;
   }
   @include xs {
+    margin: 100px auto 18px;
+
     grid-template-columns: repeat(3, 1fr);
     width: 100%;
     gap: 10px;
