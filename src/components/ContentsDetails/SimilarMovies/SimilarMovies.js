@@ -13,7 +13,7 @@ const SimilarMovies = async ({ movieId }) => {
         <>
           <p>Similar movies</p>
           <div className={styles.list}>
-            {results.slice(0, 10).map((movie) => (
+            {results.slice(0, 12).map((movie) => (
               <SimilarCardMovies media={movie} key={movie.id} />
             ))}
           </div>

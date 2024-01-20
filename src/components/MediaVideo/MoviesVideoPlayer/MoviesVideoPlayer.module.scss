@@ -1,0 +1,9 @@
+@import "variables";
+@import "mixins_media_queries";
+
+.youtubeComponent {
+  height: 100%;
+  @include md {
+    height: 270px;
+  }
+}
