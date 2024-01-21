@@ -6,7 +6,7 @@ import SeriesCredits from "../SeriesCredits/SeriesCredits";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay } from "@fortawesome/free-solid-svg-icons";
-import Like from "@/components/Like/Like";
+import LikeSeries from "@/components/Like/LikeSeries/LikeSeries";
 
 const SeriesDetails = ({ series }) => {
   return (
@@ -51,7 +51,10 @@ const SeriesDetails = ({ series }) => {
                 TRAILER
               </button>
             </Link>
-            <Like likedSeriesId={series.id} className={`${styles.icon}`} />
+            <LikeSeries
+              likedSeriesId={series.id}
+              className={`${styles.icon}`}
+            />
           </div>
           <div className={styles.credits}>
             <Suspense fallback={<p>Chargement ...</p>}>

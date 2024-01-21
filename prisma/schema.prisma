@@ -17,7 +17,7 @@ model User{
   email String @unique
   password String
   movieLikes MovieLike[] //Relazione one-to-many con MovieLike
-  serieLikes SerieLike[] //Relazione one-to-many con MovieLike
+  serieLikes SerieLike[] //Relazione one-to-many con SerieLike
 }
 
 model MovieLike {
@@ -25,12 +25,12 @@ model MovieLike {
   userId  Int
   movieId String?
   user User? @relation(fields: [userId], references: [id])
-  @@unique([userId, movieId], name: "idx_userId_movieId") // Vincolo unico per impedire più "like" dallo stesso utente per lo stesso film
+  // @@unique([userId, movieId], name: "idx_userId_movieId") // Vincolo unico per impedire più "like" dallo stesso utente per lo stesso film
 }
 model SerieLike {
   id      Int     @id @default(autoincrement())
   userId  Int
   serieId String?
   user User? @relation(fields: [userId], references: [id])
-  @@unique([userId, serieId], name: "idx_userId_serieId") // Vincolo unico per impedire più "like" dallo stesso utente per la stessa serie
+  // @@unique([userId, serieId], name: "idx_userId_serieId") // Vincolo unico per impedire più "like" dallo stesso utente per la stessa serie
 }
