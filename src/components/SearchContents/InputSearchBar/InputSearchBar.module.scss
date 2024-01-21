@@ -56,6 +56,11 @@
     text-align: center;
     color: $goldColor;
     font-size: 17px;
+    @include md-lt {
+      display: none;
+      display: none;
+      display: none;
+    }
     @include sm-lt {
       left: 20px;
       right: 20px;
