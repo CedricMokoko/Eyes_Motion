@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { getMovieByPath } from "@/utils/movieClient";
 import styles from "./SimilarMovies.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

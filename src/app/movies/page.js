@@ -5,6 +5,9 @@ import { getServerSession } from "next-auth";
 import { authOptions } from "../api/auth/[...nextauth]/route";
 import { redirect } from "next/navigation";
 import MediaCardMovies from "@/components/MediaCard/Movies/MediaCardMovies";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCopyright } from "@fortawesome/free-solid-svg-icons";
+import Link from "next/link";
 
 const MoviesPage = async () => {
   const { results: popular } = await getMovieByPath("/movie/popular");
@@ -22,29 +25,59 @@ const MoviesPage = async () => {
   }
   if (session) {
     return (
-      <div className={styles.container}>
-        <h2>Film</h2>
-        <div className={styles.content}>
-          {popularMovies.map((movie) => (
-            <div key={movie.id} className={`${styles.cardContainer}`}>
-              <MediaCardMovies media={movie} />
-            </div>
-          ))}{" "}
-          {upcomingMovies.map((movie) => (
-            <div key={movie.id} className={`${styles.cardContainer}`}>
-              <MediaCardMovies media={movie} />
-            </div>
-          ))}{" "}
-          {nowPlayingMovies.map((movie) => (
-            <div key={movie.id} className={`${styles.cardContainer}`}>
-              <MediaCardMovies media={movie} />
-            </div>
-          ))}
-          {topRatedMovies.map((movie) => (
-            <div key={movie.id} className={`${styles.cardContainer}`}>
-              <MediaCardMovies media={movie} />
-            </div>
-          ))}
+      <div className={styles.containerGenerale}>
+        <div className={styles.container}>
+          <h2>Film</h2>
+          <div className={styles.content}>
+            {popularMovies.map((movie) => (
+              <div key={movie.id} className={`${styles.cardContainer}`}>
+                <MediaCardMovies media={movie} />
+              </div>
+            ))}{" "}
+            {upcomingMovies.map((movie) => (
+              <div key={movie.id} className={`${styles.cardContainer}`}>
+                <MediaCardMovies media={movie} />
+              </div>
+            ))}{" "}
+            {nowPlayingMovies.map((movie) => (
+              <div key={movie.id} className={`${styles.cardContainer}`}>
+                <MediaCardMovies media={movie} />
+              </div>
+            ))}
+            {topRatedMovies.map((movie) => (
+              <div key={movie.id} className={`${styles.cardContainer}`}>
+                <MediaCardMovies media={movie} />
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className={styles.footer}>
+          <div className={styles.link}>
+            <p>Condizioni generali di abbonnamento</p>
+            <p>Informazioni sulla privacy</p>
+            <p>Norma sulla privacy in UE e UK</p>
+            <p>Policy sui cookie</p>
+            <p>Dispositivi supportati</p>
+            <p>Assistenza</p>
+            <p>Chi siamo</p>
+            <p>Gestione preferenze dati personali</p>
+          </div>
+          <p className={`${styles.copyText}`}>
+            <FontAwesomeIcon
+              icon={faCopyright}
+              className={`${styles.copyRight}`}
+            />
+            <Link
+              href={`https://cedricmokoko.com/`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span className={`${styles.copyText}`}>
+                Eyes_Motion by Cédric Mokoko
+              </span>
+            </Link>
+          </p>
         </div>
       </div>
     );
