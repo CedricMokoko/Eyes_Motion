@@ -29,7 +29,7 @@ export async function POST(request, { params: { movieId } }) {
 
   if (existingLike) {
     // Se la serie è già stata aggiunta, cancellala
-    const deletedLike = await prisma.movieieLike.delete({
+    const deletedLike = await prisma.movieLike.delete({
       where: {
         id: existingLike.id,
       },
