@@ -4,7 +4,6 @@ import styles from "./SimilarMovies.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleExclamation } from "@fortawesome/free-solid-svg-icons";
 import SimilarCardMovies from "@/components/MediaCard/Similar/SimilarCardMovies/SimilarCardMovies";
-import MediaCardMovies from "@/components/MediaCard/Movies/MediaCardMovies";
 
 const SimilarMovies = async ({ movieId }) => {
   const { results } = await getMovieByPath(`/movie/${movieId}/similar`, []);
@@ -15,7 +14,9 @@ const SimilarMovies = async ({ movieId }) => {
           <p>Similar movies</p>
           <div className={styles.list}>
             {results.slice(0, 12).map((movie) => (
-              <MediaCardMovies media={movie} key={movie.id} /> //
+              // <MediaCardMovies media={movie} key={movie.id} />
+
+              <SimilarCardMovies media={movie} key={movie.id} />
             ))}
           </div>
         </>
