@@ -24,13 +24,14 @@ model MovieLike {
   id      Int     @id @default(autoincrement())
   userId  Int
   movieId String?
-  user User? @relation(fields: [userId], references: [id])
-  // @@unique([userId, movieId], name: "idx_userId_movieId") // Vincolo unico per impedire più "like" dallo stesso utente per lo stesso film
+  isLiked Boolean   // Nuovo campo per indicare lo stato del like
+  user    User    @relation(fields: [userId], references: [id])
 }
+
 model SerieLike {
   id      Int     @id @default(autoincrement())
   userId  Int
   serieId String?
-  user User? @relation(fields: [userId], references: [id])
-  // @@unique([userId, serieId], name: "idx_userId_serieId") // Vincolo unico per impedire più "like" dallo stesso utente per la stessa serie
+  isLiked Boolean   // Nuovo campo per indicare lo stato del like
+  user    User    @relation(fields: [userId], references: [id])
 }

@@ -5,7 +5,7 @@
   cursor: pointer;
   font-size: 16px;
   font-weight: 900;
-  transition: 0.1s;
+  transition: 0.001s;
   opacity: 1;
   background-color: #62829a;
   color: white;
@@ -14,7 +14,7 @@
   &:hover {
     opacity: 1;
     color: $goldColor;
-    transform: scale(0.8); /* Riduci la dimensione durante l'hover */
+    transform: scale(0.9); /* Riduci la dimensione durante l'hover */
   }
 }
 .liked {
