@@ -40,6 +40,8 @@ const LikeMovies = ({ likedMoviesId }) => {
           // Salva lo stato di "like" nei cookie
           cookie.set(`likeState_${likedMoviesId}`, String(newLikeState), {
             expires: 365,
+            domain: "eyes-motion.vercel.app",
+            path: "/", // Imposta il percorso principale
           });
         } else {
           setError("Errore durante il like del film");
