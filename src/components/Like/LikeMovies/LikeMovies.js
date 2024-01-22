@@ -1,9 +1,8 @@
 "use client";
 
-import { faPlus } from "@fortawesome/free-solid-svg-icons";
-import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useState } from "react";
+import { faCheckCircle, faPlus } from "@fortawesome/free-solid-svg-icons";
+import { useState, useEffect } from "react";
 import styles from "./LikeMovies.module.scss";
 
 const LikeMovies = ({ likedMoviesId }) => {
