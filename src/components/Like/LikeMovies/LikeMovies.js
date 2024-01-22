@@ -1,6 +1,10 @@
 // LikeMovies.js
 "use client";
-import { faPlus, faCheckCircle } from "@fortawesome/free-solid-svg-icons";
+import {
+  faPlus,
+  faCheckCircle,
+  faPlusMinus,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState, useEffect } from "react";
 import styles from "./LikeMovies.module.scss";
@@ -58,7 +62,7 @@ const LikeMovies = ({ likedMoviesId }) => {
     <div className={styles.likeButton}>
       <FontAwesomeIcon
         onClick={handleLikeClicked}
-        icon={isLiked ? faCheckCircle : faPlus}
+        icon={isLiked ? faCheckCircle : faPlusMinus}
         className={`${styles.icon} ${isLiked ? styles.liked : ""} ${
           isLoading ? styles.loading : ""
         }`}
