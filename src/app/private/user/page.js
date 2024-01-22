@@ -38,7 +38,8 @@ const UserPage = async () => {
   }
   if (session) {
     // Concatenare gli array movies e series
-    const combinedList = [...movies, ...series];
+    const movieList = [...movies];
+    const serieList = [...series];
     return (
       <div className={`${styles.container}`}>
         <div className={`${styles.content}`}>
@@ -52,14 +53,29 @@ const UserPage = async () => {
           </div>
           <div className={styles.containerList}>
             <div className={styles.contentList}>
-              {combinedList.map((item) => (
-                <div key={item.id} className={`${styles.cardContainer}`}>
+              {serieList.map((itemSerie) => (
+                <div key={itemSerie.id} className={`${styles.cardContainer}`}>
                   <div className={`${styles.card}`}>
-                    <Link href={`/search/${item.id}`}>
+                    <Link href={`/series/${itemSerie.id}`}>
                       <div className={`${styles.image}`}>
                         <Image
-                          src={`${process.env.NEXT_PUBLIC_TMDB_IMAGE_BASE_PATH}/w500${item.poster_path}`}
-                          alt={item.title}
+                          src={`${process.env.NEXT_PUBLIC_TMDB_IMAGE_BASE_PATH}/w500${itemSerie.poster_path}`}
+                          alt={itemSerie.name}
+                          fill
+                        />
+                      </div>
+                    </Link>
+                  </div>
+                </div>
+              ))}
+              {movieList.map((itemMovie) => (
+                <div key={itemMovie.id} className={`${styles.cardContainer}`}>
+                  <div className={`${styles.card}`}>
+                    <Link href={`/movies/${itemMovie.id}`}>
+                      <div className={`${styles.image}`}>
+                        <Image
+                          src={`${process.env.NEXT_PUBLIC_TMDB_IMAGE_BASE_PATH}/w500${itemMovie.poster_path}`}
+                          alt={itemMovie.title}
                           fill
                         />
                       </div>
