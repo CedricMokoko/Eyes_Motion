@@ -59,7 +59,7 @@ const UserPage = async () => {
                       <div className={`${styles.image}`}>
                         <Image
                           src={`${process.env.NEXT_PUBLIC_TMDB_IMAGE_BASE_PATH}/w500${item.poster_path}`}
-                          alt={item.name}
+                          alt={item.title}
                           fill
                         />
                       </div>
