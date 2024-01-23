@@ -9,7 +9,7 @@
   align-items: center;
   min-height: 100vh;
   @include md-lt {
-    min-height: calc(100vh - 100px);
+    min-height: calc(100vh - 60px);
   }
   .searchBar {
     position: fixed;
