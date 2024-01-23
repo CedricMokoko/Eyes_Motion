@@ -35,35 +35,35 @@ const InputSearchBar = () => {
               Digitare il nome del film o della serie che stai cercando
               <FontAwesomeIcon icon={faKeyboard} className={`${styles.icon}`} />
             </p>
-            <div className={styles.footer}>
-              <div className={styles.link}>
-                <p>Condizioni generali di abbonnamento</p>
-                <p>Informazioni sulla privacy</p>
-                <p>Norma sulla privacy in UE e UK</p>
-                <p>Policy sui cookie</p>
-                <p>Dispositivi supportati</p>
-                <p>Assistenza</p>
-                <p>Chi siamo</p>
-                <p>Gestione preferenze dati personali</p>
-              </div>
-              <p className={`${styles.copyText}`}>
-                <FontAwesomeIcon
-                  icon={faCopyright}
-                  className={`${styles.copyRight}`}
-                />
-                <Link
-                  href={`https://cedricmokoko.com/`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <span className={`${styles.copyText}`}>
-                    Eyes_Motion by Cédric Mokoko
-                  </span>
-                </Link>
-              </p>
-            </div>
           </>
         )}
+      </div>
+      <div className={styles.footer}>
+        <div className={styles.link}>
+          <p>Condizioni generali di abbonnamento</p>
+          <p>Informazioni sulla privacy</p>
+          <p>Norma sulla privacy in UE e UK</p>
+          <p>Policy sui cookie</p>
+          <p>Dispositivi supportati</p>
+          <p>Assistenza</p>
+          <p>Chi siamo</p>
+          <p>Gestione preferenze dati personali</p>
+        </div>
+        <p className={`${styles.copyText}`}>
+          <FontAwesomeIcon
+            icon={faCopyright}
+            className={`${styles.copyRight}`}
+          />
+          <Link
+            href={`https://cedricmokoko.com/`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span className={`${styles.copyText}`}>
+              Eyes_Motion by Cédric Mokoko
+            </span>
+          </Link>
+        </p>
       </div>
     </>
   );

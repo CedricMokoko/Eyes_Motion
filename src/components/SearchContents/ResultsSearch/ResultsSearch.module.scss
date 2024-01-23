@@ -110,7 +110,7 @@
     font-weight: 700;
     color: $whiteColor;
     padding: 20px;
-    margin-top: 60px; // erano 30px
+    margin-top: 0px; // erano 30px
 
     @include lg-lt {
       height: min-content;

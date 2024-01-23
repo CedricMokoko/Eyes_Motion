@@ -5,6 +5,10 @@
   display: flex;
   position: relative;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  // background-color: #041226;
   .searchBar {
     position: fixed;
     top: 69px;
@@ -49,14 +53,14 @@
     }
   }
   .info {
-    position: fixed;
-    top: 50%;
-    left: 0;
-    right: 0;
+    // position: fixed;
+    // top: 50%;
+    // left: 0;
+    // right: 0;
     text-align: center;
     color: $goldColor;
-    font-size: 20px;
-    @include md-lt {
+    font-size: 17px;
+    @include lg-lt {
       font-size: 15px;
     }
     @include md-lt {
@@ -73,67 +77,68 @@
       margin-left: 15px;
     }
   }
-  .footer {
-    background-color: rgba($color: #041226, $alpha: 0.04);
-    font-family: var(--font-cormorant);
-    position: fixed;
-    bottom: 0;
-    z-index: 3;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 2px;
+}
+.footer {
+  background-color: rgba($color: #041226, $alpha: 0.04);
+  font-family: var(--font-cormorant);
+
+  // position: fixed;
+  // bottom: 0;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  height: min-content;
+  width: 100%;
+  font-weight: 700;
+  color: $whiteColor;
+  padding: 20px;
+  @include lg-lt {
     height: min-content;
-    width: 100%;
-    font-weight: 700;
-    color: $whiteColor;
+    justify-content: center;
     padding: 20px;
+  }
+
+  @include sm-lt {
+    display: none;
+  }
+
+  .link {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 55%;
+    gap: 7px;
     @include lg-lt {
-      height: min-content;
-      justify-content: center;
-      padding: 20px;
-    }
-
-    @include sm-lt {
-      display: none;
-    }
-
-    .link {
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: center;
-      width: 55%;
-      gap: 7px;
-      @include lg-lt {
-        font-weight: 900;
-        gap: 7px;
-        width: 70%;
-        font-size: 14px;
-      }
-    }
-    p {
-      margin: 0;
-      cursor: pointer;
-      &:hover {
-        opacity: 0.6;
-      }
-    }
-    .copyText {
-      color: $goldColor;
       font-weight: 900;
-      font-size: 16px;
-      @include lg-lt {
-        font-size: 15px;
-      }
+      gap: 7px;
+      width: 70%;
+      font-size: 14px;
     }
-    .copyRight {
-      margin-top: 15px;
-      margin-right: 5px;
-      font-size: 13px;
-      @include lg-lt {
-        margin-top: 7px;
-      }
+  }
+  p {
+    margin: 0;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+  .copyText {
+    color: $goldColor;
+    font-weight: 900;
+    font-size: 16px;
+    @include lg-lt {
+      font-size: 15px;
+    }
+  }
+  .copyRight {
+    margin-top: 15px;
+    margin-right: 5px;
+    font-size: 13px;
+    @include lg-lt {
+      margin-top: 7px;
     }
   }
 }
