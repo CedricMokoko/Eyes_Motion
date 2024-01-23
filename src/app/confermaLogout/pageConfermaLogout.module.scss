@@ -6,7 +6,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 9;
+  z-index: 19;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -32,7 +32,8 @@
 
     .buttonContainer {
       background-color: #62829a;
-      height: 100px;
+      z-index: 26;
+      height: 300px;
       display: flex;
       align-items: center;
       justify-content: center;
