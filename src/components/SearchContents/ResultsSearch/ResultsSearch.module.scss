@@ -3,7 +3,13 @@
 
 .containerGenerale {
   .container {
-    min-height: 100vh; //Non c'era niente qui
+    min-height: calc(100vh - 110px); //Non c'era niente qui
+    @include lg-lt {
+      min-height: calc(100vh - 100px); //Non c'era niente qui
+    }
+    @include sm-lt {
+      min-height: max-content;
+    }
     .entete {
       font-family: var(--font-caveat);
       font-size: 16px;
