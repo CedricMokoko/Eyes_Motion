@@ -1,6 +1,9 @@
 @import "variables";
 @import "mixins_media_queries";
 
+.container {
+  min-height: 100vh;
+}
 .footer {
   background-color: rgba($color: #041226, $alpha: 0.04);
   font-family: var(--font-cormorant);

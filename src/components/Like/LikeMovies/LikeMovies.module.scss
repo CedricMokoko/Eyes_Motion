@@ -3,12 +3,13 @@
 .icon {
   margin-right: 6px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 12px;
   font-weight: 900;
   transition: 0.001s;
   opacity: 1;
   background-color: #62829a;
-  color: white;
+  border: 2px solid white;
+  color: black;
   padding: 5px 7px;
   border-radius: 6px;
   &:hover {
@@ -19,27 +20,58 @@
 }
 .liked {
   padding: 5px 7px;
-  animation: rotateAndFadeOut 0.1s forwards; // Imposta "forwards" per mantenere lo stato finale dell'animazione
+  animation: rotateAndFadeOut 1s forwards; // Imposta "forwards" per mantenere lo stato finale dell'animazione
   &:hover {
     background-color: #62829a;
     opacity: 1;
     color: $goldColor;
   }
+  @include sm-lt {
+    animation: rotateAndFadeOutMobile 1s forwards;
+  }
 }
 
 @keyframes rotateAndFadeOut {
   0% {
-    transform: rotate(0deg);
-    opacity: 0;
+    transform: rotate(0deg) translateX(0); /* Nessuna traslazione iniziale */
+    opacity: 1;
     background-color: transparent;
   }
-  100% {
-    transform: rotate(360deg);
+  70% {
+    transform: rotate(360deg) translateX(0); /* Nessuna traslazione al 80% */
     font-size: 16px;
     padding: 5px;
     border-radius: 6px;
     background-color: #62829a;
     opacity: 1;
     color: $goldColor;
+  }
+  100% {
+    transform: rotate(360deg) translateX(300px); /* Traslazione di 5px verso destra al 100% */
+    opacity: 0;
+    @include sm-lt {
+      transform: rotate(360deg) translateX(0px); /* Traslazione di 5px verso destra al 100% */
+    }
+  }
+}
+
+@keyframes rotateAndFadeOutMobile {
+  0% {
+    transform: rotate(0deg); /* Nessuna traslazione iniziale */
+    opacity: 1;
+    background-color: transparent;
+  }
+  70% {
+    transform: rotate(360deg); /* Nessuna traslazione al 80% */
+    font-size: 16px;
+    padding: 5px;
+    border-radius: 6px;
+    background-color: #62829a;
+    opacity: 1;
+    color: $goldColor;
+  }
+  100% {
+    transform: rotate(360deg); /* Traslazione di 5px verso destra al 100% */
+    opacity: 0;
   }
 }
