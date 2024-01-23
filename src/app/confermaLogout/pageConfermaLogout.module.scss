@@ -24,14 +24,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    @include lg {
+    @include lg-lt {
       width: 220px;
       height: 120px;
     }
-    @include md-lt {
-      width: 180px;
-      height: 100px;
-    }
+    // @include md-lt {
+    //   width: 180px;
+    //   height: 100px;
+    // }
     .question {
       height: max-content;
       p {
@@ -42,12 +42,12 @@
         font-size: 25px;
         line-height: 1;
 
-        @include lg {
+        @include lg-lt {
           font-size: 20px;
         }
-        @include md-lt {
-          font-size: 15px;
-        }
+        // @include md-lt {
+        //   font-size: 15px;
+        // }
         // @include sm-lt {
         //   font-size: 14px;
         // }
@@ -66,13 +66,13 @@
       justify-content: center;
       gap: 40px;
       padding-left: 3px;
-      @include lg {
+      @include lg-lt {
         padding-left: 1px;
         gap: 30px;
       }
-      @include md-lt {
-        gap: 25px;
-      }
+      // @include md-lt {
+      //   gap: 25px;
+      // }
 
       .button {
         // display: flex;
@@ -94,10 +94,10 @@
           font-size: 10px;
           padding: 6px;
         }
-        @include md-lt {
-          padding: 6px;
-          font-size: 7px;
-        }
+        // @include md-lt {
+        //   padding: 6px;
+        //   font-size: 7px;
+        // }
 
         // @include sm-lt {
         //   font-size: 6px;
