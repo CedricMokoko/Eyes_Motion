@@ -55,7 +55,10 @@
     right: 0;
     text-align: center;
     color: $goldColor;
-    font-size: 17px;
+    font-size: 20px;
+    @include md-lt {
+      font-size: 15px;
+    }
     @include md-lt {
       display: none;
       display: none;
@@ -86,8 +89,6 @@
     font-weight: 700;
     color: $whiteColor;
     padding: 20px;
-    margin-top: 30px;
-
     @include lg-lt {
       height: min-content;
       justify-content: center;
