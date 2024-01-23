@@ -38,7 +38,7 @@ const InputSearchBar = () => {
           </>
         )}
       </div>
-      <div className={styles.footer}>
+      {/* <div className={styles.footer}>
         <div className={styles.link}>
           <p>Condizioni generali di abbonnamento</p>
           <p>Informazioni sulla privacy</p>
@@ -64,7 +64,7 @@ const InputSearchBar = () => {
             </span>
           </Link>
         </p>
-      </div>
+      </div> */}
     </>
   );
 };

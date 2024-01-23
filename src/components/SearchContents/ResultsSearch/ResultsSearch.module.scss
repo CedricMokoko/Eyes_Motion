@@ -2,14 +2,15 @@
 @import "mixins_media_queries";
 
 .containerGenerale {
+  width: 100%;
   .container {
     min-height: calc(100vh - 110px); //Non c'era niente qui
     @include lg-lt {
       min-height: calc(100vh - 100px); //Non c'era niente qui
     }
-    @include sm-lt {
-      min-height: max-content;
-    }
+    // @include sm-lt {
+    //   min-height: max-content;
+    // }
     .entete {
       font-family: var(--font-caveat);
       font-size: 16px;
@@ -96,6 +97,7 @@
     }
   }
   .footer {
+    // display: none;
     background-color: rgba($color: #041226, $alpha: 0.04);
     font-family: var(--font-cormorant);
     position: relative;
