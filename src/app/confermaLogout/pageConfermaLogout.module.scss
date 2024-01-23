@@ -65,7 +65,7 @@
       align-items: center;
       justify-content: center;
       gap: 40px;
-      padding-left: 3px;
+      padding-left: 7px;
       @include lg-lt {
         padding-left: 1px;
         gap: 30px;
@@ -109,11 +109,11 @@
           scale: 0.8;
           // background-color: #62829a;
           // color: $whiteColor;
-          @include sm-lt {
-            padding: 6px;
-            background-color: $goldColor;
-            color: black;
-          }
+          // @include sm-lt {
+          // padding: 6px;
+          // background-color: $goldColor;
+          // color: black;
+          // }
         }
       }
     }

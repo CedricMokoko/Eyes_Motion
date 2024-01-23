@@ -33,7 +33,7 @@
     }
     @include md {
       margin-right: 20px;
-      font-size: 6.5px;
+      font-size: 7.5px;
     }
 
     @include sm-lt {
@@ -47,16 +47,14 @@
       }
     }
     &:hover {
-      opacity: 1;
-      padding: 8px;
-      scale: 0.9;
-      background-color: #62829a;
-      color: $whiteColor;
+      opacity: 0.6;
+      // padding: 6px;
+      scale: 0.8;
+
+      // background-color: #62829a;
+      // color: $whiteColor;
       @include sm-lt {
         padding: 6px 6px 6px 0;
-
-        background-color: $goldColor;
-        color: black;
       }
     }
     .icon {

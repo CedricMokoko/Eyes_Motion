@@ -2,12 +2,12 @@
 @import "mixins_media_queries";
 
 .container {
-  margin-top: 70px;
+  margin-top: 81px;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   @include lg-lt {
-    margin-top: 70px;
+    margin-top: 77px;
   }
   @include sm-lt {
     margin-top: 60px;
@@ -151,10 +151,13 @@
         //DIV CARD CONTAINER
         .cardContainer {
           transition: transform 0.5s ease-out;
-          height: 150px;
-          @include sm {
+          height: 170px;
+          @include lg-lt {
             height: 160px;
           }
+          // @include sm {
+          //   height: 160px;
+          // }
           @include xs {
             height: 140px;
           }
@@ -175,10 +178,13 @@
             .image {
               position: relative;
               width: 100%;
-              height: 150px;
-              @include sm {
+              height: 170px;
+              @include lg-lt {
                 height: 160px;
               }
+              // @include sm {
+              //   height: 160px;
+              // }
               @include xs {
                 height: 140px;
               }
