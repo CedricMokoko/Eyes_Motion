@@ -11,8 +11,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  // width: 100%;
-  // height: 100vh;
+  width: 100%;
+  height: 100vh;
   background-color: rgb(211, 200, 200);
   background-color: rgba($color: rgb(101, 96, 96), $alpha: 0.5);
 
@@ -22,6 +22,10 @@
     background-color: white;
     width: 20%;
     height: 20%;
+    @include sm-lt {
+      width: 80%;
+      height: 50%;
+    }
     .question {
       text-align: center;
     }
