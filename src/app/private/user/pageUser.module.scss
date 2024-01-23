@@ -131,14 +131,14 @@
         @include sm {
           grid-template-columns: repeat(5, 1fr);
           width: 100%;
-          height: max-content;
+          // height: max-content;
           gap: 11px;
           padding: 10px 3.7vw 90px 3.7vw;
         }
         @include xs {
           grid-template-columns: repeat(3, 1fr);
           width: 100%;
-          height: max-content;
+          // height: max-content;
           gap: 10px;
           padding: 10px 3.7vw 90px 3.7vw;
         }
@@ -241,6 +241,12 @@
         width: 70%;
         font-size: 14px;
       }
+      @include md {
+        font-weight: 900;
+        gap: 5px;
+        width: 80%;
+        font-size: 12px;
+      }
     }
     p {
       margin: 0;
@@ -255,6 +261,9 @@
       font-size: 16px;
       @include lg-lt {
         font-size: 15px;
+      }
+      @include md {
+        font-size: 14px;
       }
     }
     .copyRight {

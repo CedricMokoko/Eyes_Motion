@@ -145,6 +145,12 @@
         width: 70%;
         font-size: 14px;
       }
+      @include md {
+        font-weight: 900;
+        gap: 5px;
+        width: 80%;
+        font-size: 12px;
+      }
     }
     p {
       margin: 0;
@@ -159,6 +165,9 @@
       font-size: 16px;
       @include lg-lt {
         font-size: 15px;
+      }
+      @include md {
+        font-size: 14px;
       }
     }
     .copyRight {
