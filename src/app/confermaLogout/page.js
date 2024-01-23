@@ -26,18 +26,18 @@ const LogoutPopUp = () => {
     <div className={styles.containerPopUp}>
       <div className={styles.popUp}>
         <div className={styles.question}>
-          <p>Sei sicuro di voler uscire dall'app</p>
+          <p>Sei sicuro di voler uscire dall'applicazione?</p>
         </div>
         <div className={styles.buttonContainer}>
-          <button className={styles.button} onClick={handleSignOut}>
-            <h2>No, rimango</h2>
-          </button>{" "}
           <button
             // data-tooltip="Are you sure you want to exit the application?"
             className={`${styles.button}`}
             onClick={() => signOut({ callbackUrl: "/" })}
           >
-            <h2>si, esco</h2>
+            <h2>Si, esco</h2>
+          </button>
+          <button className={styles.button} onClick={handleSignOut}>
+            <h2>No, rimango</h2>
           </button>
         </div>
       </div>
