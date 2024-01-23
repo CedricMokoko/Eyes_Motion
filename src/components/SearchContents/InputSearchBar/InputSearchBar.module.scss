@@ -81,9 +81,9 @@
   }
 }
 .footer {
+  display: none;
   background-color: rgba($color: #041226, $alpha: 0.04);
   font-family: var(--font-cormorant);
-
   // position: fixed;
   // bottom: 0;
   z-index: 3;
@@ -122,7 +122,7 @@
     @include md {
       font-weight: 900;
       gap: 5px;
-      width: 70%;
+      width: 80%;
       font-size: 12px;
     }
   }
@@ -140,7 +140,7 @@
     @include lg-lt {
       font-size: 15px;
     }
-    @include lg-lt {
+    @include md {
       font-size: 14px;
     }
   }
