@@ -8,7 +8,9 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  // background-color: #041226;
+  @include md-lt {
+    min-height: calc(100vh - 100px);
+  }
   .searchBar {
     position: fixed;
     top: 69px;
@@ -117,6 +119,12 @@
       width: 70%;
       font-size: 14px;
     }
+    @include md {
+      font-weight: 900;
+      gap: 5px;
+      width: 70%;
+      font-size: 12px;
+    }
   }
   p {
     margin: 0;
@@ -131,6 +139,9 @@
     font-size: 16px;
     @include lg-lt {
       font-size: 15px;
+    }
+    @include lg-lt {
+      font-size: 14px;
     }
   }
   .copyRight {
