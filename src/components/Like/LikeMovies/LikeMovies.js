@@ -10,7 +10,7 @@ const LikeMovies = ({ likedMoviesId }) => {
   const handleLikeClicked = async (e) => {
     e.preventDefault();
     if (likedMoviesId) {
-      await fetch(`/api/auth/like/moviesiesLike/${likedMoviesId}`, {
+      await fetch(`/api/auth/like/moviesLike/${likedMoviesId}`, {
         method: "POST",
       });
     }
