@@ -8,7 +8,12 @@
   right: 0;
   bottom: 10px;
   @include sm-lt {
-    position: static;
+    z-index: 8;
+    right: 0;
+    top: 64px;
+    height: max-content;
+    width: max-content;
+    margin-right: 3.2vw;
   }
   .button {
     display: flex;
@@ -38,10 +43,10 @@
 
     @include sm-lt {
       color: $goldColor;
-      font-size: 6px;
       background-color: transparent;
-      margin-right: 3.7vw;
-      padding: 6px 6px 6px 0;
+      margin-right: 0;
+      padding: 6px;
+      z-index: 9;
       h2 {
         display: none;
       }
@@ -54,7 +59,8 @@
       // background-color: #62829a;
       // color: $whiteColor;
       @include sm-lt {
-        padding: 6px 6px 6px 0;
+        background-color: $goldColor;
+        color: black;
       }
     }
     .icon {
@@ -63,6 +69,8 @@
       margin-left: 9px;
       @include sm-lt {
         font-size: 13px;
+        margin-left: 0;
+        // padding: 6px;
       }
     }
   }
