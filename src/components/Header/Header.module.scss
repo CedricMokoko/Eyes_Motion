@@ -80,8 +80,10 @@
           @include lg-lt {
             font-size: 14px;
           }
-          a {
+          a,
+          span {
             &:hover {
+              cursor: pointer;
               color: $goldColor;
             }
           }
@@ -107,9 +109,10 @@
     @include lg-lt {
       font-size: 14px;
     }
-    a {
+    span {
       &:hover {
         color: $goldColor;
+        cursor: pointer;
       }
     }
     @include sm-lt {

@@ -14,9 +14,11 @@ import {
 import Link from "next/link";
 import { toast } from "react-hot-toast";
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 
 const Header = ({ session }) => {
   const [hasShownWelcomeToast, setHasShownWelcomeToast] = useState(false);
+  const router = useRouter(); // Inizializza useRouter
 
   useEffect(() => {
     if (session && !hasShownWelcomeToast) {
@@ -29,6 +31,11 @@ const Header = ({ session }) => {
       setHasShownWelcomeToast(true);
     }
   }, [session, hasShownWelcomeToast]);
+
+  const handleIconClick = () => {
+    router.push("/private/user");
+    router.refresh(true);
+  };
 
   return (
     <>
@@ -63,18 +70,21 @@ const Header = ({ session }) => {
                   </Link>
                 </li>
                 <li>
-                  <Link href={`/private/user`}>
+                  <span
+                    onClick={() => handleIconClick("/private/user")}
+                    className={`${styles.icon}`}
+                  >
                     <FontAwesomeIcon
                       icon={faPlus}
                       className={`${styles.icon}`}
                     />
                     LA TUA LISTA
-                  </Link>
+                  </span>
                 </li>
                 <li>
                   <Link href={`/series`}>
                     <FontAwesomeIcon icon={faTv} className={`${styles.icon}`} />
-                    SERIE{" "}
+                    SERIE
                   </Link>
                 </li>
                 <li>
@@ -90,10 +100,13 @@ const Header = ({ session }) => {
             </nav>
           </div>
           <div className={`${styles.user}`}>
-            <Link href={`/private/user`}>
+            <span
+              onClick={() => handleIconClick("/private/user")}
+              className={`${styles.icon}`}
+            >
               {session?.user?.name}
               <FontAwesomeIcon icon={faUser} className={`${styles.iconUser}`} />
-            </Link>
+            </span>
           </div>
         </header>
       ) : (
