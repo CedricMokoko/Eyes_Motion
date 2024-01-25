@@ -1,3 +1,4 @@
+"use client";
 import styles from "./MobileNav.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -8,8 +9,14 @@ import {
   faVideo,
 } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const MobileNav = ({ session }) => {
+  const router = useRouter(); // Inizializza useRouter
+  const handleIconClick = () => {
+    router.push("/private/user");
+    router.refresh(true);
+  };
   if (session) {
     return (
       <footer className={`${styles.container}`}>
@@ -47,9 +54,10 @@ const MobileNav = ({ session }) => {
                 </Link>
               </li>
               <li>
-                <Link href={`/private/user`}>
+                <span onClick={() => handleIconClick("/private/user")}>
+                  {" "}
                   <FontAwesomeIcon icon={faUser} className={`${styles.icon}`} />
-                </Link>
+                </span>
               </li>
             </ul>
           </nav>
