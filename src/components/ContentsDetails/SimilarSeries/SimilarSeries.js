@@ -22,15 +22,16 @@ const SimilarSeries = async ({ seriesId }) => {
           </div>
         </>
       ) : (
-        <>
-          <p className={`${styles.notFoundSimilar}`}>
-            No similar series found
-            <FontAwesomeIcon
-              icon={faCircleExclamation}
-              className={`${styles.icon}`}
-            />
-          </p>
-        </>
+        ""
+        // <>
+        // <p className={`${styles.notFoundSimilar}`}>
+        //   No similar series found
+        //   <FontAwesomeIcon
+        //     icon={faCircleExclamation}
+        //     className={`${styles.icon}`}
+        //   />
+        // </p>
+        // </>
       )}
     </div>
   );
