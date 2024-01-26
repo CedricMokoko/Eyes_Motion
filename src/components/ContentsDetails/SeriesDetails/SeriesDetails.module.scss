@@ -19,7 +19,8 @@
   @include sm-lt {
     // padding: 100px 0; // Da impostare a 50 se mai causa problemi
     margin-top: 60px;
-    height: calc(100vh - 176px);
+    // height: calc(100vh - 176px);
+    height: calc(100vh - 60px);
   }
   .background {
     position: absolute;
