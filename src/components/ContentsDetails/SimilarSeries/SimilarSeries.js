@@ -7,7 +7,6 @@ import SimilarCardSeries from "@/components/MediaCard/Similar/SimilarCardSeries/
 
 const SimilarSeries = async ({ seriesId }) => {
   const { results } = await getMovieByPath(`/tv/${seriesId}/similar`, []);
-
   return (
     <div className={styles.similar}>
       {results && results.length > 0 ? (
