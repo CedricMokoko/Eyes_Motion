@@ -29,12 +29,32 @@
       font-size: 20px;
     }
   }
-  .notFoundSimilar {
-    margin-bottom: 80px;
-    @include lg-lt {
-      margin-bottom: 0px;
+  .contentNotFound {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    @include lg {
+      height: 150px;
     }
+    @include md {
+      height: 112px;
+    }
+    @include sm-lt {
+      height: 120px;
+    }
+
+    // @include xs {
+    // height: 120px;
+    // }
+    // .notFoundSimilar {
+    //   // margin-bottom: 80px;
+    //   @include lg-lt {
+    //     margin-bottom: 0px;
+    //   }
+    // }
   }
+
   .list {
     padding: 0 30px 20px 30px;
     width: 100%;

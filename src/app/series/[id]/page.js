@@ -27,7 +27,7 @@ const SeriesIdPage = async ({ params: { id } }) => {
           <SeriesDetails series={series} />
           <Suspense
             fallback={
-              <p style={{ fontSize: "50px", color: "red" }}>
+              <p style={{ fontSize: "16px", color: "red" }}>
                 Chargement similar series...
               </p>
             }

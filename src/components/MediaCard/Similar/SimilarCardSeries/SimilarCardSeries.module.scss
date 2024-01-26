@@ -23,7 +23,7 @@
     @include lg-lt {
       height: 150px;
     }
-    @include sm {
+    @include sm-lt {
       height: 160px;
     }
     @include xs {
