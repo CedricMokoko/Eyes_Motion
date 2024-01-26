@@ -17,8 +17,8 @@
     height: calc(100vh - 116px);
   }
   @include sm-lt {
-    // padding: 100px 0; // Da impostare a 50 se mai causa problemi
-    margin-top: 60px;
+    // margin-top: 60px;
+    margin-top: 0px;
     // height: calc(100vh - 176px);
     height: 100vh;
   }
