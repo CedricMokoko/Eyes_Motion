@@ -10,25 +10,22 @@ const SimilarMovies = async ({ movieId }) => {
   return (
     <div className={styles.similar}>
       {results && results.length > 0 ? (
-        <>
+        <div className={`${styles.content}`}>
           <p>Similar movies</p>
           <div className={styles.list}>
             {results.slice(0, 10).map((movie) => (
               <SimilarCardMovies media={movie} key={movie.id} />
             ))}
           </div>
-        </>
+        </div>
       ) : (
-        ""
-        // <>
-        //   <p className={`${styles.notFoundSimilar}`}>
-        //     No similar movies found
-        //     <FontAwesomeIcon
-        //       icon={faCircleExclamation}
-        //       className={`${styles.icon}`}
-        //     />
-        //   </p>
-        // </>
+        <p className={`${styles.notFoundSimilar}`}>
+          No similar movies found
+          <FontAwesomeIcon
+            icon={faCircleExclamation}
+            className={`${styles.icon}`}
+          />
+        </p>
       )}
     </div>
   );

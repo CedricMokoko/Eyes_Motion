@@ -11,27 +11,22 @@ const SimilarSeries = async ({ seriesId }) => {
   return (
     <div className={styles.similar}>
       {results && results.length > 0 ? (
-        <>
-          <div className={`${styles.content}`}>
-            <p>Similar series</p>
-            <div className={styles.list}>
-              {results.slice(0, 10).map((serie) => (
-                <SimilarCardSeries media={serie} key={serie.id} />
-              ))}
-            </div>
+        <div className={`${styles.content}`}>
+          <p>Similar series</p>
+          <div className={styles.list}>
+            {results.slice(0, 10).map((serie) => (
+              <SimilarCardSeries media={serie} key={serie.id} />
+            ))}
           </div>
-        </>
+        </div>
       ) : (
-        ""
-        // <>
-        // <p className={`${styles.notFoundSimilar}`}>
-        //   No similar series found
-        //   <FontAwesomeIcon
-        //     icon={faCircleExclamation}
-        //     className={`${styles.icon}`}
-        //   />
-        // </p>
-        // </>
+        <p className={`${styles.notFoundSimilar}`}>
+          No similar series found
+          <FontAwesomeIcon
+            icon={faCircleExclamation}
+            className={`${styles.icon}`}
+          />
+        </p>
       )}
     </div>
   );
