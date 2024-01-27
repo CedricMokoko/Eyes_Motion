@@ -7,7 +7,7 @@ const MediaCardHomepage = ({ mediaMovies, mediaSeries }) => {
   if (mediaMovies) {
     return (
       <div className={`${styles.card}`}>
-        <Link href={`/search/${mediaMovies.id}`}>
+        <Link href={`/private/search/${mediaMovies.id}`}>
           <div className={`${styles.image}`}>
             <Image
               src={`${process.env.NEXT_PUBLIC_TMDB_IMAGE_BASE_PATH}/w500${mediaMovies.poster_path}`}
@@ -22,7 +22,7 @@ const MediaCardHomepage = ({ mediaMovies, mediaSeries }) => {
   if (mediaSeries) {
     return (
       <div className={`${styles.card}`}>
-        <Link href={`/search/${mediaSeries.id}`}>
+        <Link href={`/private/search/${mediaSeries.id}`}>
           <div className={`${styles.image}`}>
             <Image
               src={`${process.env.NEXT_PUBLIC_TMDB_IMAGE_BASE_PATH}/w500${mediaSeries.poster_path}`}

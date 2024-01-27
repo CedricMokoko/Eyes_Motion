@@ -44,7 +44,7 @@ const MovieDetails = ({ movie }) => {
           <h2>Synopsis</h2>
           <p className={styles.overview}>{movie.overview}</p>
           <div className={styles.actions}>
-            <Link href={`/video/${movie.id}`}>
+            <Link href={`/private/video/${movie.id}`}>
               <button className={styles.btn}>
                 <FontAwesomeIcon icon={faPlay} className={`${styles.icon}`} />
                 TRAILER

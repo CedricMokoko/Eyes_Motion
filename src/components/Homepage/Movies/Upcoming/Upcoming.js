@@ -15,7 +15,7 @@ const Upcoming = async () => {
         {upcomingdMovies.map((movie) => (
           <div key={movie.id} className={`${styles.cardContainer}`}>
             <div className={`${styles.card}`}>
-              <Link href={`/search/${movie.id}`}>
+              <Link href={`/private/search/${movie.id}`}>
                 <div className={`${styles.image}`}>
                   <Image
                     src={`${process.env.NEXT_PUBLIC_TMDB_IMAGE_BASE_PATH}/w500${movie.poster_path}`}

@@ -36,7 +36,7 @@ const ContentLiked = async () => {
   );
 
   if (!session) {
-    redirect("/login");
+    redirect("/private/login");
   }
   if (session) {
     // Concatenare gli array movies e series
@@ -47,7 +47,7 @@ const ContentLiked = async () => {
         {serieList.map((itemSerie) => (
           <div key={itemSerie.id} className={`${styles.cardContainer}`}>
             <div className={`${styles.card}`}>
-              <Link href={`/series/${itemSerie.id}`}>
+              <Link href={`/private/series/${itemSerie.id}`}>
                 <div className={`${styles.image}`}>
                   <Image
                     src={`${process.env.NEXT_PUBLIC_TMDB_IMAGE_BASE_PATH}/w500${itemSerie.poster_path}`}
@@ -62,7 +62,7 @@ const ContentLiked = async () => {
         {movieList.map((itemMovie) => (
           <div key={itemMovie.id} className={`${styles.cardContainer}`}>
             <div className={`${styles.card}`}>
-              <Link href={`/movies/${itemMovie.id}`}>
+              <Link href={`/private/movies/${itemMovie.id}`}>
                 <div className={`${styles.image}`}>
                   <Image
                     src={`${process.env.NEXT_PUBLIC_TMDB_IMAGE_BASE_PATH}/w500${itemMovie.poster_path}`}

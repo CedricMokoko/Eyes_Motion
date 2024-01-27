@@ -45,7 +45,7 @@ const SeriesDetails = ({ series }) => {
           <h2>Synopsis</h2>
           <p className={styles.overview}>{series.overview}</p>
           <div className={styles.actions}>
-            <Link href={`/video/${series.id}`}>
+            <Link href={`/private/video/${series.id}`}>
               <button className={styles.btn}>
                 <FontAwesomeIcon icon={faPlay} className={`${styles.icon}`} />
                 TRAILER

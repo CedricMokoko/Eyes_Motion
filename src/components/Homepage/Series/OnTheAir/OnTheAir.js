@@ -15,7 +15,7 @@ const OnTheAir = async () => {
         {onTheAir.map((series) => (
           <div key={series.id} className={`${styles.cardContainer}`}>
             <div className={`${styles.card}`}>
-              <Link href={`/search/${series.id}`}>
+              <Link href={`/private/search/${series.id}`}>
                 <div className={`${styles.image}`}>
                   <Image
                     src={`${process.env.NEXT_PUBLIC_TMDB_IMAGE_BASE_PATH}/w500${series.poster_path}`}

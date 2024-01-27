@@ -23,12 +23,12 @@ const MobileNav = () => {
         <nav>
           <ul>
             <li>
-              <Link href={`/homepage`}>
+              <Link href={`/private/homepage`}>
                 <FontAwesomeIcon icon={faHouse} className={`${styles.icon}`} />
               </Link>
             </li>
             <li>
-              <Link href={`/search`}>
+              <Link href={`/private/search`}>
                 <FontAwesomeIcon
                   icon={faMagnifyingGlass}
                   className={`${styles.icon}`}
@@ -37,12 +37,12 @@ const MobileNav = () => {
             </li>
 
             <li>
-              <Link href={`/series`}>
+              <Link href={`/private/series`}>
                 <FontAwesomeIcon icon={faTv} className={`${styles.icon}`} />
               </Link>
             </li>
             <li>
-              <Link href={`/movies`}>
+              <Link href={`/private/movies`}>
                 <FontAwesomeIcon icon={faVideo} className={`${styles.icon}`} />
               </Link>
             </li>

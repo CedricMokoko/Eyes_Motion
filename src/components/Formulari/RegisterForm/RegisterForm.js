@@ -19,7 +19,7 @@ const RegisterForm = () => {
   //Uno dei modi per proteggere la pagina utente logato
   useEffect(() => {
     if (status === "authenticated") {
-      router.push("/homepage");
+      router.push("/private/homepage");
       router.refresh();
     }
   }, [status, router]);

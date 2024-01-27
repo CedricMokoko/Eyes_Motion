@@ -20,7 +20,7 @@ const LoginForm = () => {
   //Uno dei modi per proteggere la pagina utente logato
   useEffect(() => {
     if (status === "authenticated") {
-      router.push("/homepage");
+      router.push("/private/homepage");
       router.refresh();
     }
   }, [status, router]);
@@ -42,7 +42,7 @@ const LoginForm = () => {
         });
       }
       if (callback?.ok && !callback?.error) {
-        router.push("/homepage");
+        router.push("/private/homepage");
         router.refresh();
       }
     });
@@ -83,7 +83,7 @@ const LoginForm = () => {
             {/* <input type="submit" value="Sign In" /> */}
             <input
               type="submit"
-              value={isLoading ? "Signing In..." : "Sign In"}
+              value={isLoading ? "Loading..." : "Sign In"}
               disabled={isLoading}
             />
 

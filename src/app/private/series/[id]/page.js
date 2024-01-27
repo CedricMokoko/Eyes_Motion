@@ -1,7 +1,7 @@
 import React, { Suspense } from "react";
 //import { notFound } from "next/navigation";
 import { getServerSession } from "next-auth";
-import { authOptions } from "../../api/auth/[...nextauth]/route";
+import { authOptions } from "../../../api/auth/[...nextauth]/route";
 import { redirect } from "next/navigation";
 import { getMovieByPath } from "@/utils/movieClient";
 import SeriesDetails from "@/components/ContentsDetails/SeriesDetails/SeriesDetails";

@@ -43,7 +43,7 @@ const Header = ({ session }) => {
         <header className={`${styles.header}`}>
           <div className={`${styles.logo}`}>
             <h2>
-              <Link href={`/homepage`}>
+              <Link href={`/private/homepage`}>
                 Eyes<small>_Motion</small>
               </Link>
             </h2>
@@ -52,7 +52,7 @@ const Header = ({ session }) => {
             <nav>
               <ul>
                 <li>
-                  <Link href={`/homepage`}>
+                  <Link href={`/private/homepage`}>
                     <FontAwesomeIcon
                       icon={faHouse}
                       className={`${styles.icon}`}
@@ -61,7 +61,7 @@ const Header = ({ session }) => {
                   </Link>
                 </li>
                 <li className={`${styles.word}`}>
-                  <Link href={`/search`}>
+                  <Link href={`/private/search`}>
                     <FontAwesomeIcon
                       icon={faMagnifyingGlass}
                       className={`${styles.icon}`}
@@ -82,13 +82,13 @@ const Header = ({ session }) => {
                   </span>
                 </li>
                 <li>
-                  <Link href={`/series`}>
+                  <Link href={`/private/series`}>
                     <FontAwesomeIcon icon={faTv} className={`${styles.icon}`} />
                     SERIE
                   </Link>
                 </li>
                 <li>
-                  <Link href={`/movies`}>
+                  <Link href={`/private/movies`}>
                     <FontAwesomeIcon
                       icon={faVideo}
                       className={`${styles.icon}`}

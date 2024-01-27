@@ -6,7 +6,7 @@ import Link from "next/link";
 const SearchCard = ({ media }) => {
   return (
     <div className={`${styles.card}`}>
-      <Link href={`/search/${media.id}`}>
+      <Link href={`/private/search/${media.id}`}>
         <div className={`${styles.image}`}>
           <Image
             src={`${process.env.NEXT_PUBLIC_TMDB_IMAGE_BASE_PATH}/w500${media.poster_path}`}

@@ -2,7 +2,7 @@ import { getMovieByPath } from "@/utils/movieClient";
 import React, { Suspense } from "react";
 import styles from "./pageSeries.module.scss";
 import { getServerSession } from "next-auth";
-import { authOptions } from "../api/auth/[...nextauth]/route";
+import { authOptions } from "../../api/auth/[...nextauth]/route";
 import { redirect } from "next/navigation";
 import MediaCardSeries from "@/components/MediaCard/Series/MediaCardSeries";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
