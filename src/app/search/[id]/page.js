@@ -27,13 +27,7 @@ const SearchIdPage = async ({ params: { id } }) => {
         <>
           <div>
             <SeriesDetails series={multiSeries} />
-            <Suspense
-              fallback={
-                <p style={{ fontSize: "50px", color: "red" }}>
-                  Chargement Similar search...
-                </p>
-              }
-            >
+            <Suspense fallback={<LoadingSpinner />}>
               <SimilarSeries seriesId={multiSeries.id} />
             </Suspense>
           </div>

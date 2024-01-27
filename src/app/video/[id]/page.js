@@ -30,10 +30,10 @@ const VideoIdPage = async ({ params: { id } }) => {
     if (movieVideo.id) {
       return (
         <div className={styles.containerVideoPage}>
-          <Suspense fallback={<p>Chargement ...</p>}>
+          <Suspense fallback={<LoadingSpinner />}>
             <MoviesVideo movieVideoId={movieVideo.id} />
           </Suspense>
-          <Suspense fallback={<p>Chargement ...</p>}>
+          <Suspense fallback={<LoadingSpinner />}>
             <SimilarMovies movieId={movieVideo.id} />
             <div className={styles.footer}>
               <div className={styles.link}>

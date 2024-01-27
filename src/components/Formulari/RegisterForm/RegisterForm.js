@@ -14,6 +14,7 @@ const RegisterForm = () => {
     password: "",
     confirmPassword: "",
   });
+  const [isLoading, setIsLoading] = useState(false);
 
   //Uno dei modi per proteggere la pagina utente logato
   useEffect(() => {
@@ -25,6 +26,8 @@ const RegisterForm = () => {
 
   const handleSigninFormSubmit = async (e) => {
     e.preventDefault();
+    setIsLoading(true);
+
     try {
       const response = await fetch("/api/auth/register", {
         method: "POST",
@@ -38,7 +41,6 @@ const RegisterForm = () => {
           confirmPassword: data.confirmPassword,
         }),
       });
-      console.log("La response dal RegisterForm : ", { response });
 
       //Per avere accesso ai messaggi di NextResponse lato server
       const responseBody = await response.text();
@@ -58,6 +60,9 @@ const RegisterForm = () => {
       }
     } catch (error) {
       toast.error(responseBody, { id: "ErrorGlobal" });
+    } finally {
+      // Imposta isLoading su false indipendentemente dal successo o dal fallimento della chiamata API
+      setIsLoading(false);
     }
   };
 
@@ -100,7 +105,11 @@ const RegisterForm = () => {
           }
           required
         />
-        <input type="submit" value="Submit" />
+        <input
+          type="submit"
+          value={isLoading ? "Submitting..." : "Submit"}
+          disabled={isLoading}
+        />{" "}
       </form>
     </div>
   );

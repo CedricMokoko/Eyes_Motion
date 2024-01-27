@@ -4,24 +4,19 @@ import { getServerSession } from "next-auth";
 import { authOptions } from "./api/auth/[...nextauth]/route";
 import { redirect } from "next/navigation";
 import { Suspense } from "react";
+import LoadingSpinner from "@/components/LoadingSpinner/LoadingSpinner";
 
 export default async function Home() {
-  const session = await getServerSession(authOptions);
-  if (session) {
-    redirect("/homepage");
-  } else {
-    return (
-      <div className={styles.main}>
-        <Suspense
-          fallback={
-            <p style={{ fontSize: "50px", color: "red" }}>
-              Chargement welcome page ...
-            </p>
-          }
-        >
-          <WelcomePage />
-        </Suspense>
-      </div>
-    );
-  }
+  // const session = await getServerSession(authOptions);
+  // if (session) {
+  // redirect("/homepage");
+  // } else {
+  return (
+    <div className={styles.main}>
+      <Suspense fallback={<LoadingSpinner />}>
+        <WelcomePage />
+      </Suspense>
+    </div>
+  );
+  // }
 }

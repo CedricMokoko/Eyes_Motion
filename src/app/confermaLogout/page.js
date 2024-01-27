@@ -17,7 +17,7 @@ const LogoutPopUp = () => {
     // ...
 
     // Redirect to the confirmation logout page
-    router.push("/private/user");
+    router.push("/homepage");
 
     // redirect("/private/user");
   };

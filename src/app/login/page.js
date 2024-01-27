@@ -1,11 +1,12 @@
 import LoginForm from "@/components/Formulari/LoginForm/LoginForm";
-import React from "react";
+import React, { Suspense } from "react";
 import { getMovieByPath } from "@/utils/movieClient";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCopyright } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 import styles from "./page.module.scss";
 import Image from "next/image";
+import LoadingSpinner from "@/components/LoadingSpinner/LoadingSpinner";
 
 const LoginFormPage = async () => {
   const { results } = await getMovieByPath("/tv/top_rated", []);

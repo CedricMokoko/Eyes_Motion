@@ -1,0 +1,34 @@
+@import "variables";
+@import "mixins_media_queries";
+
+.loadingSpinner {
+  // z-index: 9999;
+  position: fixed;
+  top: 1000;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  // background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+/* Aggiungi uno stile al tuo spinner per farlo ruotare */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.icon {
+  // margin-bottom: 100px;
+  height: 40px;
+  color: $goldColor;
+  animation: spin 5s linear 2 infinite; /* Applica l'animazione di rotazione */
+}

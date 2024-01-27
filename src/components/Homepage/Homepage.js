@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import BestSeller from "./BestSeller/BestSeller";
 import Popular from "./Movies/Popular/Popular";
 import NowPlaying from "./Movies/NowPlaying/NowPlaying";
@@ -16,7 +16,7 @@ import styles from "./Homepage.module.scss";
 const Homepage = () => {
   return (
     <div>
-      <BestSeller />
+      {/* <BestSeller />
       <Popular />
       <NowPlaying />
       <Upcoming />
@@ -24,7 +24,7 @@ const Homepage = () => {
       <TopRatedSeries />
       <OnTheAir />
       <PopularSeries />
-      <AiringToday />
+      <AiringToday /> */}
       <div className={styles.footer}>
         <div className={styles.link}>
           <p>Condizioni generali di abbonnamento</p>

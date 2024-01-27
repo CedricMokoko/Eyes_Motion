@@ -11,59 +11,51 @@ import {
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
-const MobileNav = ({ session }) => {
+const MobileNav = () => {
   const router = useRouter(); // Inizializza useRouter
   const handleIconClick = () => {
     router.push("/private/user");
     router.refresh(true);
   };
-  if (session) {
-    return (
-      <footer className={`${styles.container}`}>
-        <div className={`${styles.navigation}`}>
-          <nav>
-            <ul>
-              <li>
-                <Link href={`/homepage`}>
-                  <FontAwesomeIcon
-                    icon={faHouse}
-                    className={`${styles.icon}`}
-                  />
-                </Link>
-              </li>
-              <li>
-                <Link href={`/search`}>
-                  <FontAwesomeIcon
-                    icon={faMagnifyingGlass}
-                    className={`${styles.icon}`}
-                  />
-                </Link>
-              </li>
+  return (
+    <footer className={`${styles.container}`}>
+      <div className={`${styles.navigation}`}>
+        <nav>
+          <ul>
+            <li>
+              <Link href={`/homepage`}>
+                <FontAwesomeIcon icon={faHouse} className={`${styles.icon}`} />
+              </Link>
+            </li>
+            <li>
+              <Link href={`/search`}>
+                <FontAwesomeIcon
+                  icon={faMagnifyingGlass}
+                  className={`${styles.icon}`}
+                />
+              </Link>
+            </li>
 
-              <li>
-                <Link href={`/series`}>
-                  <FontAwesomeIcon icon={faTv} className={`${styles.icon}`} />
-                </Link>
-              </li>
-              <li>
-                <Link href={`/movies`}>
-                  <FontAwesomeIcon
-                    icon={faVideo}
-                    className={`${styles.icon}`}
-                  />
-                </Link>
-              </li>
-              <li>
-                <span onClick={() => handleIconClick("/private/user")}>
-                  {" "}
-                  <FontAwesomeIcon icon={faUser} className={`${styles.icon}`} />
-                </span>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </footer>
-    );
-  }
+            <li>
+              <Link href={`/series`}>
+                <FontAwesomeIcon icon={faTv} className={`${styles.icon}`} />
+              </Link>
+            </li>
+            <li>
+              <Link href={`/movies`}>
+                <FontAwesomeIcon icon={faVideo} className={`${styles.icon}`} />
+              </Link>
+            </li>
+            <li>
+              <span onClick={() => handleIconClick("/private/user")}>
+                {" "}
+                <FontAwesomeIcon icon={faUser} className={`${styles.icon}`} />
+              </span>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+  );
 };
 export default MobileNav;

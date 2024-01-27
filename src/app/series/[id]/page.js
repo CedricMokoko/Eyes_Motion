@@ -10,6 +10,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCopyright } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 import styles from "./pageSeriesId.module.scss";
+import LoadingSpinner from "@/components/LoadingSpinner/LoadingSpinner";
 
 export const revalidate = 3600;
 
@@ -24,14 +25,10 @@ const SeriesIdPage = async ({ params: { id } }) => {
     return (
       <>
         <div>
-          <SeriesDetails series={series} />
-          <Suspense
-            fallback={
-              <p style={{ fontSize: "16px", color: "red" }}>
-                Chargement similar series...
-              </p>
-            }
-          >
+          <Suspense fallback={<LoadingSpinner />}>
+            <SeriesDetails series={series} />
+          </Suspense>
+          <Suspense fallback={<LoadingSpinner />}>
             <SimilarSeries seriesId={series.id} />
           </Suspense>
         </div>

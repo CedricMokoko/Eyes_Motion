@@ -40,6 +40,7 @@ const SignOutButton = () => {
 
     // Redirect to the confirmation logout page
     router.push("/confermaLogout");
+    router.refresh();
   };
 
   return (

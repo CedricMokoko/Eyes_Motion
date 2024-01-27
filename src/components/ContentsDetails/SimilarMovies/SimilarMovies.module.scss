@@ -44,15 +44,11 @@
       height: 120px;
     }
 
-    // @include xs {
-    // height: 120px;
-    // }
-    // .notFoundSimilar {
-    //   // margin-bottom: 80px;
-    //   @include lg-lt {
-    //     margin-bottom: 0px;
-    //   }
-    // }
+    .notFoundSimilar {
+      @include sm-lt {
+        margin-bottom: 20px;
+      }
+    }
   }
 
   .list {

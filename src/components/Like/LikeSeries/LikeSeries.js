@@ -10,6 +10,7 @@ const LikeSeries = ({ likedSeriesId }) => {
     e.preventDefault();
     if (likedSeriesId) {
       await fetch(`/api/auth/like/seriesLike/${likedSeriesId}`, {
+        cache: "no-store",
         method: "POST",
       });
     }

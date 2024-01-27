@@ -5,7 +5,8 @@ import { useRouter } from "next/navigation";
 import { signIn, useSession } from "next-auth/react";
 import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGoogle, faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faSpinner } from "@fortawesome/free-solid-svg-icons";
+import LoadingSpinner from "@/components/LoadingSpinner/LoadingSpinner";
 
 const LoginForm = () => {
   const { data: session, status } = useSession();
@@ -14,6 +15,7 @@ const LoginForm = () => {
     email: "",
     password: "",
   });
+  const [isLoading, setIsLoading] = useState(false);
 
   //Uno dei modi per proteggere la pagina utente logato
   useEffect(() => {
@@ -25,10 +27,14 @@ const LoginForm = () => {
 
   const handleLoginFormSubmit = async (e) => {
     e.preventDefault();
+    // Setta isLoading a true prima di effettuare la chiamata
+    setIsLoading(true);
+
     signIn("credentials", {
       ...data,
       redirect: false, //Per non andare sulla pagina di Login fatta di Next
     }).then((callback) => {
+      setIsLoading(false);
       if (callback?.error) {
         toast.error(callback.error, {
           id: "Messages",
@@ -74,7 +80,13 @@ const LoginForm = () => {
               onChange={(e) => setData({ ...data, password: e.target.value })}
               required
             />
-            <input type="submit" value="Sign In" />
+            {/* <input type="submit" value="Sign In" /> */}
+            <input
+              type="submit"
+              value={isLoading ? "Signing In..." : "Sign In"}
+              disabled={isLoading}
+            />
+
             {/* <p>Or</p>
             <div className={`${styles.containerBtnLogin}`}>
               <button onClick={handleGithubLogin}>
