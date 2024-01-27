@@ -16,18 +16,21 @@ import LoadingSpinner from "@/components/LoadingSpinner/LoadingSpinner";
 
 const userHomepage = () => {
   return (
-    <>
-      <Suspense fallback={<LoadingSpinner />}>
-        <BestSeller />
-        <Popular />
-        <NowPlaying />
-        <Upcoming />
-        <TopRated />
-        <TopRatedSeries />
-        <OnTheAir />
-        <PopularSeries />
-        <AiringToday />
-      </Suspense>
+    <div className={`${styles.container}`}>
+      <div className={`${styles.content}`}>
+        <Suspense fallback={<LoadingSpinner />}>
+          <BestSeller />
+          <Popular />
+          <NowPlaying />
+          <Upcoming />
+          <TopRated />
+          <TopRatedSeries />
+          <OnTheAir />
+          <PopularSeries />
+          <AiringToday />
+        </Suspense>
+      </div>
+
       <div className={styles.footer}>
         <div className={styles.link}>
           <p>Condizioni generali di abbonnamento</p>
@@ -55,7 +58,7 @@ const userHomepage = () => {
           </Link>
         </p>
       </div>
-    </>
+    </div>
   );
 };
 export default userHomepage;
