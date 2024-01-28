@@ -62,6 +62,7 @@ export default function Home() {
             loader={imageLoader}
             src="background1.png"
             alt="background demon slayer"
+            priority={true}
             fill
           />
         </div>

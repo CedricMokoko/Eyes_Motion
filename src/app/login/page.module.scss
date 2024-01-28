@@ -24,13 +24,9 @@
       bottom: 0;
       img {
         display: flex;
-        object-fit: contain;
+        object-fit: cover;
         // @include lg-lt {
         //   display: none;
-        // }
-        // @include sm-lt {
-        //   display: flex;
-        //   object-fit: cover;
         // }
       }
       &::after {

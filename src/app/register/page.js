@@ -1,18 +1,26 @@
-import React from "react";
+"use client";
 import RegisterForm from "@/components/Formulari/RegisterForm/RegisterForm";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCopyright } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 import styles from "./page.module.scss";
 import Image from "next/image";
-import background1 from "../../../public/background1.png";
 
+const imageLoader = ({ src, width, quality }) => {
+  return `https://eyes-motion.vercel.app/${src}?w=${width}&q=${quality || 75}`;
+};
 const RegisterPage = () => {
   return (
     <div className={styles.container}>
       <div className={styles.details}>
         <div className={styles.background}>
-          <Image src={background1} alt="background demon slayer" fill />
+          <Image
+            loader={imageLoader}
+            src="background1.png"
+            alt="background demon slayer"
+            priority={true}
+            fill
+          />
         </div>
         <div className={styles.content}>
           <div className={styles.description}>
