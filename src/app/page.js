@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import background1 from "../../public/background1.png";
+// import background1 from "../../public/background1.png";
 import styles from "./page.module.scss";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -12,6 +12,9 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState } from "react";
 
+const imageLoader = ({ src, width, quality }) => {
+  return `https://eyes-motion.vercel.app/${src}?w=${width}&q=${quality || 75}`;
+};
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
 
@@ -55,7 +58,12 @@ export default function Home() {
     <div className={styles.container}>
       <div className={styles.details}>
         <div className={styles.background}>
-          <Image src={background1} alt="background demon slayer" fill />
+          <Image
+            loader={imageLoader}
+            src="background1.png"
+            alt="background demon slayer"
+            fill
+          />
         </div>
         <div className={styles.content}>
           <div className={styles.description}>

@@ -19,15 +19,3 @@ const nextConfig = {
 };
 
 module.exports = nextConfig;
-module.exports = {
-  images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "eyes-motion.vercel.app",
-        port: "",
-        pathname: "/",
-      },
-    ],
-  },
-};
