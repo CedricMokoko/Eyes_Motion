@@ -74,225 +74,225 @@
   }
 }
 
-// .main {
-// position: absolute; //
-// top: 0; //
-// bottom: 0; //
-// left: 0; //
-// right: 0; //
-// display: flex;
-// flex-direction: column;
-// padding: 0;
-
-.container {
-  position: static;
+.main {
+  position: absolute; //
+  top: 0; //
+  bottom: 0; //
+  left: 0; //
+  right: 0; //
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  width: 100%;
-  @include lg-lt {
-    height: calc(100vh - 60px);
-  }
-  .details {
-    font-family: var(--font-caveat);
-    position: relative;
+  padding: 0;
+
+  .container {
+    position: static;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
     width: 100%;
-    height: 100%;
-    .background {
-      position: absolute;
-      z-index: 1;
-      top: 0;
-      left: 0;
+    @include lg-lt {
+      height: calc(100vh - 60px);
+    }
+    .details {
+      font-family: var(--font-caveat);
+      position: relative;
       width: 100%;
       height: 100%;
-      img {
-        display: flex;
-        object-fit: cover;
-        // @include lg-lt {
-        //   display: none;
-        // }
-        // @include sm-lt {
-        //   display: flex;
-        //   object-fit: cover;
-        // }
-      }
-      &::after {
+      .background {
         position: absolute;
-        z-index: 2;
+        z-index: 1;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba($color: #041226, $alpha: 0.9);
-        content: "";
+        img {
+          display: flex;
+          object-fit: cover;
+          // @include lg-lt {
+          //   display: none;
+          // }
+          // @include sm-lt {
+          //   display: flex;
+          //   object-fit: cover;
+          // }
+        }
+        &::after {
+          position: absolute;
+          z-index: 2;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba($color: #041226, $alpha: 0.9);
+          content: "";
+        }
       }
-    }
-    .content {
-      position: relative;
-      z-index: 3;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100%;
-      @include lg-lt {
-        height: 100%;
-      }
-      .description {
+      .content {
+        position: relative;
+        z-index: 3;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        width: 70%;
         height: 100%;
-        color: $whiteColor;
-        margin: 70px 0 0 0;
-        @include lg {
-          width: 95%;
-          margin: 60px 0 60px 0;
+        @include lg-lt {
+          height: 100%;
         }
-        @include md {
-          width: 95%;
-          margin: 60px 0 55px 0;
-        }
-        @include sm {
-          width: 95%;
-          margin: 60px 0 75px 0;
-        }
-        @include xs {
-          width: 95%;
-          margin: 60px 0 50px 0;
-        }
-        h1 {
-          font-weight: 900;
-          font-size: 25px;
-          @include lg-lt {
-            font-size: 20px;
-            text-align: center;
+        .description {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          width: 70%;
+          height: 100%;
+          color: $whiteColor;
+          margin: 70px 0 0 0;
+          @include lg {
+            width: 95%;
+            margin: 60px 0 60px 0;
           }
-          @include sm-lt {
-            font-size: 18px;
+          @include md {
+            width: 95%;
+            margin: 60px 0 55px 0;
           }
-        }
-        .production {
-          font-weight: 900;
-          font-size: 22px;
-          margin-top: 5px;
-          text-align: center;
-          span {
-            color: $goldColor;
+          @include sm {
+            width: 95%;
+            margin: 60px 0 75px 0;
           }
-          @include lg-lt {
-            font-size: 18px;
+          @include xs {
+            width: 95%;
+            margin: 60px 0 50px 0;
+          }
+          h1 {
+            font-weight: 900;
+            font-size: 25px;
+            @include lg-lt {
+              font-size: 20px;
+              text-align: center;
+            }
+            @include sm-lt {
+              font-size: 18px;
+            }
+          }
+          .production {
+            font-weight: 900;
+            font-size: 22px;
             margin-top: 5px;
             text-align: center;
+            span {
+              color: $goldColor;
+            }
+            @include lg-lt {
+              font-size: 18px;
+              margin-top: 5px;
+              text-align: center;
+            }
+            @include sm-lt {
+              font-size: 17px;
+            }
           }
-          @include sm-lt {
-            font-size: 17px;
-          }
-        }
-        h3 {
-          color: $whiteColor;
-          font-size: 20px;
-          font-weight: 900;
-          margin: 15px 0;
-          @include lg-lt {
-            margin: 0;
-            font-size: 16px;
-            text-align: center;
-          }
-          @include sm-lt {
-            font-size: 15px;
-          }
-          .icon {
-            font-size: 13px;
-            margin: 0 5px;
-          }
-          a {
-            color: $goldColor;
-            &:hover {
-              opacity: 0.6;
+          h3 {
+            color: $whiteColor;
+            font-size: 20px;
+            font-weight: 900;
+            margin: 15px 0;
+            @include lg-lt {
+              margin: 0;
+              font-size: 16px;
+              text-align: center;
+            }
+            @include sm-lt {
+              font-size: 15px;
+            }
+            .icon {
+              font-size: 13px;
+              margin: 0 5px;
+            }
+            a {
+              color: $goldColor;
+              &:hover {
+                opacity: 0.6;
+              }
             }
           }
         }
       }
-    }
-    .footer {
-      font-family: var(--font-cormorant);
-      position: relative;
-      z-index: 3;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 2px;
-      height: min-content;
-      width: 100%;
-      font-weight: 700;
-      color: $whiteColor;
-      padding: 20px;
-
-      @include lg-lt {
-        height: min-content;
-        justify-content: center;
-        padding: 20px;
-      }
-      .link {
+      .footer {
+        font-family: var(--font-cormorant);
+        position: relative;
+        z-index: 3;
         display: flex;
-        flex-flow: row wrap;
+        flex-direction: column;
+        align-items: center;
         justify-content: center;
-        width: 55%;
-        gap: 7px;
+        gap: 2px;
+        height: min-content;
+        width: 100%;
+        font-weight: 700;
+        color: $whiteColor;
+        padding: 20px;
+
         @include lg-lt {
-          font-weight: 900;
+          height: min-content;
+          justify-content: center;
+          padding: 20px;
+        }
+        .link {
+          display: flex;
+          flex-flow: row wrap;
+          justify-content: center;
+          width: 55%;
           gap: 7px;
-          width: 70%;
-          font-size: 14px;
+          @include lg-lt {
+            font-weight: 900;
+            gap: 7px;
+            width: 70%;
+            font-size: 14px;
+          }
+          @include md {
+            font-weight: 900;
+            gap: 5px;
+            width: 80%;
+            font-size: 12px;
+          }
+          @include sm-lt {
+            width: 95%;
+            font-size: 12px;
+          }
         }
-        @include md {
+        p {
+          margin: 0;
+          cursor: pointer;
+          &:hover {
+            opacity: 0.6;
+          }
+        }
+        .copyText {
+          color: $goldColor;
           font-weight: 900;
-          gap: 5px;
-          width: 80%;
-          font-size: 12px;
+          font-size: 16px;
+          @include lg-lt {
+            font-size: 15px;
+          }
+          @include md {
+            font-size: 14px;
+          }
+          @include sm-lt {
+            font-size: 13px;
+          }
         }
-        @include sm-lt {
-          width: 95%;
-          font-size: 12px;
-        }
-      }
-      p {
-        margin: 0;
-        cursor: pointer;
-        &:hover {
-          opacity: 0.6;
-        }
-      }
-      .copyText {
-        color: $goldColor;
-        font-weight: 900;
-        font-size: 16px;
-        @include lg-lt {
-          font-size: 15px;
-        }
-        @include md {
-          font-size: 14px;
-        }
-        @include sm-lt {
+        .copyRight {
+          margin-top: 15px;
+          margin-right: 5px;
           font-size: 13px;
-        }
-      }
-      .copyRight {
-        margin-top: 15px;
-        margin-right: 5px;
-        font-size: 13px;
-        @include lg-lt {
-          margin-top: 7px;
-        }
-        @include sm-lt {
-          margin-top: 10px;
+          @include lg-lt {
+            margin-top: 7px;
+          }
+          @include sm-lt {
+            margin-top: 10px;
+          }
         }
       }
     }
   }
 }
-// }

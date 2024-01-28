@@ -54,73 +54,74 @@ export default function Home() {
   }
 
   return (
-    // <div className={styles.main}>
-    <div className={styles.container}>
-      <div className={styles.details}>
-        <div className={styles.background}>
-          <Image
-            loader={imageLoader}
-            src="background1.png"
-            alt="background demon slayer"
-            priority={true}
-            fill
-          />
-        </div>
-        <div className={styles.content}>
-          <div className={styles.description}>
-            <h1>
-              {
-                "Perché gli occhi sono il riflesso dell'anima, ogni storia sarà un viaggio nell'intimità dei tuoi sentimenti. "
-              }
-            </h1>
-            <h2 className={styles.production}>
-              <span>Benvenuto </span>
-              {
-                "nel futuro dell'intrattenimento. Streaming senza limiti, solo per te."
-              }
-            </h2>
-            <h3>
-              {"Il racconto comincia qui "}
-              <FontAwesomeIcon
-                icon={faRightLong}
-                className={`${styles.icon}`}
-              />
-              <Link href={`/register`}> registrati... </Link>
-              <FontAwesomeIcon icon={faPause} className={`${styles.icon}`} />
-              <Link href={`/login`}> accedi...</Link>
-            </h3>
-          </div>
-        </div>
-        <div className={styles.footer}>
-          <div className={styles.link}>
-            <p>Condizioni generali di abbonnamento</p>
-            <p>Informazioni sulla privacy</p>
-            <p>Norma sulla privacy in UE e UK</p>
-            <p>Policy sui cookie</p>
-            <p>Dispositivi supportati</p>
-            <p>Assistenza</p>
-            <p>Chi siamo</p>
-            <p>Gestione preferenze dati personali</p>
-          </div>
-          <p className={`${styles.copyText}`}>
-            <FontAwesomeIcon
-              icon={faCopyright}
-              className={`${styles.copyRight}`}
+    <div className={styles.main}>
+      <div className={styles.container}>
+        <div className={styles.details}>
+          <div className={styles.background}>
+            <Image
+              loader={imageLoader}
+              src="background1.png"
+              alt="background demon slayer"
+              priority={true}
+              fill
             />
-            <Link
-              href={`https://cedricmokoko.com/`}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span className={`${styles.copyText}`}>
-                Eyes_Motion by Cédric Mokoko
-              </span>
-            </Link>
-          </p>
+          </div>
+          <div className={styles.content}>
+            <div className={styles.description}>
+              <h1>
+                {
+                  "Perché gli occhi sono il riflesso dell'anima, ogni storia sarà un viaggio nell'intimità dei tuoi sentimenti. "
+                }
+              </h1>
+              <h2 className={styles.production}>
+                <span>Benvenuto </span>
+                {
+                  "nel futuro dell'intrattenimento. Streaming senza limiti, solo per te."
+                }
+              </h2>
+              <h3>
+                {"Il racconto comincia qui "}
+                <FontAwesomeIcon
+                  icon={faRightLong}
+                  className={`${styles.icon}`}
+                />
+                <Link href={`/register`}> registrati... </Link>
+                <FontAwesomeIcon icon={faPause} className={`${styles.icon}`} />
+                <Link href={`/login`}> accedi...</Link>
+              </h3>
+            </div>
+          </div>
+          <div className={styles.footer}>
+            <div className={styles.link}>
+              <p>Condizioni generali di abbonnamento</p>
+              <p>Informazioni sulla privacy</p>
+              <p>Norma sulla privacy in UE e UK</p>
+              <p>Policy sui cookie</p>
+              <p>Dispositivi supportati</p>
+              <p>Assistenza</p>
+              <p>Chi siamo</p>
+              <p>Gestione preferenze dati personali</p>
+            </div>
+            <p className={`${styles.copyText}`}>
+              <FontAwesomeIcon
+                icon={faCopyright}
+                className={`${styles.copyRight}`}
+              />
+              <Link
+                href={`https://cedricmokoko.com/`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span className={`${styles.copyText}`}>
+                  Eyes_Motion by Cédric Mokoko
+                </span>
+              </Link>
+            </p>
+          </div>
         </div>
       </div>
+      //{" "}
     </div>
-    // </div>
   );
   // }
 }

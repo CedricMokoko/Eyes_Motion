@@ -15,11 +15,8 @@ import Link from "next/link";
 import { toast } from "react-hot-toast";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import { useSession } from "next-auth/react";
 
-const Header = () => {
-  const { data: session, status } = useSession();
-
+const Header = ({ session }) => {
   const [hasShownWelcomeToast, setHasShownWelcomeToast] = useState(false);
   const router = useRouter(); // Inizializza useRouter
 

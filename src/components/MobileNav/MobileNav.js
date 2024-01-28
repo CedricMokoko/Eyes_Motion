@@ -12,9 +12,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useSession } from "next-auth/react";
 
-const MobileNav = () => {
-  const { data: session, status } = useSession();
-
+const MobileNav = ({ session }) => {
   const router = useRouter(); // Inizializza useRouter
   const handleIconClick = () => {
     router.push("/private/user");
