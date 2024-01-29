@@ -5,6 +5,9 @@ import SeriesDetails from "@/components/ContentsDetails/SeriesDetails/SeriesDeta
 import SimilarSeries from "@/components/ContentsDetails/SimilarSeries/SimilarSeries";
 import { getMovieByPath } from "@/utils/movieClient";
 import styles from "./pageSearchId.module.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircleNotch } from "@fortawesome/free-solid-svg-icons";
+
 export const revalidate = 3600;
 
 const SearchIdPage = async ({ params: { id } }) => {
@@ -16,7 +19,13 @@ const SearchIdPage = async ({ params: { id } }) => {
         <div>
           <SeriesDetails series={multiSeries} />
           <Suspense
-            fallback={<p className={styles.loadingString}>Loading...</p>}
+            fallback={
+              <FontAwesomeIcon
+                icon={faCircleNotch}
+                spin
+                className={styles.loadingIcon}
+              />
+            }
           >
             <SimilarSeries seriesId={multiSeries.id} />
           </Suspense>

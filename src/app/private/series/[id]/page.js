@@ -3,7 +3,7 @@ import { getMovieByPath } from "@/utils/movieClient";
 import SeriesDetails from "@/components/ContentsDetails/SeriesDetails/SeriesDetails";
 import SimilarSeries from "@/components/ContentsDetails/SimilarSeries/SimilarSeries";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCopyright } from "@fortawesome/free-solid-svg-icons";
+import { faCopyright, faCircleNotch } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 import styles from "./pageSeriesId.module.scss";
 
@@ -16,7 +16,16 @@ const SeriesIdPage = async ({ params: { id } }) => {
     <>
       <div>
         <SeriesDetails series={series} />
-        <Suspense fallback={<p className={styles.loadingString}>Loading...</p>}>
+
+        <Suspense
+          fallback={
+            <FontAwesomeIcon
+              icon={faCircleNotch}
+              spin
+              className={styles.loadingIcon}
+            />
+          }
+        >
           <SimilarSeries seriesId={series.id} />
         </Suspense>
       </div>

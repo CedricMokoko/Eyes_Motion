@@ -4,7 +4,7 @@ import MovieDetails from "@/components/ContentsDetails/MovieDetails/MovieDetails
 import SimilarMovies from "@/components/ContentsDetails/SimilarMovies/SimilarMovies";
 import { getMovieByPath } from "@/utils/movieClient";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCopyright } from "@fortawesome/free-solid-svg-icons";
+import { faCopyright, faCircleNotch } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 import styles from "./pageMoviesId.module.scss";
 
@@ -21,7 +21,13 @@ const MoviesIdPage = async ({ params: { id } }) => {
         <div>
           <MovieDetails movie={movie} />
           <Suspense
-            fallback={<p className={styles.loadingString}>Loading...</p>}
+            fallback={
+              <FontAwesomeIcon
+                icon={faCircleNotch}
+                spin
+                className={styles.loadingIcon}
+              />
+            }
           >
             <SimilarMovies movieId={movie.id} />
           </Suspense>
