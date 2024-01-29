@@ -16,3 +16,13 @@ const LoadingSpinner = () => {
 };
 
 export default LoadingSpinner;
+
+export const LoadingSpinnerUser = () => {
+  return (
+    <div className={`${styles.loadingSpinnerUser}`}>
+      <div>
+        <FontAwesomeIcon icon={faCircleNotch} className={`${styles.icon}`} />
+      </div>
+    </div>
+  );
+};
