@@ -4,9 +4,6 @@ import styles from "./LoginForm.module.scss";
 import { useRouter } from "next/navigation";
 import { signIn, useSession } from "next-auth/react";
 import { useState, useEffect } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSpinner } from "@fortawesome/free-solid-svg-icons";
-import LoadingSpinner from "@/components/LoadingSpinner/LoadingSpinner";
 
 const LoginForm = () => {
   const { data: session, status } = useSession();
@@ -17,7 +14,8 @@ const LoginForm = () => {
   });
   const [isLoading, setIsLoading] = useState(false);
 
-  //Uno dei modi per proteggere la pagina utente logato
+  /*Uno dei modi per proteggere la pagina utente logato, in modo che se l'utente è logato 
+  e provo a scrivere l'url /login non la chiama e mi rimanda sul /private/homepage*/
   useEffect(() => {
     if (status === "authenticated") {
       router.push("/private/homepage");

@@ -1,6 +1,28 @@
 @import "variables";
 @import "mixins_media_queries";
 
+.loadingString {
+  color: $goldColor;
+  font-weight: 700;
+  margin: 10px 0 15px 30px;
+  @include lg {
+    font-size: 13px;
+  }
+  @include lg-lt {
+    margin: 10px 0 10px 0px;
+    padding-left: 20px;
+  }
+  @include sm-lt {
+    margin: 10px 0 10px 0px;
+    padding-left: 3.7vw;
+  }
+  .icon {
+    color: rgb(169, 18, 18);
+    margin-left: 5px;
+    font-size: 20px;
+  }
+}
+
 .footer {
   background-color: rgba($color: #041226, $alpha: 0.04);
   font-family: var(--font-cormorant);

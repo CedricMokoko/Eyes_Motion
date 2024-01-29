@@ -16,7 +16,8 @@ const RegisterForm = () => {
   });
   const [isLoading, setIsLoading] = useState(false);
 
-  //Uno dei modi per proteggere la pagina utente logato
+  /*Uno dei modi per proteggere la pagina utente logato, in modo che se l'utente è logato 
+  e provo a scrivere l'url /register non la chiama e mi rimanda sul /private/homepage*/
   useEffect(() => {
     if (status === "authenticated") {
       router.push("/private/homepage");

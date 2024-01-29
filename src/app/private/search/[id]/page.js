@@ -4,8 +4,7 @@ import SimilarMovies from "@/components/ContentsDetails/SimilarMovies/SimilarMov
 import SeriesDetails from "@/components/ContentsDetails/SeriesDetails/SeriesDetails";
 import SimilarSeries from "@/components/ContentsDetails/SimilarSeries/SimilarSeries";
 import { getMovieByPath } from "@/utils/movieClient";
-import LoadingSpinner from "@/components/LoadingSpinner/LoadingSpinner";
-
+import styles from "./pageSearchId.module.scss";
 export const revalidate = 3600;
 
 const SearchIdPage = async ({ params: { id } }) => {
@@ -16,7 +15,9 @@ const SearchIdPage = async ({ params: { id } }) => {
       <>
         <div>
           <SeriesDetails series={multiSeries} />
-          <Suspense fallback={<p>Loading similar series...</p>}>
+          <Suspense
+            fallback={<p className={styles.loadingString}>Loading...</p>}
+          >
             <SimilarSeries seriesId={multiSeries.id} />
           </Suspense>
         </div>
@@ -27,7 +28,7 @@ const SearchIdPage = async ({ params: { id } }) => {
     return (
       <div>
         <MovieDetails movie={multiMovie} movieId={multiMovie.id} />
-        <Suspense fallback={<p>Loading similar series...</p>}>
+        <Suspense fallback={<p className={styles.loadingString}>Loading...</p>}>
           <SimilarMovies movieId={multiMovie.id} />
         </Suspense>
       </div>

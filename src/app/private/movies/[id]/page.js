@@ -7,7 +7,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCopyright } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 import styles from "./pageMoviesId.module.scss";
-import LoadingSpinner from "@/components/LoadingSpinner/LoadingSpinner";
 
 export const revalidate = 3600;
 
@@ -21,7 +20,9 @@ const MoviesIdPage = async ({ params: { id } }) => {
       <>
         <div>
           <MovieDetails movie={movie} />
-          <Suspense fallback={<LoadingSpinner />}>
+          <Suspense
+            fallback={<p className={styles.loadingString}>Loading...</p>}
+          >
             <SimilarMovies movieId={movie.id} />
           </Suspense>
         </div>

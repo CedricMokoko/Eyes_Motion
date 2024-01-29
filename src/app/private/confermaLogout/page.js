@@ -7,7 +7,7 @@ const LogoutPopUp = () => {
   const router = useRouter();
 
   // Handle the sign out button click
-  const handleSignOut = () => {
+  const handleSignIn = () => {
     router.push("/private/homepage");
   };
 
@@ -24,7 +24,7 @@ const LogoutPopUp = () => {
           >
             <h2>Si, esco</h2>
           </button>
-          <button className={styles.button} onClick={handleSignOut}>
+          <button className={styles.button} onClick={handleSignIn}>
             <h2>No, rimango</h2>
           </button>
         </div>

@@ -21,7 +21,7 @@ export default async function RootLayout({ children }) {
         <AuthProvider>
           <ToasterContext />
           <Header session={session} />
-          <main session={session}>{children}</main>
+          <main>{children}</main>
           <MobileNav session={session} />
         </AuthProvider>
       </body>
