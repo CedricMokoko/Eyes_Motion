@@ -13,11 +13,8 @@ import OnTheAir from "@/components/Homepage/Series/OnTheAir/OnTheAir";
 import PopularSeries from "@/components/Homepage/Series/Popular/PopularSeries";
 import AiringToday from "@/components/Homepage/Series/AiringToday/AiringToday";
 import LoadingSpinner from "@/components/LoadingSpinner/LoadingSpinner";
-import { getServerSession } from "next-auth";
-import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 
 const userHomepage = () => {
-  const session = getServerSession(authOptions);
   return (
     <div className={`${styles.container}`}>
       <div className={`${styles.content}`}>

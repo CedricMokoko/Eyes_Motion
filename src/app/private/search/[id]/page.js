@@ -13,38 +13,29 @@ import LoadingSpinner from "@/components/LoadingSpinner/LoadingSpinner";
 export const revalidate = 3600;
 
 const SearchIdPage = async ({ params: { id } }) => {
-  const session = await getServerSession(authOptions);
   const multiSeries = await getMovieByPath(`/tv/${id}`, []);
   const multiMovie = await getMovieByPath(`/movie/${id}`, []);
-  if (!session) {
-    redirect("/login");
-  }
-  if (session) {
-    // if (!multiMovie.original_title) {
-    //   return notFound();
-    // }
-    if (multiSeries.id) {
-      return (
-        <>
-          <div>
-            <SeriesDetails series={multiSeries} />
-            <Suspense fallback={<LoadingSpinner />}>
-              <SimilarSeries seriesId={multiSeries.id} />
-            </Suspense>
-          </div>
-        </>
-      );
-    }
-    if (multiMovie.id) {
-      return (
+  if (multiSeries.id) {
+    return (
+      <>
         <div>
-          <MovieDetails movie={multiMovie} movieId={multiMovie.id} />
-          <Suspense fallback={<p>Chargement ...</p>}>
-            <SimilarMovies movieId={multiMovie.id} />
+          <SeriesDetails series={multiSeries} />
+          <Suspense fallback={<LoadingSpinner />}>
+            <SimilarSeries seriesId={multiSeries.id} />
           </Suspense>
         </div>
-      );
-    }
+      </>
+    );
+  }
+  if (multiMovie.id) {
+    return (
+      <div>
+        <MovieDetails movie={multiMovie} movieId={multiMovie.id} />
+        <Suspense fallback={<p>Chargement ...</p>}>
+          <SimilarMovies movieId={multiMovie.id} />
+        </Suspense>
+      </div>
+    );
   }
 };
 export default SearchIdPage;

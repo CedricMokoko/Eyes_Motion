@@ -1,4 +1,3 @@
-import { getMovieByPath } from "@/utils/movieClient";
 import React, { Suspense } from "react";
 import styles from "./pageMovies.module.scss";
 import ContentsMovies from "@/components/ContentsMoviesSeries/ContentsMovies/ContentsMovies";
