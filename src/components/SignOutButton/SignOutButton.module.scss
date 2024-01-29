@@ -4,7 +4,6 @@
 .container {
   position: fixed;
   z-index: 5;
-
   right: 0;
   bottom: 10px;
   @include sm-lt {
@@ -40,7 +39,6 @@
       margin-right: 20px;
       font-size: 7.5px;
     }
-
     @include sm-lt {
       color: $goldColor;
       background-color: transparent;
@@ -53,11 +51,7 @@
     }
     &:hover {
       opacity: 0.6;
-      // padding: 6px;
       scale: 0.8;
-
-      // background-color: #62829a;
-      // color: $whiteColor;
       @include sm-lt {
         background-color: $goldColor;
         color: black;
@@ -70,7 +64,6 @@
       @include sm-lt {
         font-size: 13px;
         margin-left: 0;
-        // padding: 6px;
       }
     }
   }

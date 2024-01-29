@@ -3,6 +3,7 @@ import { faCheckCircle, faPlusMinus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
 import styles from "./LikeSeries.module.scss";
+
 const LikeSeries = ({ likedSeriesId }) => {
   const [isLiked, setIsLiked] = useState(false);
 

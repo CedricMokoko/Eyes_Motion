@@ -30,5 +30,4 @@ const MoviesVideo = async ({ movieVideoId }) => {
     </div>
   );
 };
-
 export default MoviesVideo;

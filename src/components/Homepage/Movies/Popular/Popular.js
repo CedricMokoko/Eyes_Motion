@@ -1,5 +1,5 @@
-import { getMovieByPath } from "@/utils/movieClient";
 import React from "react";
+import { getMovieByPath } from "@/utils/movieClient";
 import styles from "./Popular.module.scss";
 import MediaCardHomepage from "../../../MediaCard/Homepage/MediaCardHomepage";
 

@@ -5,9 +5,6 @@ import { getServerSession } from "next-auth";
 import { authOptions } from "../../../app/api/auth/[...nextauth]/route";
 import { redirect } from "next/navigation";
 import MediaCardMovies from "@/components/MediaCard/Movies/MediaCardMovies";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCopyright } from "@fortawesome/free-solid-svg-icons";
-import Link from "next/link";
 
 const ContentsMovies = async () => {
   const { results: popular } = await getMovieByPath("/movie/popular");

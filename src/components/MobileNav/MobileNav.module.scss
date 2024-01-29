@@ -14,9 +14,7 @@
   align-items: center;
   color: $whiteColor;
   height: 90px;
-  // background: radial-gradient(circle, #62829a, #34373f);
   background: radial-gradient(circle, #526576, #34373f);
-
   @include xl {
     display: none;
   }

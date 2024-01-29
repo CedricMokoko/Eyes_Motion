@@ -20,14 +20,12 @@
   @include sm {
     grid-template-columns: repeat(5, 1fr);
     width: 100%;
-    // height: max-content;
     gap: 11px;
     padding: 10px 3.7vw 90px 3.7vw;
   }
   @include xs {
     grid-template-columns: repeat(3, 1fr);
     width: 100%;
-    // height: max-content;
     gap: 10px;
     padding: 10px 3.7vw 90px 3.7vw;
   }
@@ -37,6 +35,7 @@
   &::-webkit-scrollbar-track {
     background: transparent;
   }
+
   //DIV CARD CONTAINER
   .cardContainer {
     transition: transform 0.5s ease-out;
@@ -45,9 +44,6 @@
     @include lg-lt {
       height: 160px;
     }
-    // @include sm {
-    //   height: 160px;
-    // }
     @include xs {
       height: 140px;
     }
@@ -72,9 +68,6 @@
         @include lg-lt {
           height: 160px;
         }
-        // @include sm {
-        //   height: 160px;
-        // }
         @include xs {
           height: 140px;
         }

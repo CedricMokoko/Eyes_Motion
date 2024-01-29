@@ -1,5 +1,5 @@
-import { getMovieByPath } from "@/utils/movieClient";
 import React from "react";
+import { getMovieByPath } from "@/utils/movieClient";
 import styles from "./TopRatedSeries.module.scss";
 import Link from "next/link";
 import Image from "next/image";
@@ -22,12 +22,6 @@ const TopRatedSeries = async () => {
                     alt={series.name}
                     fill
                   />
-                  {/* <div className={`${styles.content}`}>
-                    <p className={styles.vote}>
-                      {" "}
-                      {series.vote_average.toFixed(1)}
-                    </p>
-                  </div> */}
                 </div>
               </Link>
             </div>

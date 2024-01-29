@@ -1,9 +1,6 @@
 import React from "react";
 import styles from "./ResultsSearch.module.scss";
 import SearchCard from "@/components/MediaCard/Search/SearchCard";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCopyright } from "@fortawesome/free-solid-svg-icons";
-import Link from "next/link";
 
 const ResultsSearch = ({ contentsResults }) => {
   return (

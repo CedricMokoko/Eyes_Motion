@@ -1,8 +1,6 @@
-// LoadingSpinner.js
-
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircleNotch, faSpinner } from "@fortawesome/free-solid-svg-icons";
+import { faCircleNotch } from "@fortawesome/free-solid-svg-icons";
 import styles from "./LoadingSpinner.module.scss";
 
 const LoadingSpinner = () => {
@@ -16,13 +14,3 @@ const LoadingSpinner = () => {
 };
 
 export default LoadingSpinner;
-
-export const LoadingSpinnerUser = () => {
-  return (
-    <div className={`${styles.loadingSpinnerUser}`}>
-      <div>
-        <FontAwesomeIcon icon={faCircleNotch} className={`${styles.icon}`} />
-      </div>
-    </div>
-  );
-};

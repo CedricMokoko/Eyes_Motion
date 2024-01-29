@@ -1,5 +1,5 @@
-import { getMovieByPath } from "@/utils/movieClient";
 import React from "react";
+import { getMovieByPath } from "@/utils/movieClient";
 import styles from "./OnTheAir.module.scss";
 import Link from "next/link";
 import Image from "next/image";

@@ -29,7 +29,6 @@ const SeriesDetails = ({ series }) => {
           <h1>
             {series.name}{" "}
             <span className={styles.releaseDate}>
-              {/* ( {new Date(series.first_air_date).toLocaleDateString("fr-FR")} -{" "} */}
               ( {new Date(series.last_air_date).toLocaleDateString("fr-FR")} )
             </span>
           </h1>
@@ -57,7 +56,7 @@ const SeriesDetails = ({ series }) => {
             />
           </div>
           <div className={styles.credits}>
-            <Suspense fallback={<p>Chargement ...</p>}>
+            <Suspense fallback={<p>Loading...</p>}>
               <SeriesCredits seriesId={series.id} />
             </Suspense>
           </div>

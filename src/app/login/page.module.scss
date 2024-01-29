@@ -25,9 +25,6 @@
       img {
         display: flex;
         object-fit: cover;
-        // @include lg-lt {
-        //   display: none;
-        // }
       }
       &::after {
         position: absolute;

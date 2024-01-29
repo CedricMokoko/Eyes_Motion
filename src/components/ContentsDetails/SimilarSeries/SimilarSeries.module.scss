@@ -7,7 +7,6 @@
   justify-content: flex-end;
   overflow-x: hidden;
   margin: 4px 0px 0px 0px;
-
   p {
     color: $goldColor;
     font-weight: 700;
@@ -43,14 +42,12 @@
     @include sm-lt {
       height: 120px;
     }
-
     .notFoundSimilar {
       @include sm-lt {
         margin-bottom: 20px;
       }
     }
   }
-
   .list {
     padding: 0 30px 20px 30px;
     width: 100%;
@@ -86,12 +83,7 @@
       padding: 10px 3.7vw 90px 3.7vw;
       overflow-x: hidden;
     }
-    // > div {
-    //   width: 200px;
-    // }
   }
-  // }
-  // }
 }
 .footer {
   background-color: rgba($color: #041226, $alpha: 0.04);
@@ -109,17 +101,14 @@
   color: $whiteColor;
   padding: 20px;
   margin-top: 30px;
-
   @include lg-lt {
     height: min-content;
     justify-content: center;
     padding: 20px;
   }
-
   @include sm-lt {
     display: none;
   }
-
   .link {
     display: flex;
     flex-flow: row wrap;

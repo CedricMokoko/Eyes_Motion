@@ -20,7 +20,6 @@ const imageLoader = ({ src, width, quality }) => {
 export default function WelcomePage() {
   const { data: session, status } = useSession();
   const router = useRouter();
-
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -134,5 +133,4 @@ export default function WelcomePage() {
       //{" "}
     </div>
   );
-  // }
 }

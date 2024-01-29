@@ -55,10 +55,6 @@
     }
   }
   .info {
-    // position: fixed;
-    // top: 50%;
-    // left: 0;
-    // right: 0;
     text-align: center;
     color: $goldColor;
     font-size: 17px;
@@ -84,8 +80,6 @@
   display: none;
   background-color: rgba($color: #041226, $alpha: 0.04);
   font-family: var(--font-cormorant);
-  // position: fixed;
-  // bottom: 0;
   z-index: 3;
   display: flex;
   flex-direction: column;
@@ -102,11 +96,9 @@
     justify-content: center;
     padding: 20px;
   }
-
   @include sm-lt {
     display: none;
   }
-
   .link {
     display: flex;
     flex-flow: row wrap;

@@ -11,25 +11,13 @@
     @include sm-lt {
       flex-direction: column;
     }
-
     .content {
-      // display: flex;
-      // flex-direction: row;
-      // flex-wrap: wrap;
-      // align-self: center;
       display: grid;
       grid-template-columns: repeat(6, 1fr);
       grid-template-rows: repeat(3, 1fr);
-
       gap: 13px;
       width: 60%;
       margin: 90px auto 18px;
-      // @include sm-lt {
-      //   gap: 7.5px;
-      //   width: 100%;
-      //   margin: 120px auto 70px;
-      //   justify-content: center;
-      // }
       @include lg {
         margin: 60px auto 18px;
         grid-template-columns: repeat(5, 1fr);
@@ -58,9 +46,6 @@
 
       //DIV CARD CONTAINER
       .cardContainer {
-        // display: flex;
-        // flex-direction: column;
-        // justify-content: center;
         transition: transform 0.5s ease-out;
         height: 170px;
         @include lg-lt {

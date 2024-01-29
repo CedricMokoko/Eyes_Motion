@@ -52,9 +52,8 @@ const MovieDetails = ({ movie }) => {
             </Link>
             <LikeMovies likedMoviesId={movie.id} className={`${styles.icon}`} />
           </div>
-
           <div className={styles.credits}>
-            <Suspense fallback={<p>Chargement ...</p>}>
+            <Suspense fallback={<p>Loading... </p>}>
               <MovieCredits movieId={movie.id} />
             </Suspense>
           </div>

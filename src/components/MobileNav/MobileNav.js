@@ -10,7 +10,6 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useSession } from "next-auth/react";
 
 const MobileNav = ({ session }) => {
   const router = useRouter(); // Inizializza useRouter

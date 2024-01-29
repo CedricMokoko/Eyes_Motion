@@ -15,9 +15,7 @@
   color: $whiteColor;
   padding: 0 30px;
   height: 70px;
-  // background: radial-gradient(circle, #62829a, #34373f);
   background: radial-gradient(circle, #526576, #34373f);
-
   @include lg-lt {
     height: 60px;
     padding: 0 20px;
@@ -140,11 +138,10 @@
   height: 70px;
   background: transparent;
   @include lg-lt {
-    position: relative; //
+    position: relative;
     padding: 0 15px;
     height: 60px;
   }
-
   .logo {
     h2 {
       font-family: var(--font-caveat);

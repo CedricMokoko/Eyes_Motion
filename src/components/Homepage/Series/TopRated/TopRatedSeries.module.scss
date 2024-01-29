@@ -49,32 +49,17 @@
       &:hover {
         transform: scale(1.06);
       }
-      // &:nth-child(1) {
-      // margin-left: 45px;
-      // }
-      // &:last-child {
-      // margin-right: 30px;
-      // }
       @include lg-lt {
         margin: 0 0 10px 0;
         &:hover {
           transform: scale(1.02);
         }
-        // &:nth-child(1) {
-        // margin-left: 0px;
-        // }
-        // &:last-child {
-        // margin-right: 0px;
-        // }
       }
       @include sm-lt {
         margin: 0 0 10px 0;
         &:nth-child(1) {
           margin-left: 3.7vw;
         }
-        // &:last-child {
-        // margin-right: 0px;
-        // }
       }
       .card {
         margin-top: 7px;
@@ -113,7 +98,6 @@
           @include md {
             height: 200px;
           }
-
           @include sm-lt {
             height: 245px;
           }
@@ -126,7 +110,6 @@
             }
             @include lg-lt {
               box-shadow: 3px 3px 5px rgb(26, 25, 25);
-              // box-shadow: none;
             }
           }
         }

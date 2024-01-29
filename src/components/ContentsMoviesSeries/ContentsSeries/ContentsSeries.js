@@ -5,9 +5,6 @@ import { getServerSession } from "next-auth";
 import { authOptions } from "../../../app/api/auth/[...nextauth]/route";
 import { redirect } from "next/navigation";
 import MediaCardSeries from "@/components/MediaCard/Series/MediaCardSeries";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCopyright } from "@fortawesome/free-solid-svg-icons";
-import Link from "next/link";
 
 const ContentsSeries = async () => {
   const { results: topRated } = await getMovieByPath("/tv/top_rated");
@@ -53,5 +50,4 @@ const ContentsSeries = async () => {
     );
   }
 };
-
 export default ContentsSeries;

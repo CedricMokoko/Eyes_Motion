@@ -39,7 +39,6 @@
     "sharp": "^0.33.2"
   },
   "devDependencies": {
-    "eslint": "^8.56.0",
     "prisma": "^5.8.1"
   }
 }

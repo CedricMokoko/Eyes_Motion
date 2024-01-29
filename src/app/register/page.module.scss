@@ -25,13 +25,6 @@
       img {
         display: flex;
         object-fit: cover;
-        // @include lg-lt {
-        //   display: none;
-        // }
-        // @include sm-lt {
-        //   display: flex;
-        //   object-fit: cover;
-        // }
       }
       &::after {
         position: absolute;
@@ -97,7 +90,6 @@
     font-weight: 700;
     color: $whiteColor;
     padding: 20px;
-
     @include lg-lt {
       height: min-content;
       justify-content: center;

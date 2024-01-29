@@ -3,24 +3,10 @@
 
 /* loading.module.scss */
 
-/* loading.module.scss */
-
 @keyframes fadeIn {
   from {
     opacity: 0;
     transform: translateY(-70px);
-  }
-  to {
-    opacity: 1;
-    letter-spacing: 10px;
-    font-size: 20px;
-    transform: translateY(0);
-  }
-}
-@keyframes fadeInReverse {
-  from {
-    opacity: 0;
-    transform: translateY(70px);
   }
   to {
     opacity: 1;
@@ -47,7 +33,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  animation: fadeIn 2s ease-out forwards; /* Aggiungi l'animazione al contenuto */
+  animation: fadeIn 2s ease-out forwards;
   > .icon {
     color: $goldColor;
     margin-bottom: 10px;
@@ -98,13 +84,6 @@
       img {
         display: flex;
         object-fit: cover;
-        // @include lg-lt {
-        //   display: none;
-        // }
-        // @include sm-lt {
-        //   display: flex;
-        //   object-fit: cover;
-        // }
       }
       &::after {
         position: absolute;
