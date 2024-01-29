@@ -2,7 +2,7 @@
 @import "mixins_media_queries";
 .container {
   // min-height: 100vh;
-  height: calc(100vh - 80px);
+  min-height: 100vh;
 
   .content {
     min-height: 100vh;

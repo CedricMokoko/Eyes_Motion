@@ -1,22 +1,15 @@
+"use client";
 import RegisterForm from "@/components/Formulari/RegisterForm/RegisterForm";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCopyright } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 import styles from "./page.module.scss";
 import Image from "next/image";
-import { getServerSession } from "next-auth";
-import { authOptions } from "../api/auth/[...nextauth]/route";
-import { redirect } from "next/navigation";
 
 const imageLoader = ({ src, width, quality }) => {
   return `https://eyes-motion.vercel.app/${src}?w=${width}&q=${quality || 75}`;
 };
 const RegisterPage = () => {
-  const session = getServerSession(authOptions);
-
-  if (session) {
-    redirect("/private/homepage");
-  }
   return (
     <div className={styles.container}>
       <div className={styles.details}>
@@ -25,7 +18,6 @@ const RegisterPage = () => {
             loader={imageLoader}
             src="background1.png"
             alt="background demon slayer"
-            priority={true}
             fill
           />
         </div>
