@@ -1,8 +1,4 @@
 import React, { Suspense } from "react";
-//import { notFound } from "next/navigation";
-import { getServerSession } from "next-auth";
-import { authOptions } from "../../../api/auth/[...nextauth]/route";
-import { redirect } from "next/navigation";
 import { getMovieByPath } from "@/utils/movieClient";
 import MoviesVideo from "@/components/ContentsVideos/MoviesVideo/MoviesVideo";
 import SeriesVideo from "@/components/ContentsVideos/SeriesVideo/SeriesVideo";
@@ -12,7 +8,6 @@ import { faCopyright } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 import styles from "./pageVideoId.module.scss";
 import SimilarMovies from "@/components/ContentsDetails/SimilarMovies/SimilarMovies";
-import LoadingSpinner from "@/components/LoadingSpinner/LoadingSpinner";
 
 export const revalidate = 3600;
 
@@ -23,10 +18,10 @@ const VideoIdPage = async ({ params: { id } }) => {
   if (movieVideo.id) {
     return (
       <div className={styles.containerVideoPage}>
-        {/* <Suspense fallback={<LoadingSpinner />}> */}
         <MoviesVideo movieVideoId={movieVideo.id} />
-        {/* </Suspense> */}
-        <SimilarMovies movieId={movieVideo.id} />
+        <Suspense fallback={<p>Chargement similar movies ...</p>}>
+          <SimilarMovies movieId={movieVideo.id} />
+        </Suspense>
         <div className={styles.footer}>
           <div className={styles.link}>
             <p>Condizioni generali di abbonnamento</p>

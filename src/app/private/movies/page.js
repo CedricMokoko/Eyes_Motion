@@ -15,7 +15,6 @@ const MoviesPage = () => {
           <ContentsMovies />
         </Suspense>
       </div>
-
       <div className={styles.footer}>
         <div className={styles.link}>
           <p>Condizioni generali di abbonnamento</p>

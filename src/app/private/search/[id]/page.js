@@ -1,8 +1,4 @@
 import React, { Suspense } from "react";
-// import { notFound } from "next/navigation";
-import { getServerSession } from "next-auth";
-import { authOptions } from "../../../api/auth/[...nextauth]/route";
-import { redirect } from "next/navigation";
 import MovieDetails from "@/components/ContentsDetails/MovieDetails/MovieDetails";
 import SimilarMovies from "@/components/ContentsDetails/SimilarMovies/SimilarMovies";
 import SeriesDetails from "@/components/ContentsDetails/SeriesDetails/SeriesDetails";
@@ -20,7 +16,7 @@ const SearchIdPage = async ({ params: { id } }) => {
       <>
         <div>
           <SeriesDetails series={multiSeries} />
-          <Suspense fallback={<LoadingSpinner />}>
+          <Suspense fallback={<p>Loading similar series...</p>}>
             <SimilarSeries seriesId={multiSeries.id} />
           </Suspense>
         </div>
@@ -31,7 +27,7 @@ const SearchIdPage = async ({ params: { id } }) => {
     return (
       <div>
         <MovieDetails movie={multiMovie} movieId={multiMovie.id} />
-        <Suspense fallback={<p>Chargement ...</p>}>
+        <Suspense fallback={<p>Loading similar series...</p>}>
           <SimilarMovies movieId={multiMovie.id} />
         </Suspense>
       </div>

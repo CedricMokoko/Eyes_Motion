@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-// import background1 from "../../public/background1.png";
 import styles from "./page.module.scss";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -15,16 +14,15 @@ import { useEffect, useState } from "react";
 const imageLoader = ({ src, width, quality }) => {
   return `https://eyes-motion.vercel.app/${src}?w=${width}&q=${quality || 75}`;
 };
+
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const delay = 2200; // Ritardo di 5 secondi
-
+    const delay = 2200;
     const timeoutId = setTimeout(() => {
       setIsLoading(false);
     }, delay);
-
     // Pulizia del timeout nel caso in cui il componente venga smontato prima che scada il timeout
     return () => clearTimeout(timeoutId);
   }, []);
@@ -39,7 +37,6 @@ export default function Home() {
             size="1x"
             className={styles.icon}
           />
-          {/* <span className={styles.loadingText}>Eyes_Motion</span> */}
           <div className={`${styles.logo}`}>
             <h2>
               <span className={styles.loadingText}>

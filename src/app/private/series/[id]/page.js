@@ -1,8 +1,4 @@
 import React, { Suspense } from "react";
-//import { notFound } from "next/navigation";
-import { getServerSession } from "next-auth";
-import { authOptions } from "../../../api/auth/[...nextauth]/route";
-import { redirect } from "next/navigation";
 import { getMovieByPath } from "@/utils/movieClient";
 import SeriesDetails from "@/components/ContentsDetails/SeriesDetails/SeriesDetails";
 import SimilarSeries from "@/components/ContentsDetails/SimilarSeries/SimilarSeries";
@@ -21,7 +17,7 @@ const SeriesIdPage = async ({ params: { id } }) => {
     <>
       <div>
         <SeriesDetails series={series} />
-        <Suspense fallback={<LoadingSpinner />}>
+        <Suspense fallback={<p>Loading...</p>}>
           <SimilarSeries seriesId={series.id} />
         </Suspense>
       </div>

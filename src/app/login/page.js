@@ -5,11 +5,11 @@ import { faCopyright } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 import styles from "./page.module.scss";
 import Image from "next/image";
-import background1 from "../../../public/background1.png";
 
 const imageLoader = ({ src, width, quality }) => {
   return `https://eyes-motion.vercel.app/${src}?w=${width}&q=${quality || 75}`;
 };
+
 const LoginFormPage = () => {
   return (
     <div className={styles.container}>
