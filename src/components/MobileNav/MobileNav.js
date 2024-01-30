@@ -24,14 +24,7 @@ const MobileNav = ({ session }) => {
         <div className={`${styles.navigation}`}>
           <nav>
             <ul>
-              <li
-                style={{
-                  backgroundColor:
-                    pathname === "/private/homepage" ? "#62829a" : "",
-                  borderRadius: pathname === "/private/homepage" ? "6px" : "",
-                  padding: pathname === "/private/homepage" ? "8px" : "",
-                }}
-              >
+              <li>
                 <Link
                   href={`/private/homepage`}
                   style={{
@@ -44,14 +37,7 @@ const MobileNav = ({ session }) => {
                   />
                 </Link>
               </li>
-              <li
-                style={{
-                  backgroundColor:
-                    pathname === "/private/search" ? "#62829a" : "",
-                  borderRadius: pathname === "/private/search" ? "6px" : "",
-                  padding: pathname === "/private/homepage" ? "8px" : "",
-                }}
-              >
+              <li>
                 {" "}
                 <Link
                   href={`/private/search`}
@@ -65,14 +51,7 @@ const MobileNav = ({ session }) => {
                   />
                 </Link>
               </li>
-              <li
-                style={{
-                  backgroundColor:
-                    pathname === "/private/series" ? "#62829a" : "",
-                  borderRadius: pathname === "/private/series" ? "6px" : "",
-                  padding: pathname === "/private/homepage" ? "8px" : "",
-                }}
-              >
+              <li>
                 {" "}
                 <Link
                   href={`/private/series`}
@@ -83,14 +62,7 @@ const MobileNav = ({ session }) => {
                   <FontAwesomeIcon icon={faTv} className={`${styles.icon}`} />
                 </Link>
               </li>
-              <li
-                style={{
-                  backgroundColor:
-                    pathname === "/private/movies" ? "#62829a" : "",
-                  borderRadius: pathname === "/private/movies" ? "6px" : "",
-                  padding: pathname === "/private/homepage" ? "8px" : "",
-                }}
-              >
+              <li>
                 {" "}
                 <Link
                   href={`/private/movies`}
@@ -104,14 +76,7 @@ const MobileNav = ({ session }) => {
                   />
                 </Link>
               </li>
-              <li
-                style={{
-                  backgroundColor:
-                    pathname === "/private/user" ? "#62829a" : "",
-                  borderRadius: pathname === "/private/user" ? "6px" : "",
-                  padding: pathname === "/private/homepage" ? "8px" : "",
-                }}
-              >
+              <li>
                 {" "}
                 <span
                   onClick={() => handleIconClick("/private/user")}
