@@ -14,11 +14,12 @@ import {
 import Link from "next/link";
 import { toast } from "react-hot-toast";
 import { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 const Header = ({ session }) => {
   const [hasShownWelcomeToast, setHasShownWelcomeToast] = useState(false);
   const router = useRouter(); // Inizializza useRouter
+  const pathname = usePathname();
 
   useEffect(() => {
     if (session && !hasShownWelcomeToast) {
@@ -52,7 +53,13 @@ const Header = ({ session }) => {
             <nav>
               <ul>
                 <li>
-                  <Link href={`/private/homepage`}>
+                  <Link
+                    href={`/private/homepage`}
+                    style={{
+                      color:
+                        pathname === "/private/homepage" ? "goldenrod" : "",
+                    }}
+                  >
                     <FontAwesomeIcon
                       icon={faHouse}
                       className={`${styles.icon}`}
@@ -61,7 +68,12 @@ const Header = ({ session }) => {
                   </Link>
                 </li>
                 <li className={`${styles.word}`}>
-                  <Link href={`/private/search`}>
+                  <Link
+                    href={`/private/search`}
+                    style={{
+                      color: pathname === "/private/search" ? "goldenrod" : "",
+                    }}
+                  >
                     <FontAwesomeIcon
                       icon={faMagnifyingGlass}
                       className={`${styles.icon}`}
@@ -73,6 +85,9 @@ const Header = ({ session }) => {
                   <span
                     onClick={() => handleIconClick("/private/user")}
                     className={`${styles.icon}`}
+                    style={{
+                      color: pathname === "/private/user" ? "goldenrod" : "",
+                    }}
                   >
                     <FontAwesomeIcon
                       icon={faPlus}
@@ -82,13 +97,23 @@ const Header = ({ session }) => {
                   </span>
                 </li>
                 <li>
-                  <Link href={`/private/series`}>
+                  <Link
+                    href={`/private/series`}
+                    style={{
+                      color: pathname === "/private/series" ? "goldenrod" : "",
+                    }}
+                  >
                     <FontAwesomeIcon icon={faTv} className={`${styles.icon}`} />
                     SERIE
                   </Link>
                 </li>
                 <li>
-                  <Link href={`/private/movies`}>
+                  <Link
+                    href={`/private/movies`}
+                    style={{
+                      color: pathname === "/private/movies" ? "goldenrod" : "",
+                    }}
+                  >
                     <FontAwesomeIcon
                       icon={faVideo}
                       className={`${styles.icon}`}
@@ -103,6 +128,9 @@ const Header = ({ session }) => {
             <span
               onClick={() => handleIconClick("/private/user")}
               className={`${styles.icon}`}
+              style={{
+                color: pathname === "/private/user" ? "goldenrod" : "",
+              }}
             >
               {session?.user?.name}
               <FontAwesomeIcon icon={faUser} className={`${styles.iconUser}`} />
@@ -122,7 +150,13 @@ const Header = ({ session }) => {
             <nav>
               <ul>
                 <li>
-                  <Link href={`/register`} data-tooltip="Register">
+                  <Link
+                    href={`/register`}
+                    data-tooltip="Register"
+                    style={{
+                      color: pathname === "/register" ? "goldenrod" : "",
+                    }}
+                  >
                     <FontAwesomeIcon
                       icon={faUserPlus}
                       className={`${styles.icon}`}
@@ -130,7 +164,13 @@ const Header = ({ session }) => {
                   </Link>
                 </li>
                 <li>
-                  <Link href={`/login`} data-tooltip="Login">
+                  <Link
+                    href={`/login`}
+                    data-tooltip="Login"
+                    style={{
+                      color: pathname === "/login" ? "goldenrod" : "",
+                    }}
+                  >
                     <FontAwesomeIcon
                       icon={faRightToBracket}
                       className={`${styles.icon}`}
