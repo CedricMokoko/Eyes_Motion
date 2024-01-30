@@ -29,6 +29,7 @@ const MobileNav = ({ session }) => {
                   backgroundColor:
                     pathname === "/private/homepage" ? "#62829a" : "",
                   borderRadius: pathname === "/private/homepage" ? "6px" : "",
+                  padding: pathname === "/private/homepage" ? "8px" : "",
                 }}
               >
                 <Link
@@ -48,6 +49,7 @@ const MobileNav = ({ session }) => {
                   backgroundColor:
                     pathname === "/private/search" ? "#62829a" : "",
                   borderRadius: pathname === "/private/search" ? "6px" : "",
+                  padding: pathname === "/private/homepage" ? "8px" : "",
                 }}
               >
                 {" "}
@@ -68,6 +70,7 @@ const MobileNav = ({ session }) => {
                   backgroundColor:
                     pathname === "/private/series" ? "#62829a" : "",
                   borderRadius: pathname === "/private/series" ? "6px" : "",
+                  padding: pathname === "/private/homepage" ? "8px" : "",
                 }}
               >
                 {" "}
@@ -85,6 +88,7 @@ const MobileNav = ({ session }) => {
                   backgroundColor:
                     pathname === "/private/movies" ? "#62829a" : "",
                   borderRadius: pathname === "/private/movies" ? "6px" : "",
+                  padding: pathname === "/private/homepage" ? "8px" : "",
                 }}
               >
                 {" "}
@@ -105,6 +109,7 @@ const MobileNav = ({ session }) => {
                   backgroundColor:
                     pathname === "/private/user" ? "#62829a" : "",
                   borderRadius: pathname === "/private/user" ? "6px" : "",
+                  padding: pathname === "/private/homepage" ? "8px" : "",
                 }}
               >
                 {" "}
