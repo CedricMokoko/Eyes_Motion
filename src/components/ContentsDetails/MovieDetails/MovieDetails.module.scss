@@ -15,8 +15,9 @@
     height: calc(100vh - 116px);
   }
   @include sm-lt {
-    margin-top: 60px;
-    height: calc(100vh - 176px);
+    // margin-top: 60px;
+    height: calc(100vh - 120px);
+    // height: calc(100vh - 176px);
   }
   .background {
     position: absolute;
