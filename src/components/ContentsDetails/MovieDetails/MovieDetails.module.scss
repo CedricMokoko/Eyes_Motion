@@ -8,18 +8,17 @@
   height: calc(100vh - 70px);
   @include lg-lt {
     margin-top: 60px;
-    // height: calc(100vh - 146px);
-    height: calc(100vh - 60px);
+    height: calc(100vh - 146px);
+    // height: calc(100vh - 60px);
   }
   @include md {
     margin-top: 60px;
-    // height: calc(100vh - 116px);
-    height: calc(100vh - 60px);
+    height: calc(100vh - 116px);
+    // height: calc(100vh - 60px);
   }
   @include sm-lt {
     margin-top: 60px;
     height: calc(100vh - 120px);
-    // height: calc(100vh - 176px);
   }
   .background {
     position: absolute;
