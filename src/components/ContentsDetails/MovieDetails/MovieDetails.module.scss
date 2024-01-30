@@ -7,12 +7,14 @@
   width: 100%;
   height: calc(100vh - 70px);
   @include lg-lt {
-    margin-top: 60px;
-    height: calc(100vh - 146px);
+    // margin-top: 60px;
+    // height: calc(100vh - 146px);
+    height: calc(100vh - 60px);
   }
   @include md {
-    margin-top: 60px;
-    height: calc(100vh - 116px);
+    // margin-top: 60px;
+    // height: calc(100vh - 116px);
+    height: calc(100vh - 60px);
   }
   @include sm-lt {
     // margin-top: 60px;
