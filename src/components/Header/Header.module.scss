@@ -23,7 +23,6 @@
   }
   @include sm-lt {
     padding: 0 3.7vw;
-    // justify-content: center;
   }
   .logo {
     h2 {
@@ -66,7 +65,6 @@
     @include sm-lt {
       display: none;
     }
-
     nav {
       ul {
         display: flex;
@@ -119,9 +117,6 @@
         cursor: pointer;
       }
     }
-    // @include sm-lt {
-    //   display: none;
-    // }
     .iconUser {
       margin-left: 20px;
       @include sm-lt {
