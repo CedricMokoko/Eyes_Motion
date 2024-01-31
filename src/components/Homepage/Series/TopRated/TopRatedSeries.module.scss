@@ -95,11 +95,8 @@
           @include lg {
             height: 270px;
           }
-          @include md {
+          @include md-lt {
             height: 200px;
-          }
-          @include sm-lt {
-            height: 245px;
           }
           img {
             border-radius: 6px;
