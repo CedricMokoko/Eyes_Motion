@@ -81,12 +81,12 @@
         height: 200px;
       }
       @include sm {
-        height: 260px;
-        width: 25vw;
+        height: 240px;
+        width: 60vw;
       }
       @include xs {
         height: 230px;
-        width: 40vw;
+        width: 60vw;
       }
     }
     span {

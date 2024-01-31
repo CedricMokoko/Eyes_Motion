@@ -44,6 +44,9 @@
     @include lg-lt {
       height: 160px;
     }
+    @include md {
+      height: 145px;
+    }
     @include xs {
       height: 140px;
     }
@@ -67,6 +70,9 @@
         height: 170px;
         @include lg-lt {
           height: 160px;
+        }
+        @include md {
+          height: 145px;
         }
         @include xs {
           height: 140px;
