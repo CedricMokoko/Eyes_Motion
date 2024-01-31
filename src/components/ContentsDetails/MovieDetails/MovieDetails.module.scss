@@ -74,19 +74,19 @@
       height: 330px;
       @include lg {
         width: 23vw;
-        height: 350px;
+        height: 270px;
       }
       @include md {
         width: 20vw;
         height: 200px;
       }
       @include sm {
-        height: 260px;
-        width: 50vw;
+        height: 200px;
+        width: 27vw;
       }
       @include xs {
-        height: 230px;
-        width: 60vw;
+        height: 200px;
+        width: 43vw;
       }
     }
     span {
