@@ -11,6 +11,38 @@
     @include sm-lt {
       flex-direction: column;
     }
+    h2 {
+      font-family: var(--font-caveat);
+      font-size: 16px;
+      position: fixed;
+      top: 91px;
+      left: 30px;
+      color: black;
+      border-radius: 3px;
+      opacity: 0.8;
+      padding: 6px;
+      background-color: $goldColor;
+      @include lg {
+        top: 81px;
+        font-size: 15px;
+      }
+      @include md {
+        top: 81px;
+        font-size: 14px;
+      }
+      @include sm-lt {
+        border-radius: 0px;
+        position: fixed;
+        top: 59px;
+        left: 0px;
+        color: white;
+        z-index: 2;
+        background: linear-gradient(to right, #262424, #3b3838);
+        width: 100vw;
+        padding: 7px 3.7vw;
+        opacity: 1;
+      }
+    }
     .content {
       display: grid;
       grid-template-columns: repeat(6, 1fr);
@@ -30,14 +62,14 @@
         gap: 11px;
       }
       @include sm {
-        margin: 100px auto 0px;
+        margin: 90px auto 0px;
         grid-template-columns: repeat(5, 1fr);
         width: 100%;
         gap: 11px;
         padding: 20px 3.7vw 90px 3.7vw;
       }
       @include xs {
-        margin: 100px auto 0px;
+        margin: 90px auto 0px;
         grid-template-columns: repeat(3, 1fr);
         width: 100%;
         gap: 10px;
@@ -50,6 +82,9 @@
         height: 170px;
         @include lg-lt {
           height: 160px;
+        }
+        @include md {
+          height: 145px;
         }
         @include xs {
           height: 140px;
