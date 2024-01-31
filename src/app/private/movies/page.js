@@ -19,7 +19,7 @@ const MoviesPage = () => {
       </div>
       <div className={styles.footer}>
         <div className={styles.link}>
-          <p>Condizioni generali di abbonnamento</p>
+          <p>Condizioni generali di abbonamento</p>
           <p>Informazioni sulla privacy</p>
           <p>Norma sulla privacy in UE e UK</p>
           <p>Policy sui cookie</p>
