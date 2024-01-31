@@ -22,7 +22,7 @@
     padding: 0 20px;
   }
   @include sm-lt {
-    padding: 0 15px;
+    padding: 0 3.7vw;
     // justify-content: center;
   }
   .logo {
@@ -112,7 +112,7 @@
     }
     span {
       @include sm-lt {
-        margin-top: 8px;
+        margin-top: 6px;
       }
       &:hover {
         color: $goldColor;
@@ -125,7 +125,7 @@
     .iconUser {
       margin-left: 20px;
       @include sm-lt {
-        margin-left: 3.7vw;
+        margin-left: 15px;
       }
     }
   }
