@@ -111,6 +111,9 @@
       font-size: 14px;
     }
     span {
+      @include sm-lt {
+        margin-top: 8px;
+      }
       &:hover {
         color: $goldColor;
         cursor: pointer;
@@ -121,6 +124,9 @@
     // }
     .iconUser {
       margin-left: 20px;
+      @include sm-lt {
+        margin-left: 3.7vw;
+      }
     }
   }
 }

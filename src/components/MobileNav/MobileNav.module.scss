@@ -46,6 +46,11 @@
                 color: $goldColor;
               }
             }
+            &:nth-child(5) {
+              @include sm-lt {
+                display: none;
+              }
+            }
           }
         }
       }
