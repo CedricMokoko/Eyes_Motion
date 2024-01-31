@@ -13,6 +13,11 @@
     margin-bottom: 6.8px;
   }
   @include md-lt {
+    min-width: 130px;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25);
+    margin-bottom: 6.8px;
+  }
+  @include xs {
     min-width: 120px;
     box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25);
     margin-bottom: 6.8px;
@@ -26,7 +31,7 @@
       height: 200px;
     }
     @include md-lt {
-      height: 180px;
+      height: 170px;
     }
     @include xs {
       height: 160px;
