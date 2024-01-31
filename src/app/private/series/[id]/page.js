@@ -16,7 +16,6 @@ const SeriesIdPage = async ({ params: { id } }) => {
     <>
       <div>
         <SeriesDetails series={series} />
-
         <Suspense
           fallback={
             <FontAwesomeIcon

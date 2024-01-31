@@ -5,7 +5,7 @@ import { Suspense } from "react";
 import MovieCredits from "../MovieCredits/MovieCredits";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlay } from "@fortawesome/free-solid-svg-icons";
+import { faPlay, faCircleNotch } from "@fortawesome/free-solid-svg-icons";
 import LikeMovies from "@/components/Like/LikeMovies/LikeMovies";
 
 const MovieDetails = ({ movie }) => {
@@ -53,7 +53,16 @@ const MovieDetails = ({ movie }) => {
             <LikeMovies likedMoviesId={movie.id} className={`${styles.icon}`} />
           </div>
           <div className={styles.credits}>
-            <Suspense fallback={<p>Loading... </p>}>
+            <Suspense
+              fallback={
+                <FontAwesomeIcon
+                  icon={faCircleNotch}
+                  spin
+                  className={styles.loadingIcon}
+                />
+              }
+            >
+              {" "}
               <MovieCredits movieId={movie.id} />
             </Suspense>
           </div>

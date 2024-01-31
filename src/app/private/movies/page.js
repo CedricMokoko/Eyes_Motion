@@ -6,6 +6,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCopyright } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 
+export const revalidate = 3600;
+
 const MoviesPage = () => {
   return (
     <div className={`${styles.container}`}>

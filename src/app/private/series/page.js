@@ -6,6 +6,8 @@ import Link from "next/link";
 import ContentsSeries from "@/components/ContentsMoviesSeries/ContentsSeries/ContentsSeries";
 import LoadingSpinner from "@/components/LoadingSpinner/LoadingSpinner";
 
+export const revalidate = 3600;
+
 const SeriesPage = () => {
   return (
     <div className={`${styles.container}`}>

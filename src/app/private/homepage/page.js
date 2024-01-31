@@ -14,6 +14,8 @@ import PopularSeries from "@/components/Homepage/Series/Popular/PopularSeries";
 import AiringToday from "@/components/Homepage/Series/AiringToday/AiringToday";
 import LoadingSpinner from "@/components/LoadingSpinner/LoadingSpinner";
 
+export const revalidate = 3600;
+
 const userHomepage = () => {
   return (
     <div className={`${styles.container}`}>

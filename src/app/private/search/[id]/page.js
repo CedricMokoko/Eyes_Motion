@@ -37,7 +37,16 @@ const SearchIdPage = async ({ params: { id } }) => {
     return (
       <div>
         <MovieDetails movie={multiMovie} movieId={multiMovie.id} />
-        <Suspense fallback={<p className={styles.loadingString}>Loading...</p>}>
+        <Suspense
+          fallback={
+            <FontAwesomeIcon
+              icon={faCircleNotch}
+              spin
+              className={styles.loadingIcon}
+            />
+          }
+        >
+          {" "}
           <SimilarMovies movieId={multiMovie.id} />
         </Suspense>
       </div>

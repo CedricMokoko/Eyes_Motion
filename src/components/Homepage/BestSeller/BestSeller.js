@@ -4,6 +4,9 @@ import styles from "./BestSeller.module.scss";
 import Link from "next/link";
 import Image from "next/image";
 
+export const dynamic = "force-dynamic";
+export const revalidate = 3600;
+
 const BestSeller = async () => {
   const { results } = await getMovieByPath("/tv/top_rated");
   const bestSeller = results.slice(8, 11);

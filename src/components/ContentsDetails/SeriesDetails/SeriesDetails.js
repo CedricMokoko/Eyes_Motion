@@ -5,7 +5,7 @@ import { Suspense } from "react";
 import SeriesCredits from "../SeriesCredits/SeriesCredits";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlay } from "@fortawesome/free-solid-svg-icons";
+import { faPlay, faCircleNotch } from "@fortawesome/free-solid-svg-icons";
 import LikeSeries from "@/components/Like/LikeSeries/LikeSeries";
 
 const SeriesDetails = ({ series }) => {
@@ -56,7 +56,16 @@ const SeriesDetails = ({ series }) => {
             />
           </div>
           <div className={styles.credits}>
-            <Suspense fallback={<p>Loading...</p>}>
+            <Suspense
+              fallback={
+                <FontAwesomeIcon
+                  icon={faCircleNotch}
+                  spin
+                  className={styles.loadingIcon}
+                />
+              }
+            >
+              {" "}
               <SeriesCredits seriesId={series.id} />
             </Suspense>
           </div>

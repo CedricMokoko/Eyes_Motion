@@ -4,7 +4,7 @@ import MoviesVideo from "@/components/ContentsVideos/MoviesVideo/MoviesVideo";
 import SeriesVideo from "@/components/ContentsVideos/SeriesVideo/SeriesVideo";
 import SimilarSeries from "@/components/ContentsDetails/SimilarSeries/SimilarSeries";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCopyright } from "@fortawesome/free-solid-svg-icons";
+import { faCopyright, faCircleNotch } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 import styles from "./pageVideoId.module.scss";
 import SimilarMovies from "@/components/ContentsDetails/SimilarMovies/SimilarMovies";
@@ -19,7 +19,16 @@ const VideoIdPage = async ({ params: { id } }) => {
     return (
       <div className={styles.containerVideoPage}>
         <MoviesVideo movieVideoId={movieVideo.id} />
-        <Suspense fallback={<p>Chargement similar movies ...</p>}>
+        <Suspense
+          fallback={
+            <FontAwesomeIcon
+              icon={faCircleNotch}
+              spin
+              className={styles.loadingIcon}
+            />
+          }
+        >
+          {" "}
           <SimilarMovies movieId={movieVideo.id} />
         </Suspense>
         <div className={styles.footer}>
@@ -57,7 +66,16 @@ const VideoIdPage = async ({ params: { id } }) => {
       <>
         <div>
           <SeriesVideo serieVideoId={serieVideo.id} />
-          <Suspense fallback={<p>Chargement similar series ...</p>}>
+          <Suspense
+            fallback={
+              <FontAwesomeIcon
+                icon={faCircleNotch}
+                spin
+                className={styles.loadingIcon}
+              />
+            }
+          >
+            {" "}
             <SimilarSeries seriesId={serieVideo.id} />
           </Suspense>
         </div>

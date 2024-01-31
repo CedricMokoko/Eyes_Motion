@@ -4,6 +4,26 @@
 .container {
   min-height: 100vh;
 }
+.loadingIcon {
+  font-size: 20px;
+  color: $goldColor;
+  font-weight: 700;
+  margin: 10px 0 15px 30px;
+  @include lg {
+    font-size: 13px;
+  }
+  @include lg-lt {
+    font-size: 18px;
+    margin: 10px 0 10px 0px;
+    padding-left: 20px;
+  }
+  @include sm-lt {
+    font-size: 16px;
+    margin: 10px 0 10px 0px;
+    padding-left: 3.7vw;
+  }
+}
+
 .footer {
   background-color: rgba($color: #041226, $alpha: 0.04);
   font-family: var(--font-cormorant);
