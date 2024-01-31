@@ -23,7 +23,7 @@ export default function WelcomePage() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const delay = 2200;
+    const delay = 3000;
     const timeoutId = setTimeout(() => {
       setIsLoading(false);
     }, delay);
