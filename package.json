@@ -18,7 +18,7 @@
     "@fortawesome/free-regular-svg-icons": "^6.5.1",
     "@fortawesome/free-solid-svg-icons": "^6.5.1",
     "@fortawesome/react-fontawesome": "^0.2.0",
-    "@prisma/client": "^5.8.1",
+    "@prisma/client": "^5.9.0",
     "bcrypt": "^5.1.1",
     "core-js": "^3.35.1",
     "input": "^1.0.1",
@@ -39,6 +39,6 @@
     "sharp": "^0.33.2"
   },
   "devDependencies": {
-    "prisma": "^5.8.1"
+    "prisma": "^5.9.0"
   }
 }
