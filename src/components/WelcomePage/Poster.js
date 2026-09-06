@@ -22,6 +22,7 @@ const Poster = async () => {
             <Image
               src={`${process.env.NEXT_PUBLIC_TMDB_IMAGE_BASE_PATH}/original${movie.backdrop_path}`}
               alt={movie.name}
+              priority={true}
               fill
             />
           </div>
